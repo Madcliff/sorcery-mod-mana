@@ -1,0 +1,46 @@
+targetted_decisions = {
+	1mind_control_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		OR = {
+		NOT = { character = FROM  } 
+		NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			opinion = { modifier = opinion_mind_control who = FROM years = 100000 }
+			ROOT = { join_attacker_wars = FROM }
+			ROOT = { join_defender_wars  = FROM }
+#			set_defacto_liege = FROM
+			FROM = {			
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

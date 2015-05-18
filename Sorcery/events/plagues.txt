@@ -1,0 +1,40 @@
+namespace = plagues
+character_event = {
+	id = plagues.1 
+	desc = plagues.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = plagues.1a
+	
+		event_target:plagues = {	
+			add_trait = has_tuberculosis
+			}
+			character_event = { id = spellcost.1 }	
+		}			
+	option = {
+			name = plagues.1b
+	
+		event_target:plagues = {	
+			add_trait = has_small_pox		
+		}
+			character_event = { id = spellcost.1 }			
+		}
+	option = {
+			name = plagues.1c
+	
+		event_target:plagues = {	
+			add_trait = has_typhus
+			}
+			character_event = { id = spellcost.1 }				
+		}
+	option = {
+			name = plagues.1d
+	
+		event_target:plagues = {	
+			add_trait = has_bubonic_plague
+			}
+			character_event = { id = spellcost.3 }			
+		}
+}

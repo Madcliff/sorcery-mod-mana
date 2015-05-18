@@ -1,0 +1,112 @@
+namespace = statsritual
+character_event = {
+	id = statsritual.1
+	desc = statsritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+		
+		
+		option = {
+		name = statsritual.1a	
+		change_martial = 5
+		}
+		option = {
+		name = statsritual.1b	
+       change_diplomacy = 5	
+		}
+		option = {
+		name = statsritual.1c	
+       change_intrigue = 5	
+		}
+		option = {
+		name = statsritual2	
+		character_event = { id = statsritual.2 }
+		}		
+
+		
+	}
+	character_event = {
+	id = statsritual.2
+	desc = statsritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = statsritual.1d	
+       change_stewardship = 5
+		}
+		option = {
+		name = statsritual.1e	
+       change_learning = 5
+		}
+		option = {
+		name = statsritual1	
+		character_event = { id = statsritual.1 }
+		}			
+}		
+
+
+character_event = {
+	id = statsritual.3
+	desc = statsritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+		
+		
+		option = {
+		name = statsritual.1a	
+				event_target:attributetarget = {
+		change_martial = 5
+		}
+		}
+		option = {
+		name = statsritual.1b	
+		event_target:attributetarget = {
+       change_diplomacy = 5	
+	   }
+		}
+		option = {
+		name = statsritual.1c
+		event_target:attributetarget = {		
+       change_intrigue = 5	
+	   }
+		}
+		option = {
+		name = statsritual2	
+		character_event = { id = statsritual.4 }
+		}		
+
+		
+	}
+	character_event = {
+	id = statsritual.4
+	desc = statsritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = statsritual.1d	
+		event_target:attributetarget = {	
+       change_stewardship = 5
+		}
+		}
+		option = {
+		name = statsritual.1e	
+		event_target:attributetarget = {		
+       change_learning = 5
+		}
+		}
+		option = {
+		name = statsritual1	
+		character_event = { id = statsritual.3 }
+		}			
+}		
+

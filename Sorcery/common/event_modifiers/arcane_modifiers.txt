@@ -1,0 +1,67 @@
+
+raging_winds = {
+        icon = 87
+}
+burned1 = {
+	supply_limit = -1
+	local_tax_modifier = -0.1
+	icon = 29
+}
+burned2 = {
+	supply_limit = -2
+	local_tax_modifier = -0.2
+	icon = 29
+}
+burned3 = {
+	supply_limit = -3
+	local_tax_modifier = -0.3
+	icon = 29
+}
+burning = {
+	max_attrition = 0.25
+	icon = 29
+}
+arcane_soldiers = {
+	icon = 13
+	retinuesize = 4000	
+	galleys = 20
+}
+
+magic_shield = {
+	icon = 13
+	}
+	
+	
+magic_time = { 
+	icon = 13
+	local_build_time_modifier = -1.0
+	tech_growth_modifier = 100.0
+	local_tax_modifier = -1.0
+}
+magic_subjugation = {
+	icon = 21
+	local_revolt_risk = -0.5
+	}
+magic_devestation = {
+	icon = 12 
+	levy_reinforce_rate = -1
+	local_build_time_modifier = 1.0
+	assassinate_chance_modifier = 1.0
+	local_revolt_risk = 1.0
+	supply_limit = -5	
+	}
+
+magic_awareness = {
+	icon = 12
+	plot_discovery_chance = 1.0
+	}
+
+magic_illusion = {
+	icon = 12
+	plot_power_modifier = 1.0
+	}
+	
+magic_preparation = {
+	icon = 12
+	supply_limit = 10.0 
+	}

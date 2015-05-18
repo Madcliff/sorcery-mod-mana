@@ -1,0 +1,40 @@
+namespace = magickill
+character_event = {
+
+	id = magickill.1 
+	desc = magickill.1_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes
+	option = {
+			name = magickill.1a
+					event_target:magickill = {
+					add_trait = maimed
+					add_trait = eunuch
+					banish = yes 
+					}
+#					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
+				character_event = { id = spellcost.1 }							
+				}
+			option = {
+			name = magickill.1b
+					event_target:magickill = {
+					add_trait = blinded 
+					add_trait = maimed
+					banish = yes 					
+					}
+#					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
+				character_event = { id = spellcost.1 }							
+				}
+			option = {
+				name = magickill.1c
+				trigger =  { check_variable = { which = "magic_power" value = 3   } }  	
+				event_target:magickill = {				
+					death = {
+						death_reason = death_battle
+						killer = FROM 
+					}
+				}
+				character_event = { id = spellcost.3 }					
+			}						
+	}			
+

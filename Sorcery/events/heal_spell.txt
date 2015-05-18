@@ -1,0 +1,68 @@
+namespace = healspell
+character_event = {
+	id = healspell.1
+	desc = healspell.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = healspell.1a
+		event_target:healtarget = {		
+			if = { limit = { trait = wounded } remove_trait = wounded }
+			if = { limit = { trait = maimed } remove_trait = maimed }
+			if = { limit = { trait = infirm } remove_trait = infirm }
+			if = { limit = { trait = blinded } remove_trait = blinded }
+			if = { limit = { trait = eunuch } remove_trait = eunuch }
+			if = { limit = { trait = incapable } remove_trait = incapable }		
+			if = { limit = { trait = harelip } remove_trait = harelip }
+			if = { limit = { trait = hunchback } remove_trait = hunchback }
+			if = { limit = { trait = lisp } remove_trait = lisp }
+			if = { limit = { trait = stutter } remove_trait = stutter }
+			if = { limit = { trait = ugly } remove_trait = ugly }
+			if = { limit = { trait = dwarf } remove_trait = dwarf }
+			if = { limit = { trait = crippled } remove_trait = crippled }
+			if = { limit = { trait = lunatic} remove_trait = lunatic}
+			if = { limit = { trait = stressed } remove_trait = stressed }
+			if = { limit = { trait = possessed } remove_trait = possessed }
+			if = { limit = { trait = depressed } remove_trait = depressed }
+			if = { limit = { trait = inbred } remove_trait = inbred }
+			if = { limit = { trait = disfigured } remove_trait = disfigured }
+			if = { limit = { trait = crippled } remove_trait = crippled }
+			if = { limit = { trait = blinded_age } remove_trait = blinded_age}
+		}
+	}
+	
+	option = {
+		name = healspell.1b
+			event_target:healtarget = {			
+				if = { limit = { trait = ill } remove_trait = ill }
+				if = { limit = { trait = pneumonic } remove_trait = pneumonic }
+				if = { limit = { trait = syphilitic } remove_trait = syphilitic }
+				if = { limit = { trait = leper } remove_trait = leper }
+				if = { limit = { trait = has_tuberculosis } remove_trait = has_tuberculosis }
+				if = { limit = { trait = has_typhoid_fever } remove_trait = has_typhoid_fever }
+				if = { limit = { trait = has_typhus } remove_trait = has_typhus }
+				if = { limit = { trait = has_bubonic_plague } remove_trait = has_bubonic_plague }
+				if = { limit = { trait = has_measles } remove_trait = has_measles }
+				if = { limit = { trait = has_small_pox } remove_trait = has_small_pox }
+				if = { limit = { trait = has_aztec_disease } remove_trait = has_aztec_disease }
+				if = { limit = { has_character_modifier = { modifier =  minor_disease_herpes } }  
+				if = { limit = { trait = has_bloody_flux } remove_trait = has_bloody_flux }
+				if = { limit = { trait = has_grey_plague } remove_trait = has_grey_plague }
+				if = { limit = { trait = has_greyscale } remove_trait = has_greyscale }
+				if = { limit = { trait = has_red_death } remove_trait = has_red_death }
+				if = { limit = { trait = has_pox } remove_trait = has_pox }
+
+				remove_character_modifier = { modifier = minor_disease_herpes } } 
+			}
+	}
+		
+	option = {
+		name = healspell.1c	
+			event_target:healtarget = {		
+				if = { limit = { trait = Whispers_of_the_Damned } remove_trait = Whispers_of_the_Damned}
+				if = { limit = { has_opinion_modifier = { modifier = opinion_mind_control } } remove_opinion = { modifier =  opinion_mind_control } }
+			}
+		}
+	}

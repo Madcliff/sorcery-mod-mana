@@ -1,0 +1,153 @@
+namespace = mana
+# SPELL SYSTEM: main magic power change event
+#character_event = {
+#    id = mana.1
+#    desc = ""
+#    hide_window = yes
+#    
+#    trigger = {
+#		OR = {
+#        trait = Sorcery
+#		trait = Mentalist
+#		trait = War_Mage
+#		trait = Alchemist
+#		trait = Herbalist
+#		}
+#		}
+#    
+#	  mean_time_to_happen = {
+#        days = 180
+#    }
+#    immediate = {
+# 
+#		if = {
+#			limit = { not = { check_variable = { which = "magic_power" value = 0 }}}                       
+#			set_variable = { which = "magic_power" value = 0 }
+#			}
+#            if = {
+#                limit = { 
+#						check_variable = { which = "magic_power" value = 0 }
+#					}
+#                character_event = { id = mana.201}  
+#                }
+                
+   
+#    }
+    #no option (hidden event)
+#}
+
+character_event = {
+    id = mana.2
+    desc = mana.2_desc
+    hide_window = yes
+    
+    trigger = {
+		OR = {
+        trait = Sorcery
+		trait = Mentalist
+		trait = War_Mage
+		trait = Alchemist
+		trait = Herbalist
+		}
+		}
+		
+    mean_time_to_happen = {
+        days = 180
+					
+    }
+    immediate = {
+ 
+		if = {
+			limit = { not = { check_variable = { which = "magic_power" value = 0 }}}                       
+			set_variable = { which = "magic_power" value = 0 }
+			}
+                    if = {
+                        limit = {
+						check_variable = { which = "magic_power" value = 0 } 
+						OR = {
+							AND = { 
+								NOT = { 
+									trait = Sorcery 
+								}
+								NOT = { 	
+									check_variable = { which = "magic_power" value = 10 } 
+									}
+								}
+							AND = { 
+								trait = Sorcery
+								NOT = { 
+									check_variable = { which = "magic_power" value = 25 } 
+									}
+								}
+							AND = { 
+								trait = Sorcery
+								trait = Undying
+								NOT = { 
+									check_variable = { which = "magic_power" value = 1000 } 
+									}
+								}
+							}
+						}
+                        character_event = { id = mana.201}  
+                    }
+
+			}
+    #no option (hidden event)
+	option = {
+	name = mana.2a
+	}
+}
+
+character_event = {
+    id = mana.200
+    desc = mana.200_desc
+    picture = "GFX_fire_magic"
+    is_triggered_only = yes
+    
+    option = {
+        name = mana.200a
+		if = { 
+		limit = { check_variable = { which = "magic_power" value = 3 }}
+        change_variable = { which = "magic_power" value = -1 }}
+		}
+		
+    }
+	
+character_event = {
+    id = mana.201
+    desc = mana.201_desc
+    picture = "GFX_fire_magic"
+    is_triggered_only = yes
+	hide_window = yes
+
+    option = {
+        name = mana.201a
+		if = {
+		limit = { not = { check_variable = { which = "magic_power" value = 0 }}}                       
+        set_variable = { which = "magic_power" value = 1 }
+		}
+		if = {
+		limit = { check_variable = { which = "magic_power" value = 0 }}                       
+        change_variable = { which = "magic_power" value = 1 }
+		}
+		if = {
+		limit = { trait = Sorcery }
+        change_variable = { which = "magic_power" value = 2 }
+		}
+        #end of last if
+		} 
+}
+
+character_event = {
+    id = mana.999
+    desc = ""
+    picture = "GFX_fire_magic"	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = mana_loc
+		}
+}
+

@@ -1,0 +1,24 @@
+namespace = summongeneral
+character_event = {
+	id = summongeneral.1
+	desc = summongeneral.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+	
+	option = {
+			name = summongeneral.1a
+  				create_character = {
+					random_traits = yes
+					dynasty = NONE
+					female = no
+					age = 18
+					trait = brilliant_strategist 
+					trait = quick
+					trait = unyielding_leader
+					trait = winter_soldier
+					trait = strong
+					trait = diligent 
+				}
+			}
+}			

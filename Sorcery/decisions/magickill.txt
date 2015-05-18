@@ -1,0 +1,45 @@
+targetted_decisions = {
+	1magic_kill_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = War_Mage}
+			
+		}
+	
+		potential = { 
+		OR = {
+		NOT = { character = FROM } 
+		NOT = { has_character_modifier = magic_shield }}		
+		at_location = FROM	
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }
+		}
+		
+		effect = {
+			save_event_target_as = magickill			
+			FROM = {
+				clr_character_flag = Magic_Divining
+				character_event = {id = magickill.1 }						
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	}

@@ -1,0 +1,87 @@
+targetted_decisions = {
+	field_of_fire_targeted_decision = {
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }		
+			NOT = { trait = incapable }
+			is_playable = yes
+			ai = no			
+		}
+	
+		potential = {
+			OR = {trait = Sorcery trait = War_Mage}		 
+			in_command = yes
+			prisoner = no
+		}
+		allow = {		
+				hidden_tooltip = {
+					OR = {
+						AND = {
+							is_ruler = yes
+							war = yes
+							any_playable_ruler = {
+								war_with = ROOT
+								OR = {
+									AND = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_realm_lord = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_courtier = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+								}	
+							}
+						}
+							#war = no # Your liege's wars still count
+							any_liege = {
+								any_playable_ruler = {
+									war_with = PREV
+									OR = {
+										AND = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_realm_lord = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_courtier = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+									}	
+								}
+							}						
+						any_independent_ruler = {
+							mercenary = yes
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+						}				
+					}	
+				}	
+		}
+		effect = {
+			character_event = {id = fieldoffire.1}	
+			character_event = { id = spellcost.3 }	
+			
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+			
+			
+	}
+	}

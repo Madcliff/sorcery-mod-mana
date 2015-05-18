@@ -1,0 +1,52 @@
+targetted_decisions = {
+ 	2ritual_of_mind_and_body_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+				check_variable = { which = "magic_power" value = 3 }				
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+		
+		potential = {
+		NOT = { has_character_flag = bodyritual} 
+		}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		
+		effect = {	
+			character_event = { id = ritual.1}
+			set_character_flag = bodyritual
+				FROM = { 
+			any_realm_character = { 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT			
+				}
+			save_event_target_as = spellcostcast			
+			}
+		character_event = { id =  spellcost.23 }				
+	
+		}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

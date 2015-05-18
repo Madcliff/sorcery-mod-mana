@@ -1,0 +1,39 @@
+namespace = whispersdamned
+character_event = {
+	id = whispersdamned.1 
+	desc = whispersdamned.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = whispersdamned.1a
+	
+		event_target:whispersdamned = {	
+		add_trait = Whispers_of_the_Damned
+			}
+		}			
+}
+
+
+
+
+
+
+character_event = {
+	id = whispersdamned.2 
+	desc = whispersdamned.2_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = whispersdamned.2a
+
+				event_target:whispersdamnedcaster = {
+					location = { 
+						ruler = { 
+							add_trait = Whispers_of_the_Damned
+						}
+					}
+				}
+			}	
+		}	

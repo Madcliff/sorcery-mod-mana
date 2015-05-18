@@ -1,0 +1,154 @@
+namespace = siegeoffire
+character_event = {
+	id = siegeoffire.1
+	desc = siegeoffire.1_desc
+	picture = "GFX_siegeoffire"
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = siegeoffire.1a
+		ai_chance = {
+			factor = 75
+			modifier = { #Don't burn own/liege's castle
+				factor = 0
+				location = {
+					any_province_lord = {
+						OR = {
+							character = ROOT
+							ROOT = { is_liege_or_above = PREV }
+						}	
+					}
+				}
+			}
+			modifier = { #Reluctant to burn same realm castles, unless ruthless
+				factor = 0.2
+				NOT = { trait = ruthless }
+				location = {
+					any_province_lord = {
+						same_realm = ROOT
+					}
+				}
+			}
+			modifier = { #Enemy's castle
+				factor = 2
+				location = {
+					any_province_lord = {
+						any_current_enemy = { character = ROOT }	
+					}
+				}
+			}
+			modifier = { 
+				factor = 0.2 #My family is in castle
+				location = {
+					any_province_character = {
+						is_close_relative = ROOT
+						in_command = no					
+						at_location = ROOT		
+						NOT = { character = ROOT }	
+					}
+				}
+			}
+			modifier = { 
+				factor = 3
+				trait = wroth
+			}
+			modifier = { 
+				factor = 3
+				trait = cruel
+			}
+			modifier = { 
+				factor = 3
+				trait = ambitious
+			}
+			modifier = { 
+				factor = 3
+				trait = lunatic
+			}
+		}
+	
+		siege = {
+			enemy = {
+#				if = {
+#					limit = { ROOT = { NOT = { check_variable = { which = "dragon_strength" value = 10 } } } }
+					morale = -1
+					troops = -1
+#					hidden_tooltip = { event_target:siege_of_fire_target = { character_event = { id = dragon.32 } } }
+#				}
+			}
+		}
+		hidden_tooltip = { event_target:siege_of_fire_target = { clear_event_target = siege_of_fire_target } }
+#		location = { 
+#			province_event = { id = dragon.25 } 
+#		}
+	}
+
+	option = {
+		name = siegeoffire.1b
+		ai_chance = {
+			factor = 25
+			modifier = { 
+				factor = 4
+				trait = honorable
+			}
+			modifier = { 
+				factor = 3
+				trait = patient
+			}
+			modifier = { 
+				factor = 3
+				trait = kind
+			}
+			modifier = { 
+				factor = 3
+				trait = content
+			}
+		}	
+		hidden_tooltip = { event_target:siege_of_fire_target = { clear_event_target = siege_of_fire_target clr_character_flag = siege_leader } }
+	}	
+}
+
+character_event = {
+	id = siegeoffire.2
+	desc = siegeoffire.2_desc
+	picture = "GFX_siegeoffire"
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = siegeoffire.2a
+		event_target:siege_of_fire_caster = {			
+		siege = {
+			enemy = {
+					morale = -1
+					troops = -1
+#					hidden_tooltip = { event_target:siege_of_fire_target = { character_event = { id = dragon.32 } } }
+		}
+#		location = { 
+#			province_event = { id = dragon.25 } 
+#		}
+	}
+	}
+	}
+	option = {
+		name = siegeoffire.2b
+		ai_chance = {
+			factor = 25
+
+			modifier = { 
+				factor = 3
+				trait = patient
+			}
+			modifier = { 
+				factor = 3
+				trait = kind
+			}
+			modifier = { 
+				factor = 3
+				trait = content
+			}
+		}	
+	}	
+}

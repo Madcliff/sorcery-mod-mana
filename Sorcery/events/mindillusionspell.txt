@@ -1,0 +1,41 @@
+namespace = mindillusionspell
+character_event = {
+	id = mindillusionspell.1
+	desc = mindillusionspell.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = mindillusionspell.1a
+	
+		event_target:mindillusiontarget = {	
+			primary_title = {
+				add_weak_claim = ROOT
+			}
+		}	
+	}		
+	option = {
+			name = mindillusionspell.1b
+			event_target:mindillusiontarget = {
+				ROOT = {
+					opinion = { modifier = mind_control_revoke who = FROM years = 100000 }
+				}		
+		}
+		}
+	option = {
+			name = mindillusionspell.1c
+			event_target:mindillusiontarget = {
+				ROOT = {
+					opinion = { modifier = mind_control_execute who = FROM years = 100000 }
+				}		
+		}
+		}
+	option = {
+			name = mindillusionspell.1d
+			event_target:mindillusiontarget = {
+				ROOT = {
+					opinion = { modifier = mind_control_banish who = FROM years = 100000 }
+				}		
+		}
+		}
+}

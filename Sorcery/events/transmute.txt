@@ -1,0 +1,19 @@
+
+	   
+namespace = transmute
+character_event = {
+	id = transmute.1
+	desc = transmute.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+	
+	option = {	   
+		name = transmute.1a
+	
+	   scaled_wealth = 1
+	   prestige = 100
+	   piety = 100
+	   wealth = 150
+}	
+}   

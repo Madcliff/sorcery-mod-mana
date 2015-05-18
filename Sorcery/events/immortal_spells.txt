@@ -1,0 +1,17 @@
+namespace = immortalspell
+character_event = {
+	id = immortalspell.1
+	desc = immortalspell.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = immortalspell.1a
+#		wealth = -20000
+		add_trait = Undying
+		health = 200
+ #       change_variable = { which = "magic_power" value = -20 }
+		}
+
+	}

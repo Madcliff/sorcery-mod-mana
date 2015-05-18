@@ -1,0 +1,61 @@
+targetted_decisions = {
+	1firestorm_siege_targeted_decision = {
+	
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			NOT = { trait = incapable }
+			check_variable = { which = "magic_power" value = 3 }			
+			is_playable = yes
+			ai = no			
+		}
+	
+		potential = {
+			OR = {trait = Sorcery trait = War_Mage}		
+			character = FROM 
+			in_command = yes
+			prisoner = no
+			siege = {
+				is_attacker = yes
+			}			
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+				siege = {
+					enemy = {
+						leader = {
+							save_event_target_as = siege_of_fire_target
+							set_character_flag = siege_leader
+							ROOT = { set_character_flag = siege_of_fire_target_found }
+						}
+					}
+					}
+					if = { #if no leader default to province owner (capital only)
+						limit = { ROOT = { NOT = { has_character_flag = siege_of_fire_target_found } } }
+						location = { 
+							owner = { 
+								if = {
+									limit = {
+										NOT = { tier = BARON }
+										capital_scope = { ROOT = { at_location = PREV } }
+									}
+									save_event_target_as = siege_of_fire_target
+								}
+							} 
+						}
+					}						
+			clr_character_flag = siege_of_fire_target_found
+            character_event = { id = siegeoffire.1 }				
+			character_event = { id = spellcost.3 }	
+	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

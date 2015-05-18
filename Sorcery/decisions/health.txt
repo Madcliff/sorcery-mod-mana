@@ -1,0 +1,32 @@
+targetted_decisions = {
+	health_boost = {
+			filter = self	
+		ai_target_filter   = self
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}			
+		}
+	
+		potential = {
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			character_event = { id = spellcost.3 }			
+			FROM = {
+			health = 5
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

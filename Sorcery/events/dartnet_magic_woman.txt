@@ -1,0 +1,30 @@
+namespace = magic_woman
+
+character_event = {
+id = magic_woman.2
+desc = magic_woman.2_desc
+picture = GFX_evt_recovery
+hide_window = yes
+
+trigger = {
+is_female = yes
+NOT = { has_character_flag = special_treasurer} 
+NOT = { has_character_flag = special_chancellor} 
+NOT = { has_character_flag = special_spiritual} 
+NOT = { has_character_flag = special_spymaster}
+NOT = { has_character_flag = special_marshal}
+OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}
+}
+
+mean_time_to_happen = {
+days = 1
+}
+
+immediate= {
+set_character_flag = special_marshal
+set_character_flag = special_treasurer
+set_character_flag = special_chancellor
+set_character_flag = special_spiritual
+set_character_flag = special_spymaster
+}
+}

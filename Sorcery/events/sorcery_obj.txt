@@ -1,0 +1,431 @@
+namespace = sorceryobj
+character_event = {
+	id = sorceryobj.1
+	desc = sorceryobj.1_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = War_Mage }
+		NOT = { trait = Sorcery }	
+		NOT = { has_character_flag =  Magic_studies }
+	}
+mean_time_to_happen = {
+	years = 10
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.1a
+		random_list = {
+		60 = { character_event = { id = sorceryobj.11 days = 360} set_character_flag =  Magic_studies }
+		35 = { add_trait = lunatic character_event = { id = sorceryobj.11 days = 360} set_character_flag =  Magic_studies}
+		5 = { character_event = { id = sorceryobj.99} }
+	
+		
+}
+}
+}
+character_event = {
+    id = sorceryobj.11
+    desc = sorceryobj.11_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.11a
+		add_trait = War_Mage
+		clr_character_flag = Magic_studies 
+		
+		}
+}
+
+character_event = {
+	id = sorceryobj.2
+	desc = sorceryobj.2_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = Alchemist }
+		NOT = { trait = Sorcery }		
+		NOT = { has_character_flag =  Magic_studies }
+	}
+mean_time_to_happen = {
+	years = 10
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.2a
+		random_list = {
+		60 = { character_event = { id = sorceryobj.21 days = 360} set_character_flag =  Magic_studies }
+		35 = { add_trait = lunatic character_event = { id = sorceryobj.21 days = 360} set_character_flag =  Magic_studies }
+		5 = { character_event = { id = sorceryobj.99} }
+	
+		
+}
+}
+}
+
+character_event = {
+    id = sorceryobj.21
+    desc = sorceryobj.21_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.21a
+		add_trait = Alchemist
+		clr_character_flag = Magic_studies 		
+		}
+}
+character_event = {
+	id = sorceryobj.3
+	desc = sorceryobj.3_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = Herbalist }
+		NOT = { trait = Sorcery }	
+		NOT = { has_character_flag =  Magic_studies }
+	}
+mean_time_to_happen = {
+	years = 10
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.3a
+		random_list = {
+		60 = { character_event = { id = sorceryobj.31 days = 360} set_character_flag =  Magic_studies }
+		35 = { add_trait = lunatic character_event = { id = sorceryobj.31 days = 360} set_character_flag =  Magic_studies}
+		5 = { character_event = { id = sorceryobj.99} }
+	
+		
+}
+}
+}
+
+character_event = {
+    id = sorceryobj.31
+    desc = sorceryobj.31_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.31a
+		add_trait = Herbalist
+		clr_character_flag = Magic_studies 		
+		}
+}
+
+character_event = {
+	id = sorceryobj.4
+	desc = sorceryobj.4_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = { trait = Mentalist }
+		NOT = { trait = Sorcery }	
+		NOT = { has_character_flag =  Magic_studies }
+	}
+mean_time_to_happen = {
+	years = 10
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.4a
+		random_list = {
+		60 = { character_event = { id = sorceryobj.41 days = 360} set_character_flag =  Magic_studies }
+		35 = { add_trait = lunatic character_event = { id = sorceryobj.41 days = 360} set_character_flag =  Magic_studies}
+		5 = { character_event = { id = sorceryobj.99} }
+	
+		
+}
+}
+}
+
+character_event = {
+    id = sorceryobj.41
+    desc = sorceryobj.41_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.41a
+		add_trait = Mentalist
+		clr_character_flag = Magic_studies 
+		}
+}
+
+character_event = {
+	id = sorceryobj.5
+	desc = sorceryobj.5_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		NOT = { trait = incapable }
+		trait = War_Mage 
+		trait = Mentalist
+		trait = Alchemist
+		trait = Herbalist
+		NOT = { trait = Sorcery }
+
+	}
+mean_time_to_happen = {
+	years = 1
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.5a
+		random_list = {
+		60 = { character_event = { id = sorceryobj.51} }
+		35 = { add_trait = lunatic character_event = { id = sorceryobj.51} }
+		5 = { character_event = { id = sorceryobj.99} }
+	
+		
+}
+}
+}
+
+character_event = {
+    id = sorceryobj.51
+    desc = sorceryobj.51_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.51a
+		add_trait = Sorcery
+		}
+}
+
+
+character_event = {
+    id = sorceryobj.99
+    desc = sorceryobj.99_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.99a
+			death = {
+				death_reason = death_accident
+			}
+		}
+}

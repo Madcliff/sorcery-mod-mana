@@ -1,0 +1,106 @@
+targetted_decisions = {
+	2immortality_gift_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+			at_location = ROOT		
+			is_playable = yes
+			ai = no			
+			check_variable = { which = "magic_power" value = 10 }
+			num_of_prisoners = 10
+			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+		}
+	
+		potential = {
+		NOT = {
+		trait = Undying
+		}
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = immortalspell.1 } }
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.10 }		
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

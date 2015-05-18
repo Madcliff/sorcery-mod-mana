@@ -1,0 +1,50 @@
+targetted_decisions = {
+	3vassal_sacrifice_sorcery_decision = {
+			filter = home_court
+		ai_target_filter   = home_court
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}			
+		}
+	
+		potential = {
+			prisoner = yes
+			is_adult = yes
+			host = { character = FROM }
+		}
+		
+		allow = {
+			prisoner = yes
+		}
+		
+		effect = {	
+			any_liege = {
+				limit = { 
+					ai = no
+					NOT = { character = FROM }
+				}
+			}
+			hidden_tooltip = {
+				FROM = {
+			change_variable = { which = "magic_power" value = 3 }
+				}
+			}
+			death = {
+				death_reason = death_sacrificed
+				killer = FROM
+			}
+			FROM = {
+			health = 5
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

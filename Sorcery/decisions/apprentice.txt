@@ -1,0 +1,36 @@
+targetted_decisions = {
+	2trainapprentice = {
+		
+		ai_target_filter  = dynasty
+		filter = sub_realm
+	
+		from_potential = {
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		NOT = { has_character_flag = appentice } 
+		NOT = { character = FROM}
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+			save_event_target_as = apprentice			
+
+			set_character_flag = apprentice
+			FROM = {
+			character_event = {id = apprentice.1}			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

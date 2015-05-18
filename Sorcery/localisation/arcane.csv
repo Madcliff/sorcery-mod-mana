@@ -1,0 +1,516 @@
+manacheck;Mana Check.;;;;;;;;x
+manacheck_desc;Check your mana level;;;;;;;;x
+Time_Boost;Transform Time;;;;;;;;x
+Time_Boost_desc;Move your province beyond time;;;;;;;;x
+2makeconduit;Make Magical Conduit;;;;;;;;x
+2makeconduit_desc;Make the target a conduit of your magic;;;;;;;;x
+2magicmeditation_decision;Magic Meditation;x
+2magicmeditation_decision_desc;Focus your magics extending infinitely the range of your powers;x
+
+2attribte_ritual_request_decision;Request attribute ritual;x
+2attribte_ritual_request_decision_desc;Request attribute ritual;x
+2attribte_request_War_Mage_trait_decision;Request gift of warfare trait;x
+2attribte_request_War_Mage_trait_decision_desc;Gift trait of warfare;x
+
+2attribte_War_Mage_trait_decision;Military Trait: Gift of Knowledge;;;;;;;;x
+2attribte_War_Mage_trait_decision_desc;This Spell will confer a leadership trait of your choice to the target;;;;;;;;x
+
+
+militarytrait.1a;Unyielding Leader, Flanker, Narrow Flank Leader;;;;;;;;x
+militarytrait.1b;Trickster, Organizer, Expermenter;;;;;;;;x
+militarytrait.1c;Siege Leader, Aggressive Leader, Defensive Leader;;;;;;;;x
+militarytrait.1d;Next Page;;;;;;;;x
+militarytrait.1d_desc;;;;;;;;x
+militarytrait.5a;Winter Soldier, Jungle Terrain Leader, Holy Warrior.;;;;;;;;x
+militarytrait.5b;Heavy Infantry Leader, Light Foot Leader, Cavalry Leader;;;;;;;;x
+militarytrait.5c;Mountain Terrain Leader, Rough Terrain Leader, Flat Terrain Leader;;;;;;;;x
+militarytrait.5d;Inspiring Leader, Desert Terrain Leader, War Elephant Leader;;;;;;;;x
+
+militarytrait.2a;Unyielding Leader;;;;;;;;x
+militarytrait.2b;Flanker;;;;;;;;x
+militarytrait.2c;Narrow Flank Leader;;;;;;;;x
+militarytrait.3a;Trickster;;;;;;;;x
+militarytrait.3b;Organizer;;;;;;;;x
+militarytrait.3c;Expermenter;;;;;;;;x
+militarytrait.4a;Siege Leader;;;;;;;;x
+militarytrait.4b;Aggressive Leader;;;;;;;;x
+militarytrait.4c;Defensive;;;;;;;;x
+militarytrait.6a;Winter Soldier;;;;;;;;x
+militarytrait.6b;Jungle Terrain Leader;;;;;;;;x
+militarytrait.6c;Holy Warrior;;;;;;;;x
+militarytrait.7a;Heavy Infantry Leader;;;;;;;;x
+militarytrait.7b;Light Foot Leader;;;;;;;;x
+militarytrait.7c;Cavalry Leader;;;;;;;;x
+militarytrait.8a;Mountain Terrain Leader;;;;;;;;x
+militarytrait.8b;Rough Terrain Leader;;;;;;;;x
+militarytrait.8c;Flat Terrain Leader;;;;;;;;x
+militarytrait.9a;Inspiring Leader;;;;;;;;x
+militarytrait.9b;Desert Terrain Leader;;;;;;;;x
+militarytrait.9c;War Elephant Leader;;;;;;;;x
+
+Claim_Mastery;Claim Mastery.;;;;;;;;x
+Claim_Mastery_desc;Claim your mastery of the arts of magic and become the sorcerer.;;;;;;;;x
+spell_book_close;Close Spell Book;;;;;;;;x
+spell_book_close_desc;Close your spell book;;;;;;;;x
+spell_book_open;Open Spell Book;;;;;;;;x
+spell_book_open_desc;Open your Spell Book;;;;;;x
+
+1possession_decision;Curse of Possession;;;;;;x 
+1possession_decision_desc;By casting this curse you inflict your enemy with a horde of demons and terror at the sight of the moon;;;;;;x
+possessionspell.1;Possession;;;;;;x
+possessionspell.1_desc;By drawing forth your powers you enter the mind of your target, being free to inflict whatever harm it is you wish upon their mental disposition.;;;;;;x
+possessionspell.1a;Lunacy!;;;;;;x
+possessionspell.1a_desc;Your magic bends the very corners of their mind, leaving them thinking of laws of pants;;;;;;x
+possessionspell.1b;Possessed!;;;;;;x
+possessionspell.1b_desc;You invite daemons of hell to inhabit your target, driving them into the insanity of possession;;;;;;x
+possessionspell.1c;Stressed;;;;;;x
+possessionspell.1c_desc;Your magic strains the thoughts of the target, cracking their ability to think and reducing their strength to endure.;;;;;;x
+possessionspell.1d;Depressed;;;;;;x
+possessionspell.1d_desc;You invite depression upon your victim, perhaps they shall take their life;;;;;;x
+
+1mind_control_decision;Curse of Mind Control;;;;;;x
+1mind_control_decision_desc;By wielding the arcane arts you are able to take from others their very ability to choose to oppose you.;;;;;;x
+
+1sorcerous_plague_decision;Curse of Plague;;;;;;x
+1sorcerous_plague_decision_desc;Unleash the forces of disease and pestilence to destroy your enemies.;;;;;;x
+
+plagues.1;Plagues;;;;;;x
+plagues.1_desc;Use your magic to inflict an ailment unto your target, with the potential to additionally cause the onset of the dreaded plague.;;;;;;x
+plagues.1a;Tuberculosis;;;;;;x
+plagues.1a_desc;Let lose an infection of the lungs;;;;;;x
+plagues.1b;Small Pox;;;;;;x
+plagues.1b_desc;Let Small Pox devestate your people;;;;;;x
+plagues.1c;Typhus;;;;;;x
+plagues.1c_desc;Typhus shall take yee;;;;;;x
+plagues.1d;Leprosy;;;;;;x
+plagues.1d_desc;May yee have no legs to stand on;;;;;;x
+
+2immortality_gift_decision;Gift of Eternity;;;;;;x
+2immortality_gift_decision_desc;For those who master the arts of the arcane even the gift of eternal life is possible.;;;;;;x
+2Heal_others_decision;Healing Touch;;;;;;x
+2Heal_others_decision_desc;For those who play with life and death the giving of health is but a trifle;;;;;;x 
+
+
+3vassal_sacrifice_sorcery_decision;Sacrifice;;;;;;x
+3vassal_sacrifice_sorcery_decision_desc;Sorcery is fueled by your life energies. To ensure your own survival you will need to ritually sacrifice others to fuel your unholy powers;;;;;;x
+4Sorcery_teach_decision;Teach Sorcery;;;;;;x
+4Sorcery_teach_decision_desc;Sorcery is an arcane power learned from the foot of a master. Teach an acolyte your arts!;;;;;;x
+
+0spell_Immortal;*Claim Immortality;;;;;;x
+0spell_Immortal_desc;By sacrificing your vitality you can live till the end of time itself.;;;;;;x
+1spell_foresight;*Foresight Spell;;;;;;x
+1spell_foresight_desc;Cast a spell and know all that moves within your realm.;;;;;;x
+2spell_money;*Transmute Gold;;;;;;x
+2spell_money_desc;By sacrificing your life you gain in gold;;;;;;x
+3spell_create_general;*Summon General;;;;;;x
+3spell_create_general_desc;By giving of your life energy you call to your realm a mighty general;;;;;;x
+4spell_heal;*Heal Self;;;;;;x
+4spell_heal_desc;To heal yourself is well within your grasp;;;;;;x
+4spell_ritual;*Ritual of Mind and Body;;;;;;x
+4spell_ritual_desc;Boost your mind and body to the best you could become;;;;;;x
+5spell_boost_martial;*Boost Martial;;;;;;x
+5spell_boost_martial_desc;The loss of some vitality for the sake of martial competence is a small price to pay for some.;;;;;;x
+5spell_boost_diplomacy;*Boost Diplomacy;;;;;;x
+5spell_boost_diplomacy_desc;The loss of some vitality for the sake of diplomatic competence is a small price to pay for some.;;;;;;x
+5spell_boost_intrigue;*Boost Intrigue;;;;;;x
+5spell_boost_intrigue_desc;The loss of some vitality for the sake of increasing your skills in espionage is a small price to pay for some.;;;;;;x
+5spell_boost_stewardship;*Boost Stewardship;;;;;;x
+5spell_boost_stewardship_desc;The loss of some vitality for the sake of stewarding competence is a small price to pay for some.;;;;;;x
+5spell_boost_learning;*Boost Learning;;;;;;x
+5spell_boost_learning_desc;The loss of some vitality for the sake of intellectual competence is a small price to pay for some.;;;;;;x
+5spell_boost_health;*Boost Health;;;;;;x
+5spell_boost_health_desc;Filthy Cheater;;;;;;x
+
+2requestHeal_decision;Request Healing.;;;;;;x
+2requestHeal_decision_desc;Your subject is a master of healing, call upon them to heal your ailments!;;;;;;x
+
+
+
+healspell.1;Healing Magic Unleashed.;;;;;;x
+healspell.1_desc;My magic flows through my body unkniting old harms and restoring my battered form;;;;;;x
+healspell.1a;Purge Deformity!;;;;;;x
+healspell.1b;Purge Disease!;;;;;;x
+healspell.1c;Pure Magic!;;;;;;x
+
+ritual.1;Ritual of Self Empowerment;;;;;;x
+ritual.1_desc;An arcane rite which empowers the caster to the limits of human capabaility.;;;;;;x
+ritual.1a;UNLIMITED POWER!;;;;;;x
+
+5spell_boost_stats;*Attribute Empowerment;;;;;;x
+5spell_boost_stats_desc;Empower your attributes and become whatever you wish to become;;;;;;x
+
+statsritual.1;Empowerment Ritual(stats);;;;;;x
+statsritual.2;Empowerment Ritual(stats);;;;;;x
+statsritual.1_desc;By calling forth your life energies you empower your characteristics as you so desire.;;;;;;x
+statsritual.1a;Martial;;;;;;x
+statsritual.1b;Diplomacy;;;;;;x
+statsritual.1c;Intrigue;;;;;;x
+statsritual1;Martial, Diplomacy or Intrigue;;;;;;x
+statsritual2; Stewardship or Learning;;;;;;x
+statsritual.1d;Stewardship;;;;;;x
+statsritual.1e;Learning;;;;;;x
+
+1spell_precognition;*Precognition;;;;;;x
+1spell_precognition_desc;Look into the vastness of the ether and find the knowledge to save you now;;;;;;x
+precognition.1;Precognition;;;;;;x
+precognition.1_desc;Gazing deep into the future, you seek to find secrets that will make the future the present. But beware, madness comes to those who gaze too long or too deep.;;;;;;x
+precognition.1a;Advance Economy;;;;;;x
+precognition.1b;Advance Military;;;;;;x
+precognition.1c;Advance Culture;;;;;;x 
+
+
+
+1reincarnation_decision;Incarnation;;;;;;x
+1reincarnation_decision_desc;Targeting a victim who is under the age of 20, and suffering the possessed trait, leave your old life and body behind and live anew in a new form!;;;;;;x
+
+immortalspell.1;Immortality;;;;;;x
+immortalspell.1_desc;By calling forth the binding forces of life and death you can live now till the world itself breaks asunder;;;;;;x
+immortalspell.1a;I shall live till the end of time!;;;;;;x
+
+fp_Sorcerers_tower;Sorcerer's Palace;;;;;;x
+fp_Sorcerers_tower_desc;Even the most hardworking Sorcerer needs somewhere to relax after the hard days of managing their estates.;;;;;;x
+ca_Sorcerers_tower;Sorcerer's Fortress;;;;;;x
+ca_Sorcerers_tower_desc;When the unenlightened come bashing on your doors it is time to prepare yourself for the worst, retreat to your fortress and muster your forces;;;;;;x
+ct_Sorcerers_tower;Sorcerer's Tower;;;;;;x
+ct_Sorcerers_tower_desc;What is a Sorcerer without his trademark tower to dwell in by the sea?;;;;;;x
+ca_Sorcerers_hovel;Sorceror's Fort;;;;;;x
+ca_Sorcerers_hovel_desc;A small fortress prepared for all the needs of the hidden sorceror.;;;;;;x
+ct_Sorcerers_manor;Sorceror's Manor;;;;;;x
+ct_Sorcerers_manor_desc;When world domination can take a back seat, this noble manor provides your sorceror with some well earned relaxation.;;;;;;x
+Sorcerers_outpost; Sorceror's Outpost;;;;;;x
+Sorcerers_outpost_desc;A small overseas enclave to help your Sorcerer to sell his wares;;;;;;x
+
+2ritual_of_mind_and_body_decision;Ritual of Mind and Body;;;;;;x
+2ritual_of_mind_and_body_decision_desc;Improve the body and mind of the target.;;;;;;x 
+
+2Foresight_reveal_decision;Foresight!;;;;;;x
+2Foresight_reveal_decision_desc;Look into the ether and see what plots are stirring.;;;;;;x
+foresight.1;Foresight!;;;;;;x
+foresight.1_desc;By reaching deep into the ether ancient magics have pierced all plots that rise against you!;;;;;;x
+foresight.1a;Reveal all that moves in the land!;;;;;;x
+
+2attribte_ritual_decision;Attribute Ritual;;;;;;x
+2attribte_ritual_decision_desc;Let the stats of your target increase!;;;;;;x
+2precognition_decision;Precongition;;;;;;x 
+2precognition_decision_desc;Let the target see what lies in the future for them!;;;;;;x 
+2transmute_decision;Transmute life!;;;;;;x
+2transmute_decision_desc;Convert life into gold for the target;;;;;;x
+transmute.1;Transmutation!;;;;;;x
+transmute.1_desc;Magic flows and burns as it converts life itself into blocks of gold!;;;;;;x
+transmute.1a;MONEY MONEY MONEY!;;;;;;x
+
+2Summon_General_decision;Summon General;;;;;;x
+2Summon_General_decision_desc;Summon a mighty General;;;;;;x
+general.1;Summon General;;;;;;x
+general.1_desc;By sacrificing your life energies you call upon the winds of magic to bring to you a great general, to hold back the tide of your enemies.;;;;;;x
+general.1a;By Caesar!;;;;;;x
+
+
+explore_library;Explore the Libraries of the world;;;;;;x
+explore_library_desc;Secrets long lost to the world can be found in the darkest corners;;;;;;x
+sorceryfocus.1;The search begins.;;;;;;x
+sorceryfocus.1_desc;Your lust for the arcane secrets long lost to the passage of the time has brought you to an ancient library... Perhaps in here you will find the answers you so desperately seek.;;;;;;x 
+sorceryfocus.1a;Ah these books on Herbalism!;;;;;;x
+sorceryfocus.1b;Ah these books on Alchemy!;;;;;;x
+sorceryfocus.1c;Ah these books on Mentalism!;;;;;;x
+sorceryfocus.1d;Ah these books on War Magic!;;;;;;x
+
+sorceryfocus.2;Eureka!;;;;;;x
+sorceryfocus.2_desc;Your long tireless search has revealed to you a long ignored tome. It's symbols seem to glow with arcane powers, and just looking at it you can feel your mind begin to break, but you have come to far, and the cost must be worth the gain?!;;;;;;x
+sorceryfocus.2a;Embrace lunacy and claim your power!;;;;;;x
+sorceryfocus.2b;Invite the spirits to show you the way;;;;;;x
+sorceryfocus.2c;Let your body whither so your mind may transcend.;;;;;;x
+sorceryfocus.2d;Invite death and pluck the secrets from the ether.;;;;;;x
+
+
+sorceryfocus.3;Eureka!;;;;;;x
+sorceryfocus.3_desc;Your long tireless search has revealed to you a long ignored tome. It's symbols seem to glow with arcane powers, and just looking at it you can feel your mind begin to break, but you have come to far, and the cost must be worth the gain?!;;;;;;x
+sorceryfocus.3a;Embrace lunacy and claim your power!;;;;;;x
+sorceryfocus.3b;Invite the spirits to show you the way;;;;;;x
+sorceryfocus.3c;Let your body whither so your mind may transcend.;;;;;;x
+sorceryfocus.3d;Invite death and pluck the secrets from the ether.;;;;;;x
+
+
+sorceryfocus.4;Eureka!;;;;;;x
+sorceryfocus.4_desc;Your long tireless search has revealed to you a long ignored tome. It's symbols seem to glow with arcane powers, and just looking at it you can feel your mind begin to break, but you have come to far, and the cost must be worth the gain?!;;;;;;x
+sorceryfocus.4a;Embrace lunacy and claim your power!;;;;;;x
+sorceryfocus.4b;Invite the spirits to show you the way;;;;;;x
+sorceryfocus.4c;Let your body whither so your mind may transcend.;;;;;;x
+sorceryfocus.4d;Invite death and pluck the secrets from the ether.;;;;;;x
+
+
+sorceryfocus.5;Eureka!;;;;;;x
+sorceryfocus.5_desc;Your long tireless search has revealed to you a long ignored tome. It's symbols seem to glow with arcane powers, and just looking at it you can feel your mind begin to break, but you have come to far, and the cost must be worth the gain?!;;;;;;x
+sorceryfocus.5a;Embrace lunacy and claim your power!;;;;;;x
+sorceryfocus.5b;Invite the spirits to show you the way;;;;;;x
+sorceryfocus.5c;Let your body whither so your mind may transcend.;;;;;;x
+sorceryfocus.5d;Invite death and pluck the secrets from the ether.;;;;;;x
+
+sorceryfocus.10;Sorcerer!;;;;;;x
+sorceryfocus.10_desc;Your mastery of the arcane knows no equal, claim your rightful title;;;;;;x
+sorceryfocus.10a;Embrace lunacy and claim your power!;;;;;;x
+sorceryfocus.10b;Invite the spirits to show you the way;;;;;;x
+sorceryfocus.10c;Let your body whither so your mind may transcend.;;;;;;x
+sorceryfocus.10d;Invite death and pluck the secrets from the ether.;;;;;;x
+
+2summon_undead;Summon the Undead;;;;;;x
+2summon_undead_desc;Conture the hordes of the damned to fight your wars.;;;;;;x
+skeleton.1;THE DEAD AWAKE!;;;;;;x
+skeleton.1_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.1a;The dead march to war!;;;;;;x
+skeleton.2;THE DAEMONS AWAKE!;;;;;;x
+skeleton.2_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.2a;The dead march to war!;;;;;;x
+skeleton.3;THE DREADKNIGHTS AWAKE!;;;;;;x
+skeleton.3_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.3a;The dead march to war!;;;;;;x
+
+1magic_kill_decision;Curse of Death;;;;;;x
+1magic_kill_decision_desc;For one who plays with the forces of life, even the taking of life is within your grasp.;;;;;;x
+magickill.1;MAGIC IS MIGHT!;;;;;;x
+magickill.1_desc;Lashing out with raw magical fire, you strike visciously at your enemy seeking to destroy them completely. As your energies slowly begin to ebb, you feel the rush of bloodlust subside, while the success of your brutal assault is unclear in the smoking ruins of the abode, one thing is certain, the effects of this attack will undoubtedly leave a mark.;;;;;;x
+magickill.1a;WITH FIRE AND BLOOD!;;;;;;x
+magickill.1b;WITH FIRE AND BLOOD!;;;;;;x
+magickill.2;They Survived!;;;;;;x
+magickill.2_desc;Your foe has been hideously wounded, if your eyes do not decieve you they had even suffered having their eyes boiled from their skulls. Even though they have survived, you have left them bearing forever the irremovable marks of your fury, they shall never again blight your sight, if they are lucky.;;;;;;x
+magickill.2a;The curr flees, but I guess it has not all been for naught.;;;;;;x
+
+
+1broken_mindandbody_decision;Curse of the Broken;;;;;;x
+1broken_mindandbody_decision_desc;By conjuring forth the forces of chaos you wrack your targets body with deformities.;;;;;;x
+brokenmindbody.1;LET YEE BE DAMNED AND BROKEN!;;;;;;x
+brokenmindbody.1_desc;Your long studies have taught you many ways to shatter the inferior being whom has raised your ire. You decide however, that rather than simply ending their existence, you will introduce to them suffering beyond their worst imaginings. You shall break their mind and their body, and leave the husk to simply wither!;;;;;;x
+brokenmindbody.1a;Dwarf!;;;;;;x 
+brokenmindbody.1a_desc;Inflict the curse of dwarfness on your foe;;;;;;x
+brokenmindbody.1b;Weak!;;;;;;x
+brokenmindbody.1b_desc;Strike down your foe with physical weakness;;;;;;x
+brokenmindbody.1c;Infirm!;;;;;;x
+brokenmindbody.1c_desc;Make your enemy feel the burdens of age, strike with infirmity;;;;;;x
+brokenmindbody.1d;Hunchback!;;;;;;x
+brokenmindbody.1d_desc;Make your foe cave over in pain, make them a hunchback.;;;;;;x
+
+1Whispers_of_damned_decision;Curse of the Damned;;;;;;x
+1Whispers_of_damned_decision_desc;You curse your enemy to suffer the fate of the hated.;;;;;;x
+whispersdamned.1;May your friends and lovers become your most bitter enemies.;;;;;;x
+whispersdamned.1_desc;Calling on your mastery of the most delicate of the magical arts, you let your powers run wild, bringing nothing but dispar to the mind of your victim, as they slowly and surely lose all those they once named friend and family.;;;;;;x
+whispersdamned.1a;And now you shall know what it is to be alone;;;;;;x
+
+2trainapprentice;Train an Apprentice;;;;;;x
+2trainapprentice_desc;As an acknowledged master of all the arts of magic, it falls within your gift to take and train an apprentice.;;;;;;x
+apprentice.1;An Appprentice emerges!;;;;;;x 
+apprentice.1_desc;After many long hours, you have finally managed to beat the secrets of the arcane into your chosen students head. What they shall do with their limited understanding of the mystical arts is up to them, but now is the moment to choose what you shall give advanced instruction to them in.;;;;;;x
+apprentice.1a;Herbalism is the path they shall follow!;;;;;;x
+apprentice.1b;Alchemy is the path they shall follow!;;;;;;x
+apprentice.1c;Mentalism and Illusion is the path they shall follow!;;;;;;x
+apprentice.1d;The arts of war shall be the path they shall follow!;;;;;;x
+
+field_of_fire_targeted_decision;Field of Fire;;;;;;x
+field_of_fire_targeted_decision_desc;Unleash your fury in a field of fire!;;;;;;x
+fieldoffire.1;And the earth ran red with fire and blood;;;;;;x
+fieldoffire.1_desc;Your magics are supreme, and war is your essence. Calling upon your arcane energies you marshal yourself for a great showing of power. Be prepared, that such an action shall strike awe into all the world, but that is your legacy, of fire and of blood;;;;;;x
+fieldoffire.1a;BURN YOU BASTARDS, BURNNN!;;;;;;x
+fieldoffire.1a_desc;Unleash your terrible magics and watch your enemies become as glass;;;;;;x
+fieldoffire.1b;No, I shall be gracious;;;;;;x
+fieldoffire.1b_desc;You let those insignificant fools live, for right now they are not worth it.;;;;;;x
+1firestorm_siege_targeted_decision;Siege of Fire;;;;;;x
+1firestorm_siege_targeted_decision_desc;Obliterate your enemies within their own castle;;;;;;x
+
+siegeoffire.1;Siege of Fire!;;;;;;x
+siegeoffire.1_desc;You conjure forth your hellfires and let them rage against the enemy castle. This bulwark shall be their tomb;;;;;;x
+siegeoffire.1a;And may hell take you all close to her bosom!;;;;;;x
+siegeoffire.1a_desc;Your rage knows no limits, your power is supreme, you call upon the fires of sorcery to obliterate all who stand before you.;;;;;;x
+siegeoffire.1b;Mercy, I shall have mercy;;;;;;x
+siegeoffire.1b_desc;You show mercy upon the poor souls within the castle.;;;;;;x
+
+
+
+
+
+2Heal_others_request_decision;Healing Touch (Herbalist);;;;;;x
+2Heal_others_request_decision_desc;Heal others by commanding your Herbalist to restore them;;;;;;x
+1sorcerous_plague_request_decision;Curse of Plague(Herbalist);;;;;;x
+1sorcerous_plague_request_decision_desc;Unleash the curse of plagues with this horrid spell;;;;;;x
+2ritual_of_mind_and_body_request_decision;Ritual of Mind and Body(Herbalist);;;;;;x
+2ritual_of_mind_and_body_request_decision_desc;Command your Herbalist to empower another;;;;;;x
+
+1mind_control_request_decision;Curse of Mind Control(Mentalist);;;;;;x
+1mind_control_request_decision_desc;Control the minds of others through your Mentalist;;;;;;x
+1possession_request_decision;Curse of Possession(Mentalist);;;;;;x
+1possession_request_decision_desc;Curse others with a possession through your Mentalist;;;;;;x
+1Whispers_of_damned_request_decision;Cast Whispers of the Damned(pet wizard);;;;;;x
+1Whispers_of_damned_request_decision_desc;You order your subject wizard to unleash the dark whispers;;;;;;x
+
+
+2transmute_request_decision;Transmute Life(Alchemist);;;;;;x
+2transmute_request_decision_desc;Command your alchemist to sacrifice their life force to give you gold;;;;;;x
+2attribte_ritual__request_decision;Attribute Ritual(Alchemist);;;;;;x
+2attribte_ritual__request_decision_desc;Command your alchemist to boost the attributes of the target;;;;;;x
+1broken_mindandbody_request_decision;Transmute Body(Alchemist);;;;;;x
+1broken_mindandbody_request_decision_desc;Command your alchemist to transmute and deform the body of your enemy;;;;;;x
+
+1magic_kill_request_decision;Curse of Death(War Mage);;;;;;x
+1magic_kill_request_decision_desc;Command your War Mage to attack the target;;;;;;x
+
+
+1requestfirestorm_siege_targeted_decision;Siege of Fire (War Mage);;;;;;x
+1requestfirestorm_siege_targeted_decision_desc;Command your war mage to unleash a siege of fire on the target;;;;;;x
+siegeoffire.2;The fires of War;;;;;;x
+siegeoffire.2_desc;Your War Mage has long prepared the fires that he is about to unleash. These the very pinnacle of his sorcery, straining against his faculties of control. Are you truly prepared to have such slaughter done in your name?;;;;;;x 
+#siegeoffire.2a;Wipe them out, All of them!;;;;;;x
+#siegeoffire.2a_desc;It is better for them all to die, every last one of them.;;;;;;x
+#siegeoffire.2b;NO!;;;;;;x
+#siegeoffire.2b_desc;I shall not let my servant become the monster;;;;;;x
+field_of_fire_req_targeted_decison;Field of Fire (War Mage);;;;;;x
+field_of_fire_req_targeted_decison_desc;Command your War Mage to obliterate armies in a rain of hellish fire;;;;;;x
+fieldoffire.2;Fields of Fire;;;;;;x
+fieldoffire.2_desc;Your War Mage at your direction has marshalled forth their power, preparing to smite your enemies, shall you have them use the forces of the damned?.;;;;;;x
+fieldoffire.2a; Burn them, BURN THEM ALL!;;;;;;x
+fieldoffire.2a_desc;The fires shall run free and the world shall burn;;;;;;x
+fieldoffire.2b;NO!;;;;;;x
+fieldoffire.2b_desc;Let them live;;;;;;x
+
+magic_shield;Magic Shield;;;;;;x
+Sorcery;Sorcerer;;;;;;x
+Mentalist;Mentalist;;;;;;x
+Alchemist;Alchemist;;;;;;x
+Herbalist;Herbalist;;;;;;x
+War_Mage;War Mage;;;;;;x
+Sorcery_desc;Sorcerer;;;;;;x
+Mentalist_desc;Mentalist;;;;;;x
+Alchemist_desc;Alchemist;;;;;;x
+Herbalist_desc;Herbalist;;;;;;x
+War_Mage_desc;War Mage;;;;;;x
+2magicshield_decision;Magic Shield;;;;;;x
+2magicshield_decision_desc;A shield of magic that prevents harmful spells;;;;;;x
+
+magic_subjugation_descison;Magical Subjugation Ritual.;x
+magic_subjugation_descison_desc;Using your magic you restrain the violent impulses of the populace of the province, leaving them less likely to rebel.;x
+magic_subjugation;Magical Subjugation;x
+magic_subjugation_desc;This province is pacified with magic;x
+
+time_transliteraation;Time Transliteration Ritual.;x
+time_transliteraation_desc;Focusing your magics you take your province outside the flow of time, making the building of holdings instantaneous.;x
+magic_time;Magic Time;x
+magic_time_desc;Time is faster here;x
+
+
+magic_devestation_descison;Magic Devestation Ritual.;x
+magic_devestation_descison_desc;Devestate the province you are in, inflicting lasting harm.;x
+magic_devestation;Magic Devestation;x
+magic_devestation_desc;Magic Devestation;x
+
+magic_preparation_descison;Magic Preparation Ritual;x
+magic_preparation_descison_desc;Use your magics to make the lands more fertile, increasing your ability to muster your forces in this province;x
+magic_preparation;Magic Preparation;x
+magic_preparation_desc;Magic Preparation;x
+
+magic_illusion_descison;Magic Illusion Ritual;x
+magic_illusion_descison_desc;Using your magics you shrowd yourself in illusions, making your plot power double what it would otherwise be.;x
+magic_illusion;Illusion Magic;x
+magic_illusion_desc;Illusion Magics;x
+
+magic_awareness_descison;Magic Awareness Ritual;x
+magic_awareness_descison_desc;Using your magics you greatly increase your ability to forsee impending plots.;x
+magic_awareness;Magic Awareness;x
+magic_awareness_desc;Magic Awareness;x
+
+1mind_illusion_decision;Mental Manipulation;x
+1mind_illusion_decision_desc;Use your magices to alter the minds of the world to see things your way.;x
+mindillusionspell.1;Mental Manipulation;x
+mindillusionspell.1_desc; Your magics flare binding all those to the image within your mind, your actions are now rightful no matter what the truth of the matter is.;x
+mindillusionspell.1a;Add Claim;x
+mindillusionspell.1b;Revoke Title;x
+mindillusionspell.1c;Execute;x
+mindillusionspell.1d;Banish;x
+magic_power;Mana;;;;;;;;;;;;;x;;
+mana_loc;[Root.magic_power.GetName] value is : [Root.magic_power.GetValue].;;;;;;;;;;;;;x;;
+
+spellcost.1;Spell Cost;x
+spellcost.1_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.1a;Health;x
+spellcost.1b;MANA!;x
+spellcost.1c;Prisoners;x
+
+spellcost.2;Spell Cost;x
+spellcost.2_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.2a;Mana;x
+spellcost.2b;Health!;x
+spellcost.2c;Prisoners;x
+
+spellcost.3;Spell Cost;x
+spellcost.3_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.3a;Mana;x
+spellcost.3b;Health!;x
+spellcost.3c;Prisoners;x
+
+spellcost.4;Spell Cost;x
+spellcost.4_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.4a;Mana;x
+spellcost.4b;Health!;x
+spellcost.4c;Prisoners;x
+
+spellcost.5;Spell Cost;x
+spellcost.5_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.5a;Mana;x
+spellcost.5b;Health!;x
+spellcost.5c;Prisoners;x
+
+spellcost.10;Spell Cost;x
+spellcost.10_desc;Your arcane energies are burning the air around you, and now it is time for you to decide how you wish to pay the cost of your powers, will it be by the mystical energies of your body, or your vitality or perhaps like a master of the darkness you shall use the life force of those at your mercy...;x
+spellcost.10a;Mana;x
+spellcost.10b;Health!;x
+spellcost.10c;Prisoners;x
+
+
+obj_study_magic_title;Master the secrets of the arcane.;x
+obj_study_magic_desc;You are dedicated towards the study and mastery of arcane and hidden secrets, your life will have no meaning till all things are revealed to you.;x
+
+
+sorceryobj.1;War Magic;x
+sorceryobj.1_desc;In your pursuit of ancient and hidden secrets you have stumbled upon the secrets of the magic of War. When you let your powers run they can bring ruin to entire armies;x
+sorceryobj.1a;MAGIC IS MIGHT!;x
+
+sorceryobj.11;Your studies deepen.;x
+sorceryobj.11_desc;You have survived the horrendeous terrors of delving into the secrets of war magic. Now you may claim the title War Mage!;x
+sorceryobj.11a;MAGIC IS MIGHT;x
+
+sorceryobj.2;Alchemy;x
+sorceryobj.2_desc;Your lust for the secrets of yore have led you to an ancient library. Within this dusty repository of lost lore, you have found the secrets of the ancient masters. Now not even immortality is beyond your grasp, for you have found the secrets of Alchemy!;x
+sorceryobj.2a;For the exchange of equivalency!;x
+
+sorceryobj.21;Your studies deepen. 
+sorceryobj.21_desc;YOu have spent untold hours searching for the secrets of unmaking and remaking the fundamental elements of life. After your long studies it has gone within your grasp, eternity is yours if you shall but take it.;x
+sorceryobj.21a;Life and riches are power beyond all else;x
+
+sorceryobj.3;Herbalism.;x
+sorceryobj.3_desc;Your studies in the creation of potions and the manipulation of the energies of life have begun to pay off. With your many years searching for the secrets of life you have learned not just how to heal, but how to harm.;x
+sorceryobj.3a;By wisdom I shall rule with life.;x
+
+sorceryobj.31;Your studies deepen.;x
+sorceryobj.31_desc;Your mastery of the arts of healing have led you now to the title of the Herbalist. Your skills in the manipulation of life and death and disease are now rarely equalled by those still living.;x
+sorceryobj.31a;Life if power and strength.;x
+
+sorceryobj.4;Mentalism;x
+sorceryobj.4_desc;In your many years of reading you have come to learn the mysteries of the soul and of the mind. It is now within your gift to rob others of their will but should you use it...
+sorceryobj.4a;Mind is the power of the world.;x
+
+sorceryobj.41;Your studies deepen;x
+sorceryobj.41_desc;You have survived your long journeys into the realm of the mind. Yours is now a world of thought and soul beyond the grasp of any other mortal. For yours is a power that transcends life, and transcends death, this is the secret of the mind, the manipulation of the world at the deepest level.;x
+sorceryobj.41a;Mind over Matter!;x
+
+sorceryobj.5;All Power and Glory are Yours!
+sorceryobj.5_desc;You have through hard work and many years of suffering managed to bring yourself to the very heights of power. You are now quite simply the Sorcerer, the master of magics arcane and common.;x
+sorceryobj.5a;GLORY BE MINE!;x
+
+sorceryobj.51;And now my rule shall last for eternity;x
+sorceryobj.51_desc;As a Sorcerer it is now within your power to do anything that you remotely desire. This is time of your reign, long may you rule, and may your enemies shudder in fear and terror at the thought of your powers;x
+sorceryobj.51a;MUAHAHAHA!;x
+
+sorceryobj.99;CURSES AND DAMNATION!;x
+sorceryobj.99_desc;Your experiments with the fickle energies of the ether have become your undoing. Alas it was, your quest for glory that sealed your fate.;x
+sorceryobj.999a;NOOOO!;x
+
+
+mana.2;Mana Rises;x
+mana.2_desc;Your magical energies have begun to increase;x
+mana.2a;Power;x

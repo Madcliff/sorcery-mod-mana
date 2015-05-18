@@ -1,0 +1,38 @@
+targetted_decisions = {
+	magic_devestation_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			location = { add_province_modifier = { name = magic_devestation duration = 720 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	}

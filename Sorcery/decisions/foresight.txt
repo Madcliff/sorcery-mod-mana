@@ -1,0 +1,39 @@
+targetted_decisions = {
+ 	2Foresight_reveal_decision = {
+			filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			is_playable = yes
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		character = FROM 
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+		
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = foresight.1 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

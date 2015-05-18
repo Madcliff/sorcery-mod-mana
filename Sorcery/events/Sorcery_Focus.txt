@@ -1,0 +1,299 @@
+namespace = sorceryfocus
+character_event = {
+	id = sorceryfocus.1
+	desc = sorceryfocus.1_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.1a
+#		limit = { not = {trait = Herbalist}}
+		hidden_tooltip = {		character_event = { id = sorceryfocus.2 days = 180 }} 	
+		set_character_flag = Searching_Library		
+	}
+	option = {
+		name = sorceryfocus.1b
+#		limit = { not = {trait = Alchemist}}
+		hidden_tooltip = {		character_event = { id = sorceryfocus.3 days = 180 }} 	
+		set_character_flag = Searching_Library		
+	}
+	option = {
+		name = sorceryfocus.1c
+#		limit = { not = {trait = Mentalist}}		
+		hidden_tooltip = {		character_event = { id = sorceryfocus.4 days = 180 }} 	
+		set_character_flag = Searching_Library		
+	}
+	option = {
+		name = sorceryfocus.1d
+#		limit = { not = {trait = War_Mage}}		
+		hidden_tooltip = {		character_event = { id = sorceryfocus.5 days = 180 }} 	
+		set_character_flag = Searching_Library		
+	}	
+}
+
+character_event = {
+	id = sorceryfocus.2
+	desc =sorceryfocus.2_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.2a		
+		add_trait = Herbalist
+		clr_character_flag = Searching_Library			
+		random = {
+		chance = 95
+		add_trait = lunatic
+			}
+		}
+	option = {		
+		name = sorceryfocus.2b		
+		add_trait = Herbalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = possessed
+			}
+		}
+	option = {	
+		name = sorceryfocus.2c		
+		add_trait = Herbalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 60
+		add_trait = infirm
+			}
+		}
+	option = {	
+		name = sorceryfocus.2d		
+		add_trait = Herbalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 15
+		death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+		}		
+	}
+	
+character_event = {
+	id = sorceryfocus.3
+	desc =sorceryfocus.3_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.3a			
+		add_trait = Alchemist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = lunatic
+			}
+		}
+	option = {		
+		name = sorceryfocus.3b		
+		add_trait = Alchemist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = possessed
+			}
+		}
+	option = {	
+		name = sorceryfocus.3c		
+		add_trait = Alchemist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 60
+		add_trait = infirm
+			}
+		}
+	option = {	
+		name = sorceryfocus.3d		
+		add_trait = Alchemist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 15
+		death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+		}		
+	}
+
+character_event = {
+	id = sorceryfocus.4
+	desc =sorceryfocus.4_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.4a		
+		add_trait = Mentalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = lunatic
+			}
+		}
+	option = {		
+		name = sorceryfocus.4b		
+		add_trait = Mentalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = possessed
+			}
+		}
+	option = {	
+		name = sorceryfocus.4c		
+		add_trait = Mentalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 60
+		add_trait = infirm
+			}
+		}
+	option = {	
+		name = sorceryfocus.4d		
+		add_trait = Mentalist
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 15
+		death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+		}		
+	}
+
+character_event = {
+	id = sorceryfocus.5
+	desc =sorceryfocus.5_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.5a		
+		add_trait = War_Mage
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = lunatic
+			}
+		}
+	option = {		
+		name = sorceryfocus.5b		
+		add_trait = War_Mage
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 95
+		add_trait = possessed
+			}
+		}
+	option = {	
+		name = sorceryfocus.5c		
+		add_trait = War_Mage
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 60
+		add_trait = infirm
+			}
+		}
+	option = {	
+		name = sorceryfocus.5d		
+		add_trait = War_Mage
+		clr_character_flag = Searching_Library				
+		random = {
+		chance = 15
+		death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+		}		
+	}
+
+character_event = {
+	id = sorceryfocus.10
+	desc =sorceryfocus.10_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	trigger = {
+		has_focus = focus_sorcery 
+		prisoner = no
+		NOT = { trait = incapable }
+	}
+	option = {
+		name = sorceryfocus.10a		
+		add_trait = Sorcery
+		random = {
+		chance = 95
+		add_trait = lunatic
+			}
+		}
+	option = {		
+		name = sorceryfocus.10b		
+		add_trait = Sorcery
+		random = {
+		chance = 95
+		add_trait = possessed
+			}
+		}
+	option = {	
+		name = sorceryfocus.10c		
+		add_trait = Sorcery
+		random = {
+		chance = 60
+		add_trait = infirm
+			}
+		}
+	option = {	
+		name = sorceryfocus.10d		
+		add_trait = Sorcery
+		random = {
+		chance = 15
+		death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+		}		
+	}	

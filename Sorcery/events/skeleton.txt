@@ -1,0 +1,113 @@
+namespace = skeleton
+character_event = {
+	id = skeleton.1
+	desc = skeleton.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	immediate = {
+#			add_character_modifier = {modifier = arcane_soldiers}	
+				}
+	option = {	
+		name = skeleton.1a			
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Skeletons = { 5000 5000 }		
+					}
+					attrition = 0.0
+					maintenance_multiplier = 0.0					
+					}	
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Skeletons = { 5000 5000 }							
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}					
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Skeletons = { 5000 5000 }		
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}		
+	
+					
+			}
+	option = {
+		name = skeleton.2a
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Daemons = { 200 200 }		
+					}
+					attrition = 0.0
+					maintenance_multiplier = 0.0					
+					}
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Daemons = { 200 200 }							
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						Daemons = { 200 200 }								
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}		
+			}
+	option = {
+		name = skeleton.3a					
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						DreadKnights = { 1000 1000 }							
+					}
+					attrition = 0.0
+					maintenance_multiplier = 0.0					
+					}	
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						DreadKnights = { 1000 1000 }								
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}			
+				spawn_unit = {
+					owner = ROOT
+					province = ROOT
+					home = ROOT
+					troops = {
+						DreadKnights = { 1000 1000 }							
+					}
+						attrition = 0.0
+						maintenance_multiplier = 0.0						
+					}	
+
+				}
+}

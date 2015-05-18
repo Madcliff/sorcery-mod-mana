@@ -1,0 +1,20 @@
+namespace = ritual
+character_event = {
+	id = ritual.1
+	desc = ritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+		
+		
+		option = {
+		name = ritual.1a	
+			add_trait = fair
+			add_trait = genius	
+			add_trait = strong
+			add_trait = unyielding_leader
+			add_trait = brave
+			add_trait = patient
+		}
+	}

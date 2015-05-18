@@ -1,0 +1,41 @@
+namespace = possessionspell
+character_event = {
+	id = possessionspell.1
+	desc = possessionspell.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = possessionspell.1a
+	
+		event_target:possessiontarget = {	
+			add_trait = lunatic
+			}
+			character_event = { id = spellcost.1 }				
+		}			
+	option = {
+			name = possessionspell.1b
+	
+		event_target:possessiontarget = {	
+			add_trait = possessed			
+		}
+			character_event = { id = spellcost.1 }			
+		}
+	option = {
+			name = possessionspell.1c
+	
+		event_target:possessiontarget = {	
+			add_trait = depressed
+			add_trait = stressed
+			}
+			character_event = { id = spellcost.1 }				
+		}
+	option = {
+			name = possessionspell.1d
+	
+		event_target:possessiontarget = {	
+			add_trait = imbecile
+			}
+			character_event = { id = spellcost.3 }		
+		}
+}

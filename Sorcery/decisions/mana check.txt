@@ -1,0 +1,32 @@
+targetted_decisions = {
+	manacheck = {
+	filter = self
+	ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }		
+			is_playable = yes
+			NOT = { trait = incapable }
+			OR = { trait = Sorcery trait = Alchemist trait = War_Mage trait = Mentalist trait = Herbalist}		
+			ai = no
+			}
+	
+		potential = {
+		character = FROM 		
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = mana.999 } }
+	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	}

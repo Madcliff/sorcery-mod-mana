@@ -1,0 +1,32 @@
+namespace = foresight
+character_event = {
+	id = foresight.1
+	desc = foresight.1_desc
+	picture = GFX_evt_spymaster
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = foresight.1a
+		any_realm_character = {
+			limit = {
+				NOT = { character = FROM }
+				OR = {
+					plot_target_char = { character = FROM }
+					plot_target_title = { owner = { character = FROM } }
+				}
+				OR = {
+					has_plot = plot_gain_title
+					has_plot = plot_kill_character
+					has_plot = plot_kill_spouse
+					has_plot = plot_weaken_fellow_vassal
+					has_plot = plot_gain_liege_title
+					has_plot = plot_gain_fellow_vassal_title
+				}
+			}
+			reveal_plot = yes
+		}
+#		change_variable = { which = "magic_power" value = -1 }
+#		health = -1	
+	}
+}

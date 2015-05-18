@@ -1,0 +1,26 @@
+namespace = precognition
+character_event = {
+	id = precognition.1
+	desc = precognition.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+
+		
+		option = {
+		name = precognition.1a	
+		economy_techpoints = 1500
+		}
+		option = {
+		name = precognition.1b	
+		military_techpoints = 1500
+		}
+		option = {
+		name = precognition.1c	
+		culture_techpoints = 1500	
+		}
+
+
+		
+}

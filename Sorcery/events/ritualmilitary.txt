@@ -1,0 +1,317 @@
+namespace = militarytrait
+character_event = {
+	id = militarytrait.1
+	desc = militarytrait.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+		
+		
+		option = {
+		name = militarytrait.1a	
+		character_event = { id = militarytrait.2 }
+		}
+		option = {
+		name = militarytrait.1b	
+		character_event = { id = militarytrait.3 }
+		}
+		option = {
+		name = militarytrait.1c	
+		character_event = { id = militarytrait.4 }
+		}
+		option = {
+		name = militarytrait.1d	
+		character_event = { id = militarytrait.5 }
+		}			
+	}
+	character_event = {
+	id = militarytrait.2
+	desc = statsritual.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.2a
+		event_target:militarytraittarget = {	
+			add_trait = unyielding_leader
+		}
+		}
+		option = {
+		name = militarytrait.2b
+		event_target:militarytraittarget = {			
+			add_trait = flanker
+		}
+		}
+		option = {
+		name = militarytrait.2c
+		event_target:militarytraittarget = {
+			add_trait = narrow_flank_leader
+		}
+		}
+		option = {
+		name = militarytrait.2d	
+		event_target:militarytraittarget = {
+		character_event = { id = militarytrait.1 }
+		}
+		}		
+}		
+
+ 
+ 
+ 
+
+
+	character_event = {
+	id = militarytrait.3
+	desc = militarytrait.3_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.3a
+		event_target:militarytraittarget = {
+			add_trait = trickster
+		}
+		}
+		option = {
+		name = militarytrait.3b
+		event_target:militarytraittarget = {
+			add_trait = organizer
+		}
+		}
+		option = {
+		name = militarytrait.3c
+		event_target:militarytraittarget = {
+			add_trait = experimenter
+		}
+		}
+		option = {
+		name = militarytrait.3d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+
+
+
+ 
+
+
+	character_event = {
+	id = militarytrait.4
+	desc = militarytrait.4_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.4a
+		event_target:militarytraittarget = {
+			add_trait = siege_leader
+		}
+		}
+		option = {
+		name = militarytrait.4b
+		event_target:militarytraittarget = {
+			add_trait = aggressive_leader
+		}
+		}
+		option = {
+		name = militarytrait.4c
+		event_target:militarytraittarget = {
+			add_trait = defensive_leader
+		}
+		}
+		option = {
+		name = militarytrait.4d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+
+character_event = {
+	id = militarytrait.5
+	desc = militarytrait.1_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+		
+		
+		option = {
+		name = militarytrait.5a	
+		character_event = { id = militarytrait.6 }
+		}
+		option = {
+		name = militarytrait.5b	
+		character_event = { id = militarytrait.7 }
+		}
+		option = {
+		name = militarytrait.5c	
+		character_event = { id = militarytrait.8 }
+		}
+		option = {
+		name = militarytrait.5d	
+		character_event = { id = militarytrait.9 }
+		}			
+	}
+	 
+ 
+
+
+
+	character_event = {
+	id = militarytrait.6
+	desc = militarytrait.6_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.6a
+		event_target:militarytraittarget = {
+			add_trait = winter_soldier
+		}
+		}
+		option = {
+		name = militarytrait.6b
+		event_target:militarytraittarget = {
+			add_trait = jungle_terrain_leader
+		}
+		}
+		option = {
+		name = militarytrait.6c
+		event_target:militarytraittarget = {
+			add_trait = holy_warrior
+		}
+		}
+		option = {
+		name = militarytrait.6d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+ 
+ 
+ 
+
+	character_event = {
+	id = militarytrait.7
+	desc = militarytrait.7_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.7a
+		event_target:militarytraittarget = {
+			add_trait = heavy_infantry_leader
+		}
+		}
+		option = {
+		name = militarytrait.7b
+		event_target:militarytraittarget = {
+			add_trait = light_foot_leader
+		}
+		}
+		option = {
+		name = militarytrait.7c
+		event_target:militarytraittarget = {
+			add_trait = cavalry_leader
+		}
+		}
+		option = {
+		name = militarytrait.7d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+
+	character_event = {
+	id = militarytrait.8
+	desc = militarytrait.8_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+
+ 
+
+			
+		option = {
+		name = militarytrait.8a
+		event_target:militarytraittarget = {
+			add_trait = mountain_terrain_leader
+		}
+		}
+		option = {
+		name = militarytrait.8b
+		event_target:militarytraittarget = {
+			add_trait = rough_terrain_leader
+		}
+		}
+		option = {
+		name = militarytrait.8c	
+		event_target:militarytraittarget = {
+			add_trait = flat_terrain_leader
+		}
+		}
+		option = {
+		name = militarytrait.8d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+
+	character_event = {
+	id = militarytrait.9
+	desc = militarytrait.9_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+
+			
+		option = {
+		name = militarytrait.9a
+		event_target:militarytraittarget = {
+			add_trait = inspiring_leader
+		}
+		}
+		option = {
+		name = militarytrait.9b
+		event_target:militarytraittarget = {
+			add_trait = desert_terrain_leader
+		}
+		}
+		option = {
+		name = militarytrait.9c
+		event_target:militarytraittarget = {
+			add_trait = war_elephant_leader
+		}
+		}
+		option = {
+		name = militarytrait.9d	
+		character_event = { id = militarytrait.1 }
+		}			
+}
+
+
+
+	
+
+
+
+
+
+
+
+ 
+ 
+ 	
+
+
+
+

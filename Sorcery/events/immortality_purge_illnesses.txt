@@ -1,0 +1,127 @@
+namespace = immortal_purge
+
+character_event = {
+	id = immortal_purge.2
+	desc = immortal_purge.2_desc
+	picture = GFX_evt_recovery
+    hide_window = yes
+	
+	trigger = {
+	trait = Undying
+	OR = {
+			trait = ill
+			trait = pneumonic
+			trait = syphilitic
+			trait = leper
+			trait = has_tuberculosis
+			trait = has_typhoid_fever
+			trait = has_typhus
+			trait = has_bubonic_plague
+			trait = has_measles
+			trait = has_small_pox
+			trait = has_aztec_disease
+			trait = wounded
+			trait = maimed
+			trait = infirm
+			trait = blinded
+			trait = eunuch		
+			trait = harelip
+			trait = hunchback
+			trait = lisp
+			trait = stutter
+			trait = ugly
+			trait = dwarf
+			trait = incapable 
+			trait = crippled 
+			trait = lunatic
+			trait = has_greyscale
+			trait = has_grey_plague 
+			trait = has_bloody_flux 
+			trait = has_pox 
+			trait = possessed 
+			trait =	stressed 	
+			trait =	depressed 
+			trait =	inbred 
+			trait =	blinded_age 	
+			trait = disfigured 
+			trait = has_red_death 
+			trait = crippled 
+			trait = has_pox
+			has_character_modifier = { modifier =  minor_disease_herpes }			
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+		
+		immediate= {
+		if = { limit = { trait = ill } remove_trait = ill }
+		if = { limit = { trait = pneumonic } remove_trait = pneumonic }
+		if = { limit = { trait = syphilitic } remove_trait = syphilitic }
+		if = { limit = { trait = leper } remove_trait = leper }
+		if = { limit = { trait = has_tuberculosis } remove_trait = has_tuberculosis }
+		if = { limit = { trait = has_typhoid_fever } remove_trait = has_typhoid_fever }
+		if = { limit = { trait = has_typhus } remove_trait = has_typhus }
+		if = { limit = { trait = has_bubonic_plague } remove_trait = has_bubonic_plague }
+		if = { limit = { trait = has_measles } remove_trait = has_measles }
+		if = { limit = { trait = has_small_pox } remove_trait = has_small_pox }
+		if = { limit = { trait = has_aztec_disease } remove_trait = has_aztec_disease }
+		if = { limit = { trait = wounded } remove_trait = wounded }
+		if = { limit = { trait = maimed } remove_trait = maimed }
+		if = { limit = { trait = infirm } remove_trait = infirm }
+		if = { limit = { trait = blinded } remove_trait = blinded }
+		if = { limit = { trait = eunuch } remove_trait = eunuch }
+		if = { limit = { trait = incapable } remove_trait = incapable }		
+		if = { limit = { trait = harelip } remove_trait = harelip }
+		if = { limit = { trait = hunchback } remove_trait = hunchback }
+		if = { limit = { trait = lisp } remove_trait = lisp }
+		if = { limit = { trait = stutter } remove_trait = stutter }
+		if = { limit = { trait = ugly } remove_trait = ugly }
+		if = { limit = { trait = dwarf } remove_trait = dwarf }
+		if = { limit = { trait = crippled } remove_trait = crippled }
+		if = { limit = { trait = lunatic} remove_trait = lunatic}
+		if = { limit = { trait = stressed } remove_trait = stressed }
+		if = { limit = { trait = possessed } remove_trait = possessed }
+		if = { limit = { trait = has_bloody_flux } remove_trait = has_bloody_flux }
+		if = { limit = { trait = has_grey_plague } remove_trait = has_grey_plague }
+		if = { limit = { trait = has_greyscale} remove_trait = has_greyscale}
+		if = { limit = { trait = depressed } remove_trait = depressed }
+		if = { limit = { trait = inbred } remove_trait = inbred }
+		if = { limit = { trait = blinded_age } remove_trait = blinded_age}
+		if = { limit = { trait = disfigured } remove_trait = disfigured }
+		if = { limit = { trait = has_red_death } remove_trait = has_red_death }
+		if = { limit = { trait = crippled } remove_trait = crippled }
+		if = { limit = { trait = has_pox} remove_trait = has_pox}
+ 
+
+		if = { limit = { trait = Whispers_of_the_Damned } remove_trait = Whispers_of_the_Damned}
+		if = { limit = { trait = mindcontrol_trait } remove_trait = mindcontrol_trait}
+		if = { limit = { has_opinion_modifier = opinion_mind_control } remove_opinion = opinion_mind_control }
+		if = { limit = { has_character_modifier = { modifier =  minor_disease_herpes } }  remove_character_modifier = { modifier = minor_disease_herpes } } 
+		
+}
+}
+
+character_event = {
+	id = immortal_purge.3
+	desc = immortal_purge.3_desc
+	picture = GFX_evt_recovery
+    hide_window = yes
+	
+	trigger = {
+	trait = Undying
+	OR = { 
+			NOT = { health = 400}		
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+		
+		immediate= {
+
+		health = 10
+}
+}

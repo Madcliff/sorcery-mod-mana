@@ -1,0 +1,90 @@
+targetted_decisions = {
+	1reincarnation_decision = {
+		filter = realm
+		ai_target_filter   = realm
+	
+		from_potential = {
+			ai = no		
+			check_variable = { which = "magic_power" value = 10 }	
+			is_playable = yes
+			at_location = THIS				
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+			age = 30
+		}
+	
+		potential = {
+		trait = possessed
+		at_location = FROM			
+		NOT = { age = 20 }
+		}
+		
+		allow = {	
+		at_location = FROM	
+		FROM = { has_character_flag = Magic_Divining }		
+		}
+		
+		effect = {	
+			random = {
+				chance = 10
+			death = {
+				death_reason = death_natural
+			}	
+			}
+			if = {
+				limit = {
+				is_alive = yes  
+				}
+			
+			add_trait = Sorcery
+			set_reincarnation = FROM
+			dynasty = FROM
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.10 }	
+			abdicate_to = ROOT
+			death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+			remove_trait = possessed
+			random = {
+				chance = 30
+				add_trait = lunatic
+			}
+			random = {
+				chance = 10
+				add_trait = incapable
+			}
+			random = {
+				chance = 30
+				add_trait = possessed
+			}
+			random = {
+				chance = 10
+				add_trait = infirm
+			}
+			random = {
+				chance = 10
+				add_trait = imbecile
+			}
+			random = {
+				chance = 10
+				add_trait = maimed
+			}
+			character_event = { id = RoI.10001}
+			copy_random_personality_trait = FROM
+			
+			
+
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

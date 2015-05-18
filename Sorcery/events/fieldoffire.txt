@@ -1,0 +1,254 @@
+namespace = fieldoffire
+character_event = {
+	id = fieldoffire.1
+	desc = fieldoffire.1_desc
+	title = fieldoffire.1
+	
+	picture = "GFX_dracarys"
+
+	is_triggered_only = yes
+
+	option = {
+		name = fieldoffire.1a
+		ai_chance = {
+			factor = 75
+
+			modifier = { 
+				factor = 4
+				trait = ruthless
+			}
+			modifier = { 
+				factor = 3
+				trait = wroth
+			}
+			modifier = { 
+				factor = 3
+				trait = cruel
+			}
+			modifier = { 
+				factor = 3
+				trait = ambitious
+			}
+			modifier = { 
+				factor = 3
+				trait = lunatic
+			}
+		}
+		#hidden_tooltip = {
+			if = {
+				limit = { 
+					is_ruler = yes
+					war = yes
+					OR = {
+						is_primary_war_attacker = yes
+						is_primary_war_defender = yes
+						independent = yes
+					}
+				}
+				any_current_enemy = {
+					limit = { 
+						at_location = ROOT
+						in_command = yes
+						prisoner = no
+					}
+						troops = -1
+						morale = -1
+						set_character_flag = war_mage_fof_event					
+				}	
+				any_current_enemy = {
+					any_realm_character = {
+						limit = { 
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+							NOT = { has_character_flag = war_mage_fof_event }
+						}
+							troops = -1
+							morale = -1
+						set_character_flag = war_mage_fof_event
+#						hidden_tooltip = { character_event = { id = dragon.32 } }					
+					}			
+				}
+			}	
+			if = {
+				limit = { 
+					NOT = {
+						is_ruler = yes
+						war = yes
+						OR = {
+							is_primary_war_attacker = yes
+							is_primary_war_defender = yes
+							independent = yes
+						}
+					}	
+				}
+				liege = {
+					any_current_enemy = {
+						limit = { 
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+							NOT = { has_character_flag = war_mage_fof_event }
+						}
+							troops = -1
+							morale = -1
+						
+						set_character_flag = war_mage_fof_event
+					}			
+				}
+			}
+					any_current_enemy = {
+						any_realm_character = {
+							limit = { 
+								at_location = ROOT
+								in_command = yes
+								prisoner = no
+								NOT = { has_character_flag = war_mage_fof_event }
+							}
+								troops = -1
+								morale = -1
+								set_character_flag = war_mage_fof_event
+#							hidden_tooltip = { character_event = { id = dragon.32 } }				
+						}			
+					}
+				}	
+#			random = {
+#				chance = 33
+#				location = { province_event = { id = dragon.25 } }
+#			}
+		#}	
+	option = {
+		name = fieldoffire.1b
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = { ai = no }
+		}	
+	}
+}
+
+
+character_event = {
+	id = fieldoffire.2
+	desc = fieldoffire.2_desc
+	title = fieldoffire.2
+	
+	picture = "GFX_dracarys"
+
+	is_triggered_only = yes
+
+	option = {
+		name = fieldoffire.2a
+		ai_chance = {
+			factor = 75
+
+			modifier = { 
+				factor = 4
+				trait = ruthless
+			}
+			modifier = { 
+				factor = 3
+				trait = wroth
+			}
+			modifier = { 
+				factor = 3
+				trait = cruel
+			}
+			modifier = { 
+				factor = 3
+				trait = ambitious
+			}
+			modifier = { 
+				factor = 3
+				trait = lunatic
+			}
+		}
+		#hidden_tooltip = {
+		event_target:field_of_fire_caster = {	
+		if = {
+				limit = { 
+					war = yes
+				}
+				any_current_enemy = {
+					limit = { 
+						at_location = ROOT
+						in_command = yes
+						prisoner = no
+					}
+						troops = -1
+						morale = -1
+						set_character_flag = war_mage_fof_event					
+				}	
+				any_current_enemy = {
+					any_realm_character = {
+						limit = { 
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+							NOT = { has_character_flag = war_mage_fof_event }
+						}
+							troops = -1
+							morale = -1
+						set_character_flag = war_mage_fof_event
+#						hidden_tooltip = { character_event = { id = dragon.32 } }					
+					}			
+				}
+			}	
+			if = {
+				limit = { 
+					NOT = {
+						is_ruler = yes
+						war = yes
+						OR = {
+							is_primary_war_attacker = yes
+							is_primary_war_defender = yes
+							independent = yes
+						}
+					}	
+				}
+				liege = {
+					any_current_enemy = {
+						limit = { 
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+							NOT = { has_character_flag = war_mage_fof_event }
+						}
+							troops = -1
+							morale = -1
+						set_character_flag = war_mage_fof_event
+					}			
+				}
+			}
+					any_current_enemy = {
+						any_realm_character = {
+							limit = { 
+								at_location = ROOT
+								in_command = yes
+								prisoner = no
+								NOT = { has_character_flag = war_mage_fof_event }
+							}
+								troops = -1
+								morale = -1
+								set_character_flag = war_mage_fof_event
+#							hidden_tooltip = { character_event = { id = dragon.32 } }				
+						}			
+					}
+				}
+
+#			random = {
+#				chance = 33
+#				location = { province_event = { id = dragon.25 } }
+#			}
+		}	
+	option = {
+		name = fieldoffire.2b
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = { ai = no }
+		}	
+	}
+}

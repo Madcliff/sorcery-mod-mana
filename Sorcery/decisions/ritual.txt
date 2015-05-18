@@ -1,0 +1,41 @@
+targetted_decisions = {
+ 	2ritual_of_mind_and_body_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }	
+			is_playable = yes
+			ai = no
+			NOT = { trait = incapable } 
+			OR = {trait = Sorcery trait = Herbalist}
+			}
+	
+		potential = {
+		NOT = { has_character_flag = bodyritual} 
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		
+		effect = {	
+			character_event = {id = ritual.1}
+			set_character_flag = bodyritual
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.3 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

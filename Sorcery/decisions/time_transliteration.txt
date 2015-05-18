@@ -1,0 +1,41 @@
+targetted_decisions = {
+	time_transliteraation = {
+		filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+			check_variable = { which = "magic_power" value = 1 }
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}				
+		}
+		
+		allow = { 			OR = {trait = Sorcery trait = Alchemist}
+		}
+		
+		effect = {	
+			any_demesne_title = {
+				limit = { tier = BARON }
+				refill_holding_levy = yes
+			}
+			FROM = {
+			character_event = { id = spellcost.1 }
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

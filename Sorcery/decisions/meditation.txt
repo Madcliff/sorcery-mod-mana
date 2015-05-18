@@ -1,0 +1,39 @@
+targetted_decisions = {
+	2magicmeditation_decision = {
+			filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+				character = FROM
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+				
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+		set_character_flag =  Magic_Divining
+			FROM = {
+			character_event = { id = spellcost.3 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	}

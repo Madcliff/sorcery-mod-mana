@@ -1,0 +1,2254 @@
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (self MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# #ai_target_filter  = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty (including the dead!)
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+
+targetted_decisions = {
+
+	manacheck = {
+	filter = self
+	ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }		
+			is_playable = yes
+			NOT = { trait = incapable }
+			OR = { trait = Sorcery trait = Alchemist trait = War_Mage trait = Mentalist trait = Herbalist}		
+			ai = no
+			}
+	
+		potential = {
+		character = FROM 		
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = mana.999 } }
+	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	
+	Time_Boost = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+			check_variable = { which = "magic_power" value = 1 }
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}				
+		}
+		
+		allow = { 		
+			OR = { 
+				trait = Sorcery 
+				trait = Alchemist} 
+		}
+		
+		effect = {	
+			location = { add_province_modifier = { name = magic_time duration = 720 } }
+			FROM = {
+			character_event = { id = spellcost.1 }
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	
+		time_transliteraation = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+			check_variable = { which = "magic_power" value = 1 }
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}				
+		}
+		
+		allow = { 			OR = {trait = Sorcery trait = Alchemist}
+		}
+		
+		effect = {	
+			any_demesne_title = {
+				limit = { tier = BARON }
+				refill_holding_levy = yes
+			}
+			FROM = {
+			character_event = { id = spellcost.1 }
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	
+	magic_subjugation_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+					
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			location = { add_province_modifier = { name = magic_subjugation duration = 720 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	magic_devestation_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			location = { add_province_modifier = { name = magic_devestation duration = 720 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+
+	magic_awareness_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			add_character_modifier = { name = magic_awareness duration = 720 } 
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	magic_illusion_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			add_character_modifier = { name = magic_illusion duration = 720 } 
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	magic_preparation_descison = {
+				filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			trait = Sorcery
+		}
+		
+		allow = { trait = Sorcery }
+		
+		effect = {	
+			location = { add_province_modifier = { name = magic_preparation duration = 720 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	2makeconduit = {
+		
+		ai_target_filter  = dynasty
+		filter = sub_realm
+	
+		from_potential = {
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		NOT = { trait = Conduit } 
+		NOT = { character = FROM}
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+		add_trait = Conduit
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	2trainapprentice = {
+		
+		ai_target_filter  = dynasty
+		filter = sub_realm
+	
+		from_potential = {
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		NOT = { has_character_flag = appentice } 
+		NOT = { character = FROM}
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+			save_event_target_as = apprentice			
+
+			set_character_flag = apprentice
+			FROM = {
+			character_event = {id = apprentice.1}			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	2immortality_gift_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+			at_location = ROOT		
+			is_playable = yes
+			ai = no			
+			check_variable = { which = "magic_power" value = 10 }
+			num_of_prisoners = 10
+			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+		}
+	
+		potential = {
+		NOT = {
+		trait = Undying
+		}
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = immortalspell.1 } }
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.10 }		
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}
+			any_courtier = {
+			limit = { prisoner = yes }
+				death= {
+					death_reason = death_sacrificed
+				}
+			}			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+ 	2ritual_of_mind_and_body_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }	
+			is_playable = yes
+			ai = no
+			NOT = { trait = incapable } 
+			OR = {trait = Sorcery trait = Herbalist}
+			}
+	
+		potential = {
+		NOT = { has_character_flag = bodyritual} 
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		
+		effect = {	
+			character_event = {id = ritual.1}
+			set_character_flag = bodyritual
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.3 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	2attribte_War_Mage_trait_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = War_Mage}
+			}
+	
+		potential = {}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		effect = {	
+			save_event_target_as = militarytraittarget		
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = militarytrait.1 }	
+			character_event = { id = spellcost.1 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	2attribte_ritual_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+			}
+	
+		potential = {}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}
+		
+		effect = {	
+			character_event = { id = statsritual.1 }	
+			FROM = {
+			character_event = { id = spellcost.1 }		
+			clr_character_flag = Magic_Divining
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	2precognition_decision = {
+	filter = self
+	ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		character = FROM 		
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = precognition.1 } }
+			FROM = {
+			character_event = { id = spellcost.1 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	2magicshield_decision = {
+			filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+				character = FROM
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+				
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+		add_character_modifier = { modifier = magic_shield years = 1 }
+			FROM = {
+			character_event = { id = spellcost.1 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	2magicmeditation_decision = {
+			filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+				character = FROM
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+				
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+		set_character_flag =  Magic_Divining
+			FROM = {
+			character_event = { id = spellcost.3 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	2transmute_decision = {
+				filter = sub_realm
+		ai_target_filter  = self
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Alchemist}				
+		}
+		
+		allow = { 			OR = {trait = Sorcery trait = Alchemist}
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = transmute.1 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	2summon_undead = {
+			filter = self
+		ai_target_filter  = self
+		is_mercenary = yes	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 5 }			
+			is_playable = yes
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = War_Mage}
+			ai = no
+			}
+	
+		potential = {
+				character = FROM 
+			is_playable = yes
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = War_Mage}
+			ai = no
+				
+		}
+		
+		allow = {
+		piety = 500
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = skeleton.1 } }
+
+			FROM = {
+			piety = -500
+			character_event = { id = spellcost.5 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+ 	2Foresight_reveal_decision = {
+			filter = self
+		ai_target_filter  = self
+	
+		from_potential = {
+			is_playable = yes
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+			}
+	
+		potential = {
+		character = FROM 
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+		
+		}
+		
+		allow = {
+		}
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = foresight.1 } }
+			FROM = {
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	2Heal_others_decision = {
+			
+		ai_target_filter   = realm
+		filter = all
+	
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }	
+			is_playable = yes
+			NOT = { trait = incapable } 
+			OR = {trait = Sorcery trait = Herbalist}
+			ai = no
+			}
+	
+		potential = {	OR = {
+			trait = ill
+			trait = pneumonic
+			trait = syphilitic
+			trait = leper
+			trait = has_tuberculosis
+			trait = has_typhoid_fever
+			trait = has_typhus
+			trait = has_bubonic_plague
+			trait = has_measles
+			trait = has_small_pox
+			trait = has_aztec_disease
+			trait = wounded
+			trait = maimed
+			trait = infirm
+			trait = blinded
+			trait = eunuch		
+			trait = harelip
+			trait = hunchback
+			trait = lisp
+			trait = stutter
+			trait = ugly
+			trait = dwarf
+			trait = incapable 
+			trait = crippled 
+			trait = lunatic
+			trait = has_greyscale
+			trait = has_grey_plague 
+			trait = has_bloody_flux 
+			trait = has_pox 
+			trait = possessed 
+			trait =	stressed 	
+			trait =	depressed 
+			trait =	inbred 
+			trait =	blinded_age 
+			}
+			}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+				}		
+		effect = {	
+			save_event_target_as = healtarget				
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = {id = healspell.1}
+			character_event = { id = spellcost.1 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	field_of_fire_targeted_decision = {
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }		
+			NOT = { trait = incapable }
+			is_playable = yes
+			ai = no			
+		}
+	
+		potential = {
+			OR = {trait = Sorcery trait = War_Mage}		 
+			in_command = yes
+			prisoner = no
+		}
+		allow = {		
+				hidden_tooltip = {
+					OR = {
+						AND = {
+							is_ruler = yes
+							war = yes
+							any_playable_ruler = {
+								war_with = ROOT
+								OR = {
+									AND = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_realm_lord = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_courtier = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+								}	
+							}
+						}
+							#war = no # Your liege's wars still count
+							any_liege = {
+								any_playable_ruler = {
+									war_with = PREV
+									OR = {
+										AND = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_realm_lord = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_courtier = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+									}	
+								}
+							}						
+						any_independent_ruler = {
+							mercenary = yes
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+						}				
+					}	
+				}	
+		}
+		effect = {
+			character_event = {id = fieldoffire.1}	
+			character_event = { id = spellcost.3 }	
+			
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+			
+			
+	}
+	1firestorm_siege_targeted_decision = {
+	
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			NOT = { trait = incapable }
+			check_variable = { which = "magic_power" value = 3 }			
+			is_playable = yes
+			ai = no			
+		}
+	
+		potential = {
+			OR = {trait = Sorcery trait = War_Mage}		
+			character = FROM 
+			in_command = yes
+			prisoner = no
+			siege = {
+				is_attacker = yes
+			}			
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+				siege = {
+					enemy = {
+						leader = {
+							save_event_target_as = siege_of_fire_target
+							set_character_flag = siege_leader
+							ROOT = { set_character_flag = siege_of_fire_target_found }
+						}
+					}
+					}
+					if = { #if no leader default to province owner (capital only)
+						limit = { ROOT = { NOT = { has_character_flag = siege_of_fire_target_found } } }
+						location = { 
+							owner = { 
+								if = {
+									limit = {
+										NOT = { tier = BARON }
+										capital_scope = { ROOT = { at_location = PREV } }
+									}
+									save_event_target_as = siege_of_fire_target
+								}
+							} 
+						}
+					}						
+			clr_character_flag = siege_of_fire_target_found
+            character_event = { id = siegeoffire.1 }				
+			character_event = { id = spellcost.3 }	
+	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1sorcerous_plague_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+				check_variable = { which = "magic_power" value = 1 }	
+			is_playable = yes
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Herbalist}
+			ai = no
+			}
+	
+		potential = { OR = { NOT = { has_character_modifier = magic_shield } NOT = { character = FROM } }	}
+		
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			save_event_target_as = plagues			
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = {id = plagues.1 }		
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1possession_decision = {
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			check_variable = { which = "magic_power" value = 1 }			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+			ai = no
+		}
+	
+		potential = { OR = { NOT = { has_character_modifier = magic_shield } NOT = { character = FROM } }	}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+					}
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			save_event_target_as = possessiontarget			
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = {id = possessionspell.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	1mind_control_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		OR = {
+		NOT = { character = FROM  } 
+		NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			opinion = { modifier = opinion_mind_control who = FROM years = 100000 }
+			ROOT = { join_attacker_wars = FROM }
+			ROOT = { join_defender_wars  = FROM }
+#			set_defacto_liege = FROM
+			FROM = {			
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1mind_illusion_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		OR = {
+		NOT = { character = FROM  } 
+		NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			save_event_target_as = mindillusiontarget			
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = {id = mindillusionspell.1 }	
+			character_event = { id = spellcost.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	1Whispers_of_damned_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {	
+			is_playable = yes
+			ai = no			
+			check_variable = { which = "magic_power" value = 1 }	
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		OR = {
+		NOT = { character = FROM }
+		not = {trait = Whispers_of_the_Damned}
+		NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }
+						}
+		NOT = { character = FROM  }
+		}
+		
+		effect = {	
+			save_event_target_as = whispersdamned			
+			FROM = {
+				clr_character_flag = Magic_Divining
+				character_event = {id = whispersdamned.1 }				
+				character_event = { id = spellcost.1 }	
+				character_event = { id = spellcost.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1broken_mindandbody_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			check_variable = { which = "magic_power" value = 1 }			
+			NOT = { trait = incapable } 
+			OR = {trait = Sorcery trait = Alchemist}
+		}
+	
+		potential = {
+		OR = {
+			NOT = { character = FROM }
+			NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }		
+		}
+		effect = {
+			save_event_target_as = brokenmindbody			
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = {id = brokenmindbody.1 }	
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1magic_kill_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			check_variable = { which = "magic_power" value = 1 }
+			is_playable = yes
+			ai = no		
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = War_Mage}
+			
+		}
+	
+		potential = { 
+		OR = {
+		NOT = { character = FROM } 
+		NOT = { has_character_modifier = magic_shield }}		
+		at_location = FROM	
+		}
+		
+		allow = { 
+					OR = { 
+						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
+						FROM = { has_character_flag = Magic_Divining }						
+					}
+		NOT = { character = FROM  }
+		}
+		
+		effect = {
+			save_event_target_as = magickill			
+			FROM = {
+				clr_character_flag = Magic_Divining
+				character_event = {id = magickill.1 }						
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	3vassal_sacrifice_sorcery_decision = {
+			filter = home_court
+		ai_target_filter   = home_court
+	
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}			
+		}
+	
+		potential = {
+			prisoner = yes
+			is_adult = yes
+			host = { character = FROM }
+		}
+		
+		allow = {
+			prisoner = yes
+		}
+		
+		effect = {	
+			any_liege = {
+				limit = { 
+					ai = no
+					NOT = { character = FROM }
+				}
+			}
+			hidden_tooltip = {
+				FROM = {
+			change_variable = { which = "magic_power" value = 3 }
+				}
+			}
+			death = {
+				death_reason = death_sacrificed
+				killer = FROM
+			}
+			FROM = {
+			health = 5
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	1reincarnation_decision = {
+		filter = realm
+		ai_target_filter   = realm
+	
+		from_potential = {
+			ai = no		
+			check_variable = { which = "magic_power" value = 10 }	
+			is_playable = yes
+			at_location = THIS				
+			NOT = { trait = incapable }
+			OR = {trait = Sorcery trait = Mentalist}
+			age = 30
+		}
+	
+		potential = {
+		trait = possessed
+		at_location = FROM			
+		NOT = { age = 20 }
+		}
+		
+		allow = {	
+		at_location = FROM	
+		FROM = { has_character_flag = Magic_Divining }		
+		}
+		
+		effect = {	
+			random = {
+				chance = 10
+			death = {
+				death_reason = death_natural
+			}	
+			}
+			if = {
+				limit = {
+				is_alive = yes  
+				}
+			
+			add_trait = Sorcery
+			set_reincarnation = FROM
+			dynasty = FROM
+			FROM = {
+			clr_character_flag = Magic_Divining
+			character_event = { id = spellcost.10 }	
+			abdicate_to = ROOT
+			death = {
+				death_reason = death_natural
+				killer = FROM
+			}
+			}
+			remove_trait = possessed
+			random = {
+				chance = 30
+				add_trait = lunatic
+			}
+			random = {
+				chance = 10
+				add_trait = incapable
+			}
+			random = {
+				chance = 30
+				add_trait = possessed
+			}
+			random = {
+				chance = 10
+				add_trait = infirm
+			}
+			random = {
+				chance = 10
+				add_trait = imbecile
+			}
+			random = {
+				chance = 10
+				add_trait = maimed
+			}
+			character_event = { id = RoI.10001}
+			copy_random_personality_trait = FROM
+			
+			
+
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	2attribte_request_War_Mage_trait_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}		
+				trait = War_Mage
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+	
+		potential = {}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = War_Mage
+				at_location = ROOT			
+				}		
+				}
+				}
+		effect = {	
+			save_event_target_as = militarytraittarget		
+			FROM = {
+			character_event = { id = militarytrait.1 }	
+			any_realm_character = { 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT			
+				}
+			save_event_target_as = spellcostcast			
+			}
+		character_event = { id =  spellcost.21 }
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	2Heal_others_request_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}		
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+	
+		potential = {	
+			OR = {
+				trait = ill
+				trait = pneumonic
+				trait = syphilitic
+				trait = leper
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_bubonic_plague
+				trait = has_measles
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = wounded
+				trait = maimed
+				trait = infirm
+				trait = blinded
+				trait = eunuch		
+				trait = harelip
+				trait = hunchback
+				trait = lisp
+				trait = stutter
+				trait = ugly
+				trait = dwarf
+				trait = incapable 
+				trait = lunatic
+				trait = possessed 
+				trait =	stressed 	
+				trait =	depressed 
+				trait =	inbred 
+				trait =	blinded_age 
+				trait = has_greyscale
+				trait = has_grey_plague 
+				trait = has_bloody_flux 
+				trait = crippled 
+				trait = has_pox 
+
+
+			}
+			}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		effect = {	
+			save_event_target_as = healtarget							
+			FROM = { 
+			character_event = {id = healspell.1}			
+			any_realm_character = { 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT			
+				}
+			save_event_target_as = healcaster	
+			save_event_target_as = spellcostcast			
+			}
+		character_event = { id =  spellcost.21 }	
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	1sorcerous_plague_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {
+		ai = no	
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}	
+						
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+
+	
+		potential = { NOT = { character = FROM } }
+		
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		
+		effect = {	
+			save_event_target_as = plagues			
+			FROM = {
+			character_event = {id = plagues.1 }	
+			 any_realm_character = 
+				{ 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT				
+					}
+			save_event_target_as = spellcostcast								
+			}
+		character_event = { id =  spellcost.21 }				
+		}
+
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+ 	2ritual_of_mind_and_body_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 3 }
+				health = 3 
+				Prev = { num_of_prisoners = 3 }				
+			}					
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+		
+		potential = {
+		NOT = { has_character_flag = bodyritual} 
+		}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		
+		effect = {	
+			character_event = { id = ritual.1}
+			set_character_flag = bodyritual
+				FROM = { 
+			any_realm_character = { 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT			
+				}
+			save_event_target_as = spellcostcast			
+			}
+		character_event = { id =  spellcost.23 }				
+	
+		}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	1mind_control_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {	
+				ai = no
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}					
+				trait = Mentalist
+				NOT = { trait = incapable }
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+		}
+	
+		potential = {	
+		NOT = { character = FROM }
+		}
+		
+		allow = {
+			FROM = {
+				any_realm_character = { 
+				trait = Mentalist
+				at_location = ROOT			
+				}		
+				}		
+		}
+		
+		effect = {	
+			opinion = { modifier = opinion_mind_control who = FROM years = 100000 }
+				FROM = { any_realm_character = { limit = {
+				trait = Mentalist
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+	
+		}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	1possession_request_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+		from_potential = {
+		ai = no
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}					
+				trait = Mentalist
+				NOT = { trait = incapable }
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+		}
+	
+		potential = {  
+		NOT = { character = FROM }	
+		}
+		
+		allow = { 
+			FROM = {
+				any_realm_character = { 
+				trait = Mentalist
+				at_location = ROOT			
+				}		
+				}
+		}
+		
+		effect = {	
+			save_event_target_as = possessiontarget			
+			FROM = {
+			character_event = {id = possessionspell.1 }	
+			any_realm_character = { limit = {
+				trait = Mentalist
+				at_location = ROOT			}
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+	
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+
+	1Whispers_of_damned_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {	
+		ai = no		
+			any_realm_character = {
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}					
+				trait = Mentalist
+				NOT = { trait = incapable }
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+				}
+	
+		potential = {
+		NOT = { character = FROM }
+		not = {trait = Whispers_of_the_Damned}
+		}
+		
+		
+		allow = { 
+			FROM = {
+				any_realm_character = {  
+				trait = Mentalist
+				at_location = ROOT			
+				}		
+				}
+		}
+		
+		effect = {	
+			save_event_target_as = whispersdamned			
+			FROM = {
+		character_event = {id = whispersdamned.1 }
+				any_realm_character = { limit = {
+				trait = Mentalist
+				at_location = ROOT }			
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+	
+		}
+		}		
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	2transmute_request_decision = {
+	
+		ai_target_filter  = sub_realm
+		
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}					
+				trait = Alchemist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+			}
+	
+		potential = {
+		ai = no
+			any_realm_character = { 
+				trait = Alchemist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = transmute.1 } }
+				FROM = { any_realm_character = { limit = {
+				trait = Alchemist
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	2attribte_ritual_request_decision = {
+	
+		ai_target_filter  = sub_realm
+			
+		from_potential = {
+		ai = no	
+		
+			any_realm_character = { 
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}				
+				trait = Alchemist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+	
+		potential = {}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Alchemist
+				at_location = ROOT	
+				}		
+				}
+				}		
+		effect = {		
+			save_event_target_as = attributetarget
+				FROM = { any_realm_character = { limit = {
+				trait = Alchemist
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+		character_event = { id = statsritual.3 }
+		}		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+
+	1broken_mindandbody_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {	
+		ai = no
+		
+			any_realm_character = { 
+				trait = Alchemist
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}						
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+		}
+	
+		potential = {
+		at_location = FROM			
+		NOT = { character = FROM }
+		}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Alchemist
+				at_location = ROOT	
+				}		
+				}
+				}
+				
+		effect = {
+			save_event_target_as = brokenmindbody			
+			FROM = {
+			character_event = {id = brokenmindbody.1 }	
+			any_realm_character = { limit = {
+				trait = Alchemist
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+
+		}
+			}	
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
+	1magic_kill_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {	
+		ai = no
+		
+			any_realm_character = { 
+				trait = War_Mage
+			OR = {
+				check_variable = { which = "magic_power" value = 1 }
+				health = 1 
+				Prev = { num_of_prisoners = 1 }				
+			}						
+				NOT = { trait = incapable }
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+				}
+	
+		potential = { NOT = { character = FROM } at_location = FROM	}
+		
+		allow = {
+		FROM = {
+				any_realm_character = { 
+				trait = War_Mage
+				at_location = ROOT			
+				}		
+				}
+		
+		}
+		
+		effect = {
+			save_event_target_as = magickill			
+			FROM = {
+		character_event = {id = magickill.1 }	
+				any_realm_character = { limit = {
+				trait = War_Mage
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }
+		}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}		
+
+	1requestfirestorm_siege_targeted_decision = {
+	
+		ai_target_filter  = sub_realm
+		filter = sub_realm	
+		from_potential = {
+				ai = no			
+		}
+	
+		potential = {
+			NOT = { character = FROM }			
+			NOT = { trait = incapable }
+			OR = {
+				check_variable = { which = "magic_power" value = 3 }
+				health = 3
+				FROM = { num_of_prisoners = 3 }				
+			}				
+			trait = War_Mage
+			in_command = yes
+			prisoner = no				
+		}
+		
+		allow = {}
+		
+		effect = {	
+		save_event_target_as = siege_of_fire_caster		
+				siege = {
+					enemy = {
+						leader = {
+							save_event_target_as = siege_of_fire_target
+							set_character_flag = siege_leader
+							ROOT = { set_character_flag = siege_of_fire_target_found }
+						}
+					}
+					}
+					if = { #if no leader default to province owner (capital only)
+						limit = { ROOT = { NOT = { has_character_flag = siege_of_fire_target_found } } }
+						location = { 
+							owner = { 
+								if = {
+									limit = {
+										NOT = { tier = BARON }
+										capital_scope = { ROOT = { at_location = PREV } }
+									}
+									save_event_target_as = siege_of_fire_target
+								}
+							} 
+						}					
+				}	
+				clr_character_flag = siege_of_fire_target_found
+		ROOT = {				
+			save_event_target_as = spellcostcast			
+			}	
+	
+			FROM = {
+            character_event = { id = siegeoffire.2 }	
+		character_event = { id =  spellcost.23 }			
+			}	
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	field_of_fire_req_targeted_decison = {
+		ai_target_filter  = sub_realm
+		filter = sub_realm	
+		from_potential = {
+				ai = no			
+		}
+	
+		potential = {
+			NOT = { trait = incapable }
+			OR = {
+				check_variable = { which = "magic_power" value = 3 }
+				health = 3
+				FROM = { num_of_prisoners = 3 }				
+			}					
+			trait = War_Mage
+			in_command = yes
+			prisoner = no	
+			NOT = { character = FROM }				
+		}
+		
+		allow = {		
+				hidden_tooltip = {
+					OR = {
+						AND = {
+							is_ruler = yes
+							war = yes
+							any_playable_ruler = {
+								war_with = ROOT
+								OR = {
+									AND = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_realm_lord = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+									any_courtier = {
+										at_location = ROOT
+										prisoner = no
+										in_command = yes
+									}
+								}	
+							}
+							#war = no # Your liege's wars still count
+							any_liege = {
+								any_playable_ruler = {
+									war_with = PREV
+									OR = {
+										AND = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_realm_lord = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+										any_courtier = {
+											at_location = ROOT
+											prisoner = no
+											in_command = yes
+										}
+									}	
+								}
+							}
+						}						
+						any_independent_ruler = {
+							mercenary = yes
+							at_location = ROOT
+							in_command = yes
+							prisoner = no
+						}				
+					}	
+				}
+			}	
+		effect = {	
+		save_event_target_as = field_of_fire_caster	
+		ROOT = {
+		save_event_target_as = spellcostcast		
+		}
+		FROM = {		
+		character_event = {id = fieldoffire.2}
+		character_event = { id =  spellcost.23 }			
+		}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+			
+			
+	}
+
+	
+	}
+	
+	
+

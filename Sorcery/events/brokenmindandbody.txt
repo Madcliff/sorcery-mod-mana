@@ -1,0 +1,39 @@
+namespace = brokenmindbody
+character_event = {
+	id = brokenmindbody.1 
+	desc = brokenmindbody.1_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes			
+	option = {
+			name = brokenmindbody.1a
+	
+		event_target:brokenmindbody = {	
+			add_trait = weak			
+		}
+			character_event = { id = spellcost.1 }			
+		}
+	option = {
+			name = brokenmindbody.1b
+			
+		event_target:brokenmindbody = {	
+			add_trait = infirm
+			}
+			character_event = { id = spellcost.1 }				
+		}
+	option = {
+			name = brokenmindbody.1c
+	
+		event_target:brokenmindbody = {	
+			add_trait = hunchback
+			}
+			character_event = { id = spellcost.1 }				
+		}
+	option = {
+			name = brokenmindbody.1d
+		trigger =  { check_variable = { which = "magic_power" value = 3   } }  	
+		event_target:brokenmindbody = {	
+			add_trait = incapable
+			}
+			character_event = { id = spellcost.3 }		
+		}
+		}
