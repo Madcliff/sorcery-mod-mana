@@ -1,34 +1,31 @@
-targetted_decisions = {
+title_decisions = {
 	2summon_undead = {
-			filter = self
+			filter = sub_realm
 		ai_target_filter  = self
 		is_mercenary = yes	
 		from_potential = {
-			check_variable = { which = "magic_power" value = 5 }			
+			check_variable = { which = "magic_power" value = 5 }	 			
 			is_playable = yes
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = War_Mage}
 			ai = no
 			}
 	
 		potential = {
-				character = FROM 
-			is_playable = yes
-			NOT = { trait = incapable }
-			OR = {trait = Sorcery trait = War_Mage}
-			ai = no
-				
-		}
-		
+		tier = COUNT
+		}	
+
 		allow = {
-		piety = 500
+
 		}
 		
 		effect = {	
-			hidden_tooltip = { character_event = { id = skeleton.1 } }
-
+		location = {
+		save_event_target_as = undeadloc	
+		}
+			
 			FROM = {
-			piety = -500
+			hidden_tooltip = { character_event = { id = skeleton.1 } }			
 			character_event = { id = spellcost.5 }	
 			}	
 		}

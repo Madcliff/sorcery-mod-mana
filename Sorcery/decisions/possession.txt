@@ -5,7 +5,7 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			check_variable = { which = "magic_power" value = 1 }			
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = Mentalist}
 			ai = no
 		}

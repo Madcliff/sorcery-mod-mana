@@ -1,0 +1,169 @@
+Sorcery_hellfire_melee_tactic_awesome = {
+	days = 18
+	sprite = 7
+	group = sorcery
+
+	trigger = {
+#		phase = melee 
+		leader = {
+			OR = {
+			trait = Sorcery
+			trait = War_Mage
+			}
+			learning = 10
+			check_variable = { which = "magic_power" value = 3}	
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 5
+	
+		modifier = {
+			factor = 0.5# Increases chances by half
+			leader = { learning = 10}
+		}
+		modifier = {
+			factor = 0.5 # Increases chances by half
+			leader = { learning = 20}
+		}
+		modifier = {
+			factor = 0.5 # Increases chances by half
+			leader = { learning = 30}
+		}
+		modifier = {
+			factor = 0.5 # Increases chances by half
+			leader ={ learning = 40}
+		}	
+		modifier = {
+			factor = 0.25 # Increases chances by half
+			leader ={ learning = 50}
+		}		
+		modifier = {
+			factor = 1
+			leader = { trait = Sorcery }
+		}
+
+	}
+
+	
+	knights_offensive = 2
+	horse_archers_offensive = 2
+	light_infantry_offensive = 2
+	heavy_infantry_offensive = 2
+	pikemen_offensive = 2
+	archers_offensive = 2
+	
+	knights_defensive = 2
+	horse_archers_defensive = 2
+	light_infantry_defensive = 2
+	heavy_infantry_defensive = 2
+	pikemen_defensive = 2
+	archers_defensive = 2
+	
+	enemy = {
+		group = swarm
+		factor = 0.001
+	}
+	enemy = {
+		group = harass
+		factor = 0.001
+	}
+	enemy = {
+		group = charge
+		factor = 0.001
+	}
+	#change_phase_to = pursue
+}
+
+
+firestorm = {
+	days = 18
+	sprite = 7
+	group = sorcery
+
+	trigger = {
+		phase = skirmish 
+		leader = {
+			OR = {
+			trait = Sorcery
+			trait = War_Mage
+			}
+			learning = 10
+			has_character_flag = firestorm
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 10000
+			leader = { trait = Sorcery }
+		}
+
+	}
+
+	
+	knights_offensive = 200
+	horse_archers_offensive = 200
+	light_infantry_offensive = 200
+	heavy_infantry_offensive = 200
+	pikemen_offensive = 200
+	archers_offensive = 200
+	
+	knights_defensive = 200
+	horse_archers_defensive = 200
+	light_infantry_defensive = 20
+	heavy_infantry_defensive = 200
+	pikemen_defensive = 200
+	archers_defensive = 200
+
+	change_phase_to = skirmish
+}
+
+
+firestorm_siege = {
+	days = 18
+	sprite = 7
+	group = sorcery
+	
+	siege = attacker
+	trigger = {
+		leader = {
+			OR = {
+			trait = Sorcery
+			trait = War_Mage
+			}
+			learning = 10
+			has_character_flag = firestorm
+		}
+		
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1000
+			leader = { trait = Sorcery }
+		}
+
+	}
+
+	
+	knights_offensive = 20
+	horse_archers_offensive = 20
+	light_infantry_offensive = 20
+	heavy_infantry_offensive = 20
+	pikemen_offensive = 20
+	archers_offensive = 20
+	
+	knights_defensive = 20
+	horse_archers_defensive = 20
+	light_infantry_defensive = 20
+	heavy_infantry_defensive = 20
+	pikemen_defensive = 20
+	archers_defensive = 20
+}
+
+

@@ -12,7 +12,8 @@ targetted_decisions = {
 			trait = War_Mage
 			in_command = yes
 			prisoner = no	
-			NOT = { character = FROM }				
+			NOT = { character = FROM }	
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}			
 		}
 		
 		allow = {		
@@ -77,7 +78,9 @@ targetted_decisions = {
 		effect = {	
 		save_event_target_as = field_of_fire_caster	
 		ROOT = {
-		save_event_target_as = spellcostcast		
+		save_event_target_as = spellcostcast
+		set_character_flag = sorcery		
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }			
 		}
 		FROM = {		
 		character_event = {id = fieldoffire.2}

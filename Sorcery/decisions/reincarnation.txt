@@ -8,7 +8,7 @@ targetted_decisions = {
 			check_variable = { which = "magic_power" value = 10 }	
 			is_playable = yes
 			at_location = THIS				
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = Mentalist}
 			age = 30
 		}
@@ -75,7 +75,8 @@ targetted_decisions = {
 			}
 			character_event = { id = RoI.10001}
 			copy_random_personality_trait = FROM
-			
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 1800 } }			
 			
 
 		}

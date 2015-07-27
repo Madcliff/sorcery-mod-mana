@@ -1,38 +1,31 @@
-targetted_decisions = {
+title_decisions = {
 	magic_devestation_descison = {
-				filter = self
-		ai_target_filter  = self
+				filter = any
+		ai_target_filter  = any
 	
 		from_potential = {
-			check_variable = { which = "magic_power" value = 1 }
-			
 			is_playable = yes
 			ai = no			
-			NOT = { trait = incapable }
-			trait = Sorcery
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
+			OR = {trait = Sorcery trait = War_Mage}
+			check_variable = { which = "magic_power" value = 1 }
 			}
 	
 		potential = {
-				character = FROM 
-			is_playable = yes
-			ai = no			
-			NOT = { trait = incapable }
-			trait = Sorcery
+		tier = COUNT
 		}
 		
-		allow = { trait = Sorcery }
+		allow = { 		 
+		}
+		
 		
 		effect = {	
 			location = { add_province_modifier = { name = magic_devestation duration = 720 } }
 			FROM = {
 			character_event = { id = spellcost.1 }			
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			}	
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
 		}
 	}	
 	}

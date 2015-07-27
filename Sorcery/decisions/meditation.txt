@@ -6,7 +6,7 @@ targetted_decisions = {
 		from_potential = {
 			check_variable = { which = "magic_power" value = 3 }
 			is_playable = yes
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			trait = Sorcery
 			ai = no
 			}
@@ -26,7 +26,7 @@ targetted_decisions = {
 		effect = {	
 		set_character_flag =  Magic_Divining
 			FROM = {
-			character_event = { id = spellcost.3 }		
+			character_event = { id = spellcost.3 }				
 			}	
 		}
 		revoke_allowed = {

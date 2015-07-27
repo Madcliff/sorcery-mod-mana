@@ -1,0 +1,33 @@
+targetted_decisions = {
+	firestorm_targeted_decision = {
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			check_variable = { which = "magic_power" value = 3 }		
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
+			is_playable = yes
+			ai = no			
+		}
+	
+		potential = {
+			OR = {trait = Sorcery trait = War_Mage}		 
+			in_command = yes
+			prisoner = no
+		}
+		allow = {	
+		}
+	effect = {
+			character_event = { id = spellcost.3 }
+			set_character_flag = sorcery
+			set_character_flag = firestorm
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }			
+			hidden_tooltip = { character_event = { id = cooldown.2 days = 15 } }	
+			change_phase_to = skirmish	
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+			
+			
+	}
+	}

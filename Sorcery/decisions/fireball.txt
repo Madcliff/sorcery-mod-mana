@@ -1,0 +1,28 @@
+title_decisions = {
+	fireball = {
+		filter = all
+		ai_target_filter = all
+		
+		from_potential = {
+			is_playable = yes
+			ai = no			
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}		
+			trait = Sorcery
+			check_variable = { which = "magic_power" value = 5 }				
+		}
+		potential = {
+		tier = COUNT
+		}
+			effect = {
+			location = { add_province_modifier = {name = fireball duration = 35 }	
+					save_event_target_as = fireballloc	
+					}
+			FROM = {
+					character_event = {id = fireball.1}	
+					character_event = { id = spellcost.5 }
+					set_character_flag = sorcery
+					hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }						
+			}
+		}
+}
+}

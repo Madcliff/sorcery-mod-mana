@@ -1,0 +1,15 @@
+namespace = dynasty
+
+character_event = {
+	id = dynasty.1
+	desc = immortal_purge.2_desc
+	picture = GFX_evt_recovery
+    hide_window = yes
+	is_triggered_only = yes
+
+	option = {
+	name = dynasty.1a
+	dynasty = 10450580
+	}
+	
+	}

@@ -52,7 +52,7 @@ character_event = {
 		}
 		
     mean_time_to_happen = {
-        days = 180
+        days = 365
 					
     }
     immediate = {

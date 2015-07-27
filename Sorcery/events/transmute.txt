@@ -11,9 +11,9 @@ character_event = {
 	option = {	   
 		name = transmute.1a
 	
-	   scaled_wealth = 1
-	   prestige = 100
-	   piety = 100
+	   scaled_wealth = 2
+#	   prestige = 100
+#	   piety = 100
 	   wealth = 150
 }	
 }   

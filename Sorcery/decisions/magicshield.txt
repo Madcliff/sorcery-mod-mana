@@ -6,7 +6,7 @@ targetted_decisions = {
 		from_potential = {
 			check_variable = { which = "magic_power" value = 1 }
 			is_playable = yes
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			trait = Sorcery
 			ai = no
 			}
@@ -24,9 +24,11 @@ targetted_decisions = {
 		}
 		
 		effect = {	
-		add_character_modifier = { modifier = magic_shield years = 1 }
+		add_character_modifier = { modifier = magic_shield years = 5 }
 			FROM = {
-			character_event = { id = spellcost.1 }		
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }			
 			}	
 		}
 		revoke_allowed = {

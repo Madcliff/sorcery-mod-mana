@@ -4,7 +4,7 @@ targetted_decisions = {
 	ai_target_filter  = self
 	
 		from_potential = {
-			check_variable = { which = "magic_power" value = 1 }		
+#			check_variable = { which = "magic_power" value = 1 }		
 			is_playable = yes
 			NOT = { trait = incapable }
 			OR = { trait = Sorcery trait = Alchemist trait = War_Mage trait = Mentalist trait = Herbalist}		

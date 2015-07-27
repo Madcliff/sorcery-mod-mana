@@ -1,0 +1,135 @@
+militarytrait.1a;Unyielding Leader, Flanker, Narrow Flank Leader;;;;;;;;x
+militarytrait.1b;Trickster, Organizer, Expermenter;;;;;;;;x
+militarytrait.1c;Siege Leader, Aggressive Leader, Defensive Leader;;;;;;;;x
+militarytrait.1d;Next Page;;;;;;;;x
+militarytrait.1d_desc;;;;;;;;x
+militarytrait.5a;Winter Soldier, Jungle Terrain Leader, Holy Warrior.;;;;;;;;x
+militarytrait.5b;Heavy Infantry Leader, Light Foot Leader, Cavalry Leader;;;;;;;;x
+militarytrait.5c;Mountain Terrain Leader, Rough Terrain Leader, Flat Terrain Leader;;;;;;;;x
+militarytrait.5d;Inspiring Leader, Desert Terrain Leader, War Elephant Leader;;;;;;;;x
+militarytrait.2a;Unyielding Leader;;;;;;;;x
+militarytrait.2b;Flanker;;;;;;;;x
+militarytrait.2c;Narrow Flank Leader;;;;;;;;x
+militarytrait.3a;Trickster;;;;;;;;x
+militarytrait.3b;Organizer;;;;;;;;x
+militarytrait.3c;Expermenter;;;;;;;;x
+militarytrait.4a;Siege Leader;;;;;;;;x
+militarytrait.4b;Aggressive Leader;;;;;;;;x
+militarytrait.4c;Defensive;;;;;;;;x
+militarytrait.6a;Winter Soldier;;;;;;;;x
+militarytrait.6b;Jungle Terrain Leader;;;;;;;;x
+militarytrait.6c;Holy Warrior;;;;;;;;x
+militarytrait.7a;Heavy Infantry Leader;;;;;;;;x
+militarytrait.7b;Light Foot Leader;;;;;;;;x
+militarytrait.7c;Cavalry Leader;;;;;;;;x
+militarytrait.8a;Mountain Terrain Leader;;;;;;;;x
+militarytrait.8b;Rough Terrain Leader;;;;;;;;x
+militarytrait.8c;Flat Terrain Leader;;;;;;;;x
+militarytrait.9a;Inspiring Leader;;;;;;;;x
+militarytrait.9b;Desert Terrain Leader;;;;;;;;x
+militarytrait.9c;War Elephant Leader;;;;;;;;x
+
+possessionspell.1;Possession;;;;;;x
+possessionspell.1_desc;By drawing forth your powers you enter the mind of your target, being free to inflict whatever harm it is you wish upon their mental disposition.;;;;;;x
+possessionspell.1a;Lunacy!;;;;;;x
+possessionspell.1a_desc;Your magic bends the very corners of their mind, leaving them thinking of laws of pants;;;;;;x
+possessionspell.1b;Possessed!;;;;;;x
+possessionspell.1b_desc;You invite daemons of hell to inhabit your target, driving them into the insanity of possession;;;;;;x
+possessionspell.1c;Stressed and Depressed.;;;;;;x
+possessionspell.1c_desc;Your magic strains the thoughts of the target, cracking their ability to think and reducing their strength to endure.;;;;;;x
+possessionspell.1d;Imbecile!;;;;;;x
+possessionspell.1d_desc;By raw exertion you destroy the victims mind!;;;;;;x
+
+plagues.1;Plagues;;;;;;x
+plagues.1_desc;Use your magic to inflict an ailment unto your target, with the potential to additionally cause the onset of the dreaded plague.;;;;;;x
+plagues.1a;Tuberculosis;;;;;;x
+plagues.1a_desc;Let lose an infection of the lungs;;;;;;x
+plagues.1b;Small Pox;;;;;;x
+plagues.1b_desc;Let Small Pox devastate your people;;;;;;x
+plagues.1c;Typhus;;;;;;x
+plagues.1c_desc;Typhus shall take yee;;;;;;x
+plagues.1d;Black Death!;;;;;;x
+plagues.1d_desc;With power alone you make their life a misery!;;;;;;x
+
+precognition.1;Precognition;;;;;;x
+precognition.1_desc;Gazing deep into the future, you seek to find secrets that will make the future the present. But beware, madness comes to those who gaze too long or too deep.;;;;;;x
+precognition.1a;Advance Economy;;;;;;x
+precognition.1b;Advance Military;;;;;;x
+precognition.1c;Advance Culture;;;;;;x 
+
+
+statsritual.1;Empowerment Ritual(stats);;;;;;x
+statsritual.2;Empowerment Ritual(stats);;;;;;x
+statsritual.1_desc;By calling forth your life energies you empower your characteristics as you so desire.;;;;;;x
+statsritual.1a;Martial;;;;;;x
+statsritual.1b;Diplomacy;;;;;;x
+statsritual.1c;Intrigue;;;;;;x
+statsritual1;Martial, Diplomacy or Intrigue;;;;;;x
+statsritual2; Stewardship or Learning;;;;;;x
+statsritual.1d;Stewardship;;;;;;x
+statsritual.1e;Learning;;;;;;x
+
+foresight.1;Sorcery:Foresight!;;;;;;x
+foresight.1_desc;By reaching deep into the ether ancient magics have pierced all plots that rise against you!;;;;;;x
+foresight.1a;Reveal all that moves in the land!;;;;;;x
+
+
+transmute.1;Transmutation!;;;;;;x
+transmute.1_desc;Magic flows and burns as it converts life itself into blocks of gold!;;;;;;x
+transmute.1a;MONEY MONEY MONEY!;;;;;;x
+
+skeleton.1;THE DEAD AWAKE!;;;;;;x
+skeleton.1_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.1a;The dead march to war!;;;;;;x
+skeleton.2;THE DAEMONS AWAKE!;;;;;;x
+skeleton.2_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.2a;The dead march to war!;;;;;;x
+skeleton.3;THE DREADKNIGHTS AWAKE!;;;;;;x
+skeleton.3_desc;Your armies are broken, but all is not lost, for you are a master of the damned, and they if no one else will still answer your call!;;;;;;x
+skeleton.3a;The dead march to war!;;;;;;x
+
+
+brokenmindbody.1;LET YEE BE DAMNED AND BROKEN!;;;;;;x
+brokenmindbody.1_desc;Your long studies have taught you many ways to shatter the inferior being whom has raised your ire. You decide however, that rather than simply ending their existence, you will introduce to them suffering beyond their worst imaginings. You shall break their mind and their body, and leave the husk to simply wither!;;;;;;x
+brokenmindbody.1a;Dwarf!;;;;;;x 
+brokenmindbody.1a_desc;Inflict the curse of dwarfness on your foe;;;;;;x
+brokenmindbody.1b;Weak!;;;;;;x
+brokenmindbody.1b_desc;Strike down your foe with physical weakness;;;;;;x
+brokenmindbody.1c;Infirm!;;;;;;x
+brokenmindbody.1c_desc;Make your enemy feel the burdens of age, strike with infirmity;;;;;;x
+brokenmindbody.1d;Hunchback!;;;;;;x
+brokenmindbody.1d_desc;Make your foe cave over in pain, make them a hunchback.;;;;;;x
+
+magickill.1;MAGIC IS MIGHT!;;;;;;x
+magickill.1_desc;Lashing out with raw magical fire, you strike visciously at your enemy seeking to destroy them completely. As your energies slowly begin to ebb, you feel the rush of bloodlust subside, while the success of your brutal assault is unclear in the smoking ruins of the abode, one thing is certain, the effects of this attack will undoubtedly leave a mark.;;;;;;x
+magickill.1a;WITH FIRE AND BLOOD!;;;;;;x
+magickill.1b;WITH FIRE AND BLOOD!;;;;;;x
+magickill.2;They Survived!;;;;;;x
+magickill.2_desc;Your foe has been hideously wounded, if your eyes do not decieve you they had even suffered having their eyes boiled from their skulls. Even though they have survived, you have left them bearing forever the irremovable marks of your fury, they shall never again blight your sight, if they are lucky.;;;;;;x
+magickill.2a;The curr flees, but I guess it has not all been for naught.;;;;;;x
+magickill.1c;DIE, JUST DIE!!!;;;;;;x
+
+apprentice.1;An Appprentice emerges!;;;;;;x 
+apprentice.1_desc;After many long hours, you have finally managed to beat the secrets of the arcane into your chosen students head. What they shall do with their limited understanding of the mystical arts is up to them, but now is the moment to choose what you shall give advanced instruction to them in.;;;;;;x
+apprentice.1a;Herbalism is the path they shall follow!;;;;;;x
+apprentice.1b;Alchemy is the path they shall follow!;;;;;;x
+apprentice.1c;Mentalism and Illusion is the path they shall follow!;;;;;;x
+apprentice.1d;The arts of war shall be the path they shall follow!;;;;;;x
+
+whispersdamned.1;May your friends and lovers become your most bitter enemies.;;;;;;x
+whispersdamned.1_desc;Calling on your mastery of the most delicate of the magical arts, you let your powers run wild, bringing nothing but dispar to the mind of your victim, as they slowly and surely lose all those they once named friend and family.;;;;;;x
+whispersdamned.1a;And now you shall know what it is to be alone;;;;;;x
+
+fieldoffire.1;And the earth ran red with fire and blood;;;;;;x
+fieldoffire.1_desc;Your magics are supreme, and war is your essence. Calling upon your arcane energies you marshal yourself for a great showing of power. Be prepared, that such an action shall strike awe into all the world, but that is your legacy, of fire and of blood;;;;;;x
+fieldoffire.1a;BURN YOU BASTARDS, BURNNN!;;;;;;x
+fieldoffire.1a_desc;Unleash your terrible magics and watch your enemies become as glass;;;;;;x
+fieldoffire.1b;No, I shall be gracious;;;;;;x
+fieldoffire.1b_desc;You let those insignificant fools live, for right now they are not worth it.;;;;;;x
+1firestorm_siege_targeted_decision;Siege of Fire;;;;;;x
+1firestorm_siege_targeted_decision_desc;Obliterate your enemies within their own castle;;;;;;x
+
+siegeoffire.1a;And may hell take you all close to her bosom!;;;;;;x
+siegeoffire.1a_desc;Your rage knows no limits, your power is supreme, you call upon the fires of sorcery to obliterate all who stand before you.;;;;;;x
+siegeoffire.1b;Mercy, I shall have mercy;;;;;;x
+siegeoffire.1b_desc;You show mercy upon the poor souls within the castle.;;;;;;x

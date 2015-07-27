@@ -4,7 +4,7 @@ targetted_decisions = {
 		ai_target_filter   = self
 		filter = self
 		from_potential = {
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			check_variable = { which = "magic_power" value = 3 }			
 			is_playable = yes
 			ai = no			
@@ -49,7 +49,8 @@ targetted_decisions = {
 			clr_character_flag = siege_of_fire_target_found
             character_event = { id = siegeoffire.1 }				
 			character_event = { id = spellcost.3 }	
-	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }	
 		}
 		revoke_allowed = {
 			always = no

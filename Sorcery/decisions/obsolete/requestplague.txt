@@ -1,0 +1,52 @@
+targetted_decisions = {
+	1sorcerous_plague_request_decision = {
+			
+		ai_target_filter  = sub_realm
+	
+		from_potential = {
+		ai = no	
+			any_realm_character = { 
+				check_variable = { which = "magic_power" value = 1 }	
+						
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+
+	
+		potential = { NOT = { character = FROM } }
+		
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		
+		effect = {	
+			save_event_target_as = plagues			
+			FROM = {
+			character_event = {id = plagues.2 }	
+			 any_realm_character = 
+				{ 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT				
+					}
+			save_event_target_as = spellcostcast								
+			}				
+		}
+
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

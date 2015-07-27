@@ -5,6 +5,11 @@ opinion_mind_control = {
 	years = 1200
 }
 
+opinion_mind_control1 = {
+	opinion = 100
+	months = 6
+}
+
 mind_control_revoke = {
 	revoke_reason = yes	
 	prison_reason = yes

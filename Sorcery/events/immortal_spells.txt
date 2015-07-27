@@ -10,7 +10,7 @@ character_event = {
 		name = immortalspell.1a
 #		wealth = -20000
 		add_trait = Undying
-		health = 200
+#		health = 200
  #       change_variable = { which = "magic_power" value = -20 }
 		}
 

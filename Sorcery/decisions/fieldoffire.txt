@@ -4,7 +4,7 @@ targetted_decisions = {
 		filter = self
 		from_potential = {
 			check_variable = { which = "magic_power" value = 3 }		
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			is_playable = yes
 			ai = no			
 		}
@@ -21,7 +21,6 @@ targetted_decisions = {
 							is_ruler = yes
 							war = yes
 							any_playable_ruler = {
-								war_with = ROOT
 								OR = {
 									AND = {
 										at_location = ROOT
@@ -44,7 +43,6 @@ targetted_decisions = {
 							#war = no # Your liege's wars still count
 							any_liege = {
 								any_playable_ruler = {
-									war_with = PREV
 									OR = {
 										AND = {
 											at_location = ROOT
@@ -75,7 +73,9 @@ targetted_decisions = {
 		}
 		effect = {
 			character_event = {id = fieldoffire.1}	
-			character_event = { id = spellcost.3 }	
+			character_event = { id = spellcost.3 }
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			
 		}
 		ai_will_do = {

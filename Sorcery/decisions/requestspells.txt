@@ -1,0 +1,102 @@
+targetted_decisions = {
+	1requestgold = {
+	
+		ai_target_filter  = sub_realm
+		filter = sub_realm	
+		from_potential = {
+				ai = no			
+		}
+	
+		potential = {
+			NOT = { character = FROM }			
+			NOT = { trait = incapable }
+				check_variable = { which = "magic_power" value = 3 }			
+			trait = Alchemist
+			in_command = yes
+			prisoner = no	
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}			
+		}
+		
+		allow = {}
+		
+		effect = {
+		FROM = {
+		wealth = 500
+		}
+		ROOT = {
+			set_character_flag = sorcery		
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }			
+		}
+		}
+		
+		
+		}
+	
+	1requestdiseaseshield = {
+	
+		ai_target_filter  = sub_realm
+		filter = sub_realm	
+		from_potential = {
+				ai = no			
+		}
+	
+		potential = {
+			NOT = { character = FROM }			
+			NOT = { trait = incapable }
+				check_variable = { which = "magic_power" value = 3 }			
+			trait = Herbalist
+			in_command = yes
+			prisoner = no	
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}			
+		}
+		
+		allow = {}
+		
+		effect = {
+		FROM = {
+		wealth = 500
+		}
+		ROOT = {
+			set_character_flag = sorcery		
+			location = { add_province_modifier = { name = disease_shield duration = 720 } }			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }			
+		}
+		}
+		
+		
+		}
+	1requestrevoltshield = {
+	
+		ai_target_filter  = sub_realm
+		filter = sub_realm	
+		from_potential = {
+				ai = no			
+		}
+	
+		potential = {
+			NOT = { character = FROM }			
+			NOT = { trait = incapable }
+				check_variable = { which = "magic_power" value = 3 }			
+			trait = Mentalist
+			in_command = yes
+			prisoner = no	
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}			
+		}
+		
+		allow = {}
+		
+		effect = {
+		FROM = {
+		wealth = 500
+		}
+		ROOT = {
+			set_character_flag = sorcery		
+			location = { add_province_modifier = { name = revolt_shield duration = 720 } }			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }			
+		}
+		}
+		
+		
+		}
+	
+		}

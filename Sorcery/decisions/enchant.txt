@@ -1,0 +1,37 @@
+targetted_decisions = {
+	1enchant_decision = {
+			
+		ai_target_filter   = self
+		filter = self
+		from_potential = {
+			is_playable = yes
+			ai = no
+			check_variable = { which = "magic_power" value = 1 }		
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		}
+		allow = { 	
+		}
+		
+		effect = {	
+		any_realm_lord  = {
+			opinion = { modifier = opinion_mind_control1 who = FROM months = 3 }
+			}
+			FROM = {			
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }
+			}	
+		
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

@@ -11,7 +11,7 @@ targetted_decisions = {
 			check_variable = { which = "magic_power" value = 10 }
 			num_of_prisoners = 10
 			
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = Alchemist}
 		}
 	
@@ -33,7 +33,9 @@ targetted_decisions = {
 			hidden_tooltip = { character_event = { id = immortalspell.1 } }
 			FROM = {
 			clr_character_flag = Magic_Divining
-			character_event = { id = spellcost.10 }		
+			character_event = { id = spellcost.10 }	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 720 } }			
 			any_courtier = {
 			limit = { prisoner = yes }
 				death= {

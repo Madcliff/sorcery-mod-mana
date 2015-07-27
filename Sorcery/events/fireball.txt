@@ -1,0 +1,40 @@
+namespace = fireball
+character_event = {
+	id = fireball.1
+	desc = fieldoffire.1_desc
+	
+	picture = "GFX_dracarys"
+
+	is_triggered_only = yes
+
+	option = {
+		name = fieldoffire.1a		
+				any_current_enemy = {
+					limit = { 
+						at_location = event_target:fireballloc
+						in_command = yes
+						prisoner = no
+					}
+						troops = -10
+						morale = -10
+						set_character_flag = war_mage_fof_event					
+				}	
+				any_current_enemy = {
+					any_realm_character = {
+						limit = { 
+							at_location = event_target:fireballloc
+							in_command = yes
+							prisoner = no
+							NOT = { has_character_flag = war_mage_fof_event }
+						}
+							troops = -10
+							morale = -10
+						set_character_flag = war_mage_fof_event					
+					}			
+				}
+			}	
+		
+}
+
+
+

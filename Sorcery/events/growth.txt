@@ -1,0 +1,77 @@
+namespace = growth
+
+
+
+character_event = {
+	id = "growth.1"
+	desc = "growth.1"
+	picture = GFX_event_roi_reincarnation
+	border = GFX_event_normal_frame_war
+    hide_window = yes	
+	trigger = {
+	OR = {
+			trait = Sorcery
+			trait = Mentalist
+			trait = War_Mage
+			trait = Alchemist
+			trait = Herbalist
+	}
+	}
+	
+	mean_time_to_happen  = { 
+		years = 5
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = Sorcery
+	}		
+	}
+	
+	option = {
+		name = "growth.1a"
+		random_list = {
+			25 = { change_diplomacy = 1 }
+			25 = { change_martial = 1 }
+			25 = { change_stewardship = 1 }
+			25 = { change_intrigue = 1 }
+		}
+		random = {
+			chance = 75
+			change_learning = 1
+		}		
+		random = {
+			chance = 50
+#			fertility = 0.25 = 1
+		}
+
+		health = 1
+	}
+}
+
+
+character_event = {
+	id = "growth.2"
+	desc = "growth.2"
+	picture = GFX_event_roi_reincarnation
+	border = GFX_event_normal_frame_war
+    hide_window = yes	
+	trigger = {
+		trait = undying
+	}
+	
+	mean_time_to_happen  = { 
+		years = 10
+	}
+	
+	option = {
+		name = "growth.2a"
+
+		change_martial = 1
+		change_stewardship = 1
+		change_intrigue = 1
+		change_diplomacy = 1
+		change_learning = 1		
+#		fertility = 0.05
+		
+		health = 1
+	}
+}

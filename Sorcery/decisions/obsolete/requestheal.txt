@@ -1,0 +1,89 @@
+targetted_decisions = {
+	2Heal_others_request_decision = {
+			
+		ai_target_filter  = sub_realm
+		filter = all
+	
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+				check_variable = { which = "magic_power" value = 1 }	
+				trait = Herbalist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+		}
+	
+		potential = {	
+			OR = {
+				trait = ill
+				trait = pneumonic
+				trait = syphilitic
+				trait = leper
+				trait = has_tuberculosis
+				trait = has_typhoid_fever
+				trait = has_typhus
+				trait = has_bubonic_plague
+				trait = has_measles
+				trait = has_small_pox
+				trait = has_aztec_disease
+				trait = wounded
+				trait = maimed
+				trait = infirm
+				trait = blinded
+				trait = eunuch		
+				trait = harelip
+				trait = hunchback
+				trait = lisp
+				trait = stutter
+				trait = ugly
+				trait = dwarf
+				trait = incapable 
+				trait = lunatic
+				trait = possessed 
+				trait =	stressed 	
+				trait =	depressed 
+				trait =	inbred 
+				trait =	blinded_age 
+				trait = has_greyscale
+				trait = has_grey_plague 
+				trait = has_bloody_flux 
+				trait = crippled 
+				trait = has_pox 
+
+
+			}
+			}
+		
+		allow = {		
+			FROM = { any_realm_character = { 
+				trait = Herbalist
+				at_location = ROOT			
+				}		
+				}
+				}
+		effect = {	
+			save_event_target_as = healtarget							
+			FROM = { 
+			character_event = {id = healspell.1}			
+			any_realm_character = { 
+				limit = { 
+					trait = Herbalist
+					at_location = ROOT			
+				}
+			save_event_target_as = healcaster	
+			save_event_target_as = spellcostcast			
+			}
+		character_event = { id =  spellcost.21 }	
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	}

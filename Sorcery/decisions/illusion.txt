@@ -7,7 +7,7 @@ targetted_decisions = {
 			check_variable = { which = "magic_power" value = 1 }
 			is_playable = yes
 			ai = no			
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			trait = Sorcery
 			}
 	
@@ -24,7 +24,9 @@ targetted_decisions = {
 		effect = {	
 			add_character_modifier = { name = magic_illusion duration = 720 } 
 			FROM = {
-			character_event = { id = spellcost.1 }			
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			
 			}	
 		}

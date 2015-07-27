@@ -13,7 +13,9 @@ character_event = {
 					banish = yes 
 					}
 #					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
-				character_event = { id = spellcost.1 }							
+				character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }					
 				}
 			option = {
 			name = magickill.1b
@@ -23,7 +25,9 @@ character_event = {
 					banish = yes 					
 					}
 #					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
-				character_event = { id = spellcost.1 }							
+				character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }					
 				}
 			option = {
 				name = magickill.1c
@@ -34,7 +38,54 @@ character_event = {
 						killer = FROM 
 					}
 				}
+				character_event = { id = spellcost.3 }		
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }					
+			}						
+	}			
+
+character_event = {
+
+	id = magickill.2 
+	desc = magickill.2_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes
+	option = {
+			name = magickill.1a
+					event_target:magickill = {
+					add_trait = maimed
+					add_trait = eunuch
+					banish = yes 
+					}
+#					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }			
+				}				
+				}
+			option = {
+			name = magickill.1b
+					event_target:magickill = {
+					add_trait = blinded 
+					add_trait = maimed
+					banish = yes 					
+					}
+#					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}
+				}
+			option = {
+				name = magickill.1c
+				trigger =  { event_target:spellcostcast = { check_variable =  { which = "magic_power" value = 3   } } }  	
+				event_target:magickill = {				
+					death = {
+						death_reason = death_battle
+						killer = ROOT 
+					}
+				}
+					event_target:spellcostcast = {			
 				character_event = { id = spellcost.3 }					
 			}						
+			}
 	}			
 

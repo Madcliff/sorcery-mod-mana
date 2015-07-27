@@ -7,7 +7,7 @@ targetted_decisions = {
 			is_playable = yes
 			ai = no			
 			check_variable = { which = "magic_power" value = 1 }			
-			NOT = { trait = incapable } 
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}} 
 			OR = {trait = Sorcery trait = Alchemist}
 		}
 	
@@ -21,7 +21,6 @@ targetted_decisions = {
 		allow = { 
 					OR = { 
 						ROOT = { at_location = FROM } 			
-						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
 						FROM = { has_character_flag = Magic_Divining }						
 					}
 		NOT = { character = FROM  }		

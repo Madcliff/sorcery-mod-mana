@@ -34,7 +34,6 @@ character_event = {
 				trait = lunatic
 			}
 		}
-		#hidden_tooltip = {
 			if = {
 				limit = { 
 					is_ruler = yes
@@ -45,6 +44,7 @@ character_event = {
 						independent = yes
 					}
 				}
+				
 				any_current_enemy = {
 					limit = { 
 						at_location = ROOT
@@ -65,8 +65,7 @@ character_event = {
 						}
 							troops = -1
 							morale = -1
-						set_character_flag = war_mage_fof_event
-#						hidden_tooltip = { character_event = { id = dragon.32 } }					
+						set_character_flag = war_mage_fof_event					
 					}			
 				}
 			}	
@@ -107,16 +106,10 @@ character_event = {
 							}
 								troops = -1
 								morale = -1
-								set_character_flag = war_mage_fof_event
-#							hidden_tooltip = { character_event = { id = dragon.32 } }				
+								set_character_flag = war_mage_fof_event			
 						}			
 					}
-				}	
-#			random = {
-#				chance = 33
-#				location = { province_event = { id = dragon.25 } }
-#			}
-		#}	
+				}		
 	option = {
 		name = fieldoffire.1b
 		ai_chance = {
@@ -164,7 +157,6 @@ character_event = {
 				trait = lunatic
 			}
 		}
-		#hidden_tooltip = {
 		event_target:field_of_fire_caster = {	
 		if = {
 				limit = { 
@@ -190,8 +182,7 @@ character_event = {
 						}
 							troops = -1
 							morale = -1
-						set_character_flag = war_mage_fof_event
-#						hidden_tooltip = { character_event = { id = dragon.32 } }					
+						set_character_flag = war_mage_fof_event					
 					}			
 				}
 			}	
@@ -231,16 +222,11 @@ character_event = {
 							}
 								troops = -1
 								morale = -1
-								set_character_flag = war_mage_fof_event
-#							hidden_tooltip = { character_event = { id = dragon.32 } }				
+								set_character_flag = war_mage_fof_event				
 						}			
 					}
 				}
 
-#			random = {
-#				chance = 33
-#				location = { province_event = { id = dragon.25 } }
-#			}
 		}	
 	option = {
 		name = fieldoffire.2b

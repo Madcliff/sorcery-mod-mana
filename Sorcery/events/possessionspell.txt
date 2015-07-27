@@ -10,16 +10,22 @@ character_event = {
 	
 		event_target:possessiontarget = {	
 			add_trait = lunatic
+			add_trait = paranoid			
 			}
-			character_event = { id = spellcost.1 }				
+			character_event = { id = spellcost.1 }
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}			
 	option = {
 			name = possessionspell.1b
 	
 		event_target:possessiontarget = {	
-			add_trait = possessed			
+			add_trait = possessed	
+			add_trait = craven			
 		}
-			character_event = { id = spellcost.1 }			
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
 	option = {
 			name = possessionspell.1c
@@ -28,14 +34,70 @@ character_event = {
 			add_trait = depressed
 			add_trait = stressed
 			}
-			character_event = { id = spellcost.1 }				
+			character_event = { id = spellcost.1 }
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
 	option = {
 			name = possessionspell.1d
-	
+		trigger =  { check_variable = { which = "magic_power" value = 3   } } 	
 		event_target:possessiontarget = {	
 			add_trait = imbecile
 			}
 			character_event = { id = spellcost.3 }		
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }				
+		}
+}
+
+
+character_event = {
+	id = possessionspell.2
+	desc = possessionspell.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = possessionspell.1a
+	
+		event_target:possessiontarget = {	
+			add_trait = lunatic
+			add_trait = paranoid			
+			}
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}			
+		}			
+	option = {
+			name = possessionspell.1b
+	
+		event_target:possessiontarget = {	
+			add_trait = possessed	
+			add_trait = craven			
+		}
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}				
+		}
+	option = {
+			name = possessionspell.1c
+	
+		event_target:possessiontarget = {	
+			add_trait = depressed
+			add_trait = stressed
+			}
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}					
+		}
+	option = {
+			name = possessionspell.1d
+				trigger =  { event_target:spellcostcast = { check_variable =  { which = "magic_power" value = 3   } } } 	
+		event_target:possessiontarget = {	
+			add_trait = imbecile
+			}
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.3 }							
+				}	
 		}
 }

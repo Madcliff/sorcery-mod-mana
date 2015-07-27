@@ -7,7 +7,7 @@ targetted_decisions = {
 			check_variable = { which = "magic_power" value = 1 }
 			is_playable = yes
 			ai = no		
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = War_Mage}
 			
 		}
@@ -16,7 +16,6 @@ targetted_decisions = {
 		OR = {
 		NOT = { character = FROM } 
 		NOT = { has_character_modifier = magic_shield }}		
-		at_location = FROM	
 		}
 		
 		allow = { 

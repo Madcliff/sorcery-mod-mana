@@ -29,16 +29,13 @@ targetted_decisions = {
 			}
 			hidden_tooltip = {
 				FROM = {
-			change_variable = { which = "magic_power" value = 3 }
+			change_variable = { which = "magic_power" value = 5 }
 				}
 			}
 			death = {
 				death_reason = death_sacrificed
 				killer = FROM
 			}
-			FROM = {
-			health = 5
-			}	
 		}
 		revoke_allowed = {
 			always = no

@@ -1,0 +1,30 @@
+namespace = cooldown
+
+character_event = {
+	id = "cooldown.1"
+	desc = "growth.1"
+	picture = GFX_event_roi_reincarnation
+	border = GFX_event_normal_frame_war
+    hide_window = yes	
+    is_triggered_only = yes	
+	
+	option = {
+	        name = cooldown.100
+			clr_character_flag = sorcery
+	}
+	}
+	
+	
+character_event = {
+	id = "cooldown.2"
+	desc = "growth.2"
+	picture = GFX_event_roi_reincarnation
+	border = GFX_event_normal_frame_war
+    hide_window = yes	
+    is_triggered_only = yes	
+	
+	option = {
+	        name = cooldown.100
+			clr_character_flag = firestorm
+	}
+	}

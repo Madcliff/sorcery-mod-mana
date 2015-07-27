@@ -9,33 +9,37 @@ character_event = {
 			name = mindillusionspell.1a
 	
 		event_target:mindillusiontarget = {	
-			primary_title = {
-				add_weak_claim = ROOT
-			}
-		}	
+		opinion = { modifier = opinion_mind_control who = ROOT years = 100000 }
+		}
+		character_event = { id = spellcost.1 }			
 	}		
 	option = {
 			name = mindillusionspell.1b
 			event_target:mindillusiontarget = {
 				ROOT = {
 					opinion = { modifier = mind_control_revoke who = FROM years = 100000 }
+					opinion = { modifier = mind_control_execute who = FROM years = 100000 }		
+					opinion = { modifier = mind_control_banish who = FROM years = 100000 }					
 				}		
 		}
+		character_event = { id = spellcost.2 }	
 		}
 	option = {
 			name = mindillusionspell.1c
-			event_target:mindillusiontarget = {
-				ROOT = {
-					opinion = { modifier = mind_control_execute who = FROM years = 100000 }
-				}		
-		}
+			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { ROOT = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
+			event_target:mindillusiontarget = {	
+				abdicate_to = ROOT
+			}	
+			character_event = { id = spellcost.5 }	
 		}
 	option = {
 			name = mindillusionspell.1d
+			trigger = { ROOT = { higher_tier_than = event_target:mindillusiontarget }  check_variable = { which = "magic_power" value = 10   } event_target:mindillusiontarget = { independent = yes }   NOT = { ROOT = { is_liege_or_above = event_target:mindillusiontarget } }} 			
 			event_target:mindillusiontarget = {
-				ROOT = {
-					opinion = { modifier = mind_control_banish who = FROM years = 100000 }
-				}		
-		}
+				FROM = { 
+					set_defacto_liege = ROOT 
+				}				
+			}
+			character_event = { id = spellcost.10 }	
 		}
 }

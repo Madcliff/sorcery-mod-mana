@@ -13,7 +13,8 @@ targetted_decisions = {
 				check_variable = { which = "magic_power" value = 3 }			
 			trait = War_Mage
 			in_command = yes
-			prisoner = no				
+			prisoner = no	
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}			
 		}
 		
 		allow = {}
@@ -45,7 +46,9 @@ targetted_decisions = {
 				}	
 				clr_character_flag = siege_of_fire_target_found
 		ROOT = {				
-			save_event_target_as = spellcostcast			
+			save_event_target_as = spellcostcast		
+		set_character_flag = sorcery		
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }				
 			}	
 	
 			FROM = {

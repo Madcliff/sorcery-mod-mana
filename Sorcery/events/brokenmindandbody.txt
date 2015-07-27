@@ -10,7 +10,9 @@ character_event = {
 		event_target:brokenmindbody = {	
 			add_trait = weak			
 		}
-			character_event = { id = spellcost.1 }			
+			character_event = { id = spellcost.1 }		
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }			
 		}
 	option = {
 			name = brokenmindbody.1b
@@ -18,7 +20,9 @@ character_event = {
 		event_target:brokenmindbody = {	
 			add_trait = infirm
 			}
-			character_event = { id = spellcost.1 }				
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }			
 		}
 	option = {
 			name = brokenmindbody.1c
@@ -26,7 +30,9 @@ character_event = {
 		event_target:brokenmindbody = {	
 			add_trait = hunchback
 			}
-			character_event = { id = spellcost.1 }				
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }			
 		}
 	option = {
 			name = brokenmindbody.1d
@@ -34,6 +40,8 @@ character_event = {
 		event_target:brokenmindbody = {	
 			add_trait = incapable
 			}
-			character_event = { id = spellcost.3 }		
+			character_event = { id = spellcost.3 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }				
 		}
 		}

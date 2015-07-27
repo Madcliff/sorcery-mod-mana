@@ -1,0 +1,49 @@
+targetted_decisions = {
+	2transmute_request_decision = {
+	
+		ai_target_filter  = sub_realm
+		
+		from_potential = {
+		ai = no
+		
+			any_realm_character = { 
+				check_variable = { which = "magic_power" value = 1 }				
+				trait = Alchemist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}		
+			}
+	
+		potential = {
+		ai = no
+			any_realm_character = { 
+				trait = Alchemist
+				NOT = { character = FROM } 
+				at_location = ROOT
+#				is_vassal_or_below = FROM				
+				}
+
+		}
+		
+		allow = { at_location = FROM }
+		
+		effect = {	
+			hidden_tooltip = { character_event = { id = transmute.1 } }
+				FROM = { any_realm_character = { limit = {
+				trait = Alchemist
+				at_location = ROOT		}	
+			save_event_target_as = spellcostcast			
+					
+			}
+		character_event = { id =  spellcost.21 }				
+		}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

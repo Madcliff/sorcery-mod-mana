@@ -48,7 +48,8 @@ magic_devestation = {
 	local_build_time_modifier = 1.0
 	assassinate_chance_modifier = 1.0
 	local_revolt_risk = 1.0
-	supply_limit = -5	
+	supply_limit = -15	
+	max_attrition = 1
 	}
 
 magic_awareness = {
@@ -63,5 +64,24 @@ magic_illusion = {
 	
 magic_preparation = {
 	icon = 12
-	supply_limit = 10.0 
+	supply_limit = 100.0 
+	}
+	
+	fireball = {
+	icon = 12
+	garrison_size = -10
+	levy_size =  -10
+	max_attrition = 1000	
+	local_movement_speed = -10	
+	}
+	
+	
+	disease_shield = {
+		icon = 12
+		disease_defence = 1 
+	}
+	
+	revolt_shield = {
+		icon = 12
+		local_revolt_risk = -0.5 
 	}

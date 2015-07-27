@@ -12,6 +12,8 @@ character_event = {
 			add_trait = has_tuberculosis
 			}
 			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}			
 	option = {
 			name = plagues.1b
@@ -19,7 +21,57 @@ character_event = {
 		event_target:plagues = {	
 			add_trait = has_small_pox		
 		}
-			character_event = { id = spellcost.1 }			
+			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
+		}
+	option = {
+			name = plagues.1c
+	
+		event_target:plagues = {	
+			add_trait = has_typhus
+			}
+			character_event = { id = spellcost.1 }
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
+		}
+	option = {
+			name = plagues.1d
+		trigger =  { check_variable = { which = "magic_power" value = 3   } } 	
+		event_target:plagues = {	
+			add_trait = has_bubonic_plague
+			}
+			character_event = { id = spellcost.3 }
+			set_character_flag = sorcery			
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }				
+		}
+}
+
+character_event = {
+	id = plagues.2 
+	desc = plagues.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = plagues.1a
+	
+		event_target:plagues = {	
+			add_trait = has_tuberculosis
+			}
+			event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}
+		}			
+	option = {
+			name = plagues.1b
+	
+		event_target:plagues = {	
+			add_trait = has_small_pox		
+		}
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.1 }							
+				}		
 		}
 	option = {
 			name = plagues.1c
@@ -31,10 +83,12 @@ character_event = {
 		}
 	option = {
 			name = plagues.1d
-	
+				trigger =  { event_target:spellcostcast = { check_variable =  { which = "magic_power" value = 3   } } } 
 		event_target:plagues = {	
 			add_trait = has_bubonic_plague
 			}
-			character_event = { id = spellcost.3 }			
+				event_target:spellcostcast = {
+				character_event = { id = spellcost.3 }							
+				}		
 		}
 }

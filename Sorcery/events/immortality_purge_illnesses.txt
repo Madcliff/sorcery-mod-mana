@@ -102,26 +102,3 @@ character_event = {
 		
 }
 }
-
-character_event = {
-	id = immortal_purge.3
-	desc = immortal_purge.3_desc
-	picture = GFX_evt_recovery
-    hide_window = yes
-	
-	trigger = {
-	trait = Undying
-	OR = { 
-			NOT = { health = 400}		
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-		
-		immediate= {
-
-		health = 10
-}
-}
