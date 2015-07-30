@@ -17,7 +17,9 @@ title_decisions = {
 			location = { add_province_modifier = {name = fireball duration = 35 }	
 					save_event_target_as = fireballloc	
 					}
+			
 			FROM = {
+					add_character_modifer = { name = fireball1 duration = 35}
 					character_event = {id = fireball.1}	
 					character_event = { id = spellcost.5 }
 					set_character_flag = sorcery

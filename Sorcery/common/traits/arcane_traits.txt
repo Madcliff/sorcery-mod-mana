@@ -53,9 +53,6 @@ Undying = {
 	
 Whispers_of_the_Damned = {
 	general_opinion = -10000
-	execute_reason = yes
-	banish_reason = yes
-	prison_reason = yes
     customizer = no
 	random = no
 }

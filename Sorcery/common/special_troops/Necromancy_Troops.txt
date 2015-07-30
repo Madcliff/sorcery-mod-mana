@@ -1,80 +1,40 @@
 Skeletons = {
-
 	morale = 40
-
 	maintenance = 0
-
 	phase_skirmish_attack = 0.125
-
 	phase_melee_attack = 4
-
 	phase_pursue_attack = 1
-
 	phase_skirmish_defense = 4
-
 	phase_melee_defense = 6
-
 	phase_pursue_defense = 1
 	base_type = heavy_infantry
-	
-	graphical_culture_type = westerngfx
-
 }
 
 
 
 DreadKnights = {
-
-
 	morale = 100
-
-	maintenance = 0
-
-	
+	maintenance = 0	
 	phase_skirmish_attack = 0.5
-
-
 	phase_melee_attack = 10
-
 	phase_pursue_attack = 6
-
 	phase_skirmish_defense = 16
-
-
 	phase_melee_defense = 16
-
 	phase_pursue_defense = 8
-
-
 	base_type = heavy_cavalry
-
-	graphical_culture_type = westerngfx
-
-
 }
 
 
 
 Daemons = {
-
 	morale = 300
-
 	maintenance = 0
-
 	phase_skirmish_attack = 0.25
-
 	phase_melee_attack = 50
-
 	phase_pursue_attack = 6
-
 	phase_skirmish_defense = 24
-
 	phase_melee_defense = 40
-
 	phase_pursue_defense = 8
-
 	base_type = heavy_cavalry
-
-	graphical_culture_type = westerngfx
 	
 }

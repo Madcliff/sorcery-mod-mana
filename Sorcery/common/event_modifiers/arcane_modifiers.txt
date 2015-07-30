@@ -67,14 +67,19 @@ magic_preparation = {
 	supply_limit = 100.0 
 	}
 	
-	fireball = {
+fireball = {
 	icon = 12
 	garrison_size = -10
 	levy_size =  -10
+	supply_limit = -100.0 
 	max_attrition = 1000	
 	local_movement_speed = -10	
 	}
-	
+fireball1 = {
+	icon = 12
+	max_attrition = -1000	
+
+	}
 	
 	disease_shield = {
 		icon = 12

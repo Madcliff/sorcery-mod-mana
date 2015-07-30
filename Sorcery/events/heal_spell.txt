@@ -47,14 +47,14 @@ character_event = {
 				if = { limit = { trait = has_measles } remove_trait = has_measles }
 				if = { limit = { trait = has_small_pox } remove_trait = has_small_pox }
 				if = { limit = { trait = has_aztec_disease } remove_trait = has_aztec_disease }
-				if = { limit = { has_character_modifier = { modifier =  minor_disease_herpes } }  
+				if = { limit = { has_character_modifier = minor_disease_herpes } }  
 				if = { limit = { trait = has_bloody_flux } remove_trait = has_bloody_flux }
 				if = { limit = { trait = has_grey_plague } remove_trait = has_grey_plague }
 				if = { limit = { trait = has_greyscale } remove_trait = has_greyscale }
 				if = { limit = { trait = has_red_death } remove_trait = has_red_death }
 				if = { limit = { trait = has_pox } remove_trait = has_pox }
 
-				remove_character_modifier = { modifier = minor_disease_herpes } } 
+				remove_character_modifier = minor_disease_herpes   
 			}
 	}
 		
@@ -62,7 +62,6 @@ character_event = {
 		name = healspell.1c	
 			event_target:healtarget = {		
 				if = { limit = { trait = Whispers_of_the_Damned } remove_trait = Whispers_of_the_Damned}
-				if = { limit = { has_opinion_modifier = { modifier = opinion_mind_control } } remove_opinion = { modifier =  opinion_mind_control } }
-			}
+				if = { limit = { has_opinion_modifier = { who = FROM modifier = opinion_mind_control } } remove_opinion = { who = FROM modifier = opinion_mind_control }}			}
 		}
 	}

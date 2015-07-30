@@ -31,13 +31,14 @@ targetted_decisions = {
 		effect = {
 			save_event_target_as = magickill			
 			FROM = {
-		character_event = {id = magickill.2 }	
+		character_event = {id = magickill.1 }	
 				any_realm_character = { limit = {
 				trait = War_Mage
 				at_location = ROOT		}	
 			save_event_target_as = spellcostcast			
 					
 			}
+		character_event = { id =  spellcost.21 }
 		}	
 		}
 		revoke_allowed = {

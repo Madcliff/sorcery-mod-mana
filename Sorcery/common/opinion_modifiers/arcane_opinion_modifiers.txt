@@ -5,6 +5,16 @@ opinion_mind_control = {
 	years = 1200
 }
 
+opinion_mind_influence = {
+	opinion = 10
+	years = 1200
+}
+
+opinion_mind_dark_whispers = {
+	opinion = -20
+	years = 1200
+}
+
 opinion_mind_control1 = {
 	opinion = 100
 	months = 6

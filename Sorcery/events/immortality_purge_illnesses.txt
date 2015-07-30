@@ -47,7 +47,7 @@ character_event = {
 			trait = has_red_death 
 			trait = crippled 
 			trait = has_pox
-			has_character_modifier = { modifier =  minor_disease_herpes }			
+			has_character_modifier = minor_disease_herpes 		
 		}
 	}
 	
@@ -97,8 +97,8 @@ character_event = {
 
 		if = { limit = { trait = Whispers_of_the_Damned } remove_trait = Whispers_of_the_Damned}
 		if = { limit = { trait = mindcontrol_trait } remove_trait = mindcontrol_trait}
-		if = { limit = { has_opinion_modifier = opinion_mind_control } remove_opinion = opinion_mind_control }
-		if = { limit = { has_character_modifier = { modifier =  minor_disease_herpes } }  remove_character_modifier = { modifier = minor_disease_herpes } } 
+		if = { limit = { has_opinion_modifier = { who = FROM modifier = opinion_mind_control } } remove_opinion = { who = FROM modifier = opinion_mind_control }}
+		if = { limit = { has_character_modifier = minor_disease_herpes  }  remove_character_modifier = minor_disease_herpes  } 
 		
 }
 }

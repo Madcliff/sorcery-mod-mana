@@ -303,14 +303,30 @@ magic_awareness_desc;Magic Awareness;x
 1mind_illusion_decision_desc;Use your magices to alter the minds of the world to see things your way.;x
 mindillusionspell.1;Mental Manipulation;x
 mindillusionspell.1_desc; Your magics flare binding all those to the image within your mind, your actions are now rightful no matter what the truth of the matter is.;x
-mindillusionspell.1a;Mind Control;x
-mindillusionspell.1b;Rights of the Liege!;x
+mindillusionspell.1a;Mental Influence;x
+mindillusionspell.1b;Influence Character;x
 mindillusionspell.1c;Claim Lands!;x
 mindillusionspell.1d;Make Vassal!;x
 mindillusionspell.1b_desc;Imprison, revoke or banish!;x
 mindillusionspell.1c_desc;Force a lunatic to abdicate to you!;x
 mindillusionspell.1d_desc;If they are an independent ruler of a lesser tier, make them your vassal.;x
+mindillusionspell.2;Manipulate opinions;x
+mindillusionspell.2_desc;By wielding your powers to enter the mind of others, you subtly and nimbly influence them towards your will, to either serve you, or hate others.;x
+mindillusionspell.2a;Influence Mind;x
+mindillusionspell.2b;Dark Whispers;x
+mindillusionspell.2c;Mind COntrol;x
 
+mindillusionspell.3;Influence Character;x 
+mindillusionspell.3_desc;With subtle manipulation, you use your sorceries to alter the character of your enemies;x
+mindillusionspell.3a;Lunacy;x
+mindillusionspell.3b;Paranoid;x
+mindillusionspell.3c;Craven;x
+mindillusionspell.3d;Next Page;x
+mindillusionspell.4;With subtle manipulation, you use your sorceries to alter the character of your enemies;x
+mindillusionspell.4a;Depressed;x
+mindillusionspell.4b;Imbecile;x
+mindillusionspell.4c;Incapaable;x
+mindillusionspell.4d;Main Menu;x
 magic_power;Mana;;;;;;;;;;;;;x;;
 mana_loc;[Root.magic_power.GetName] value is : [Root.magic_power.GetValue].;;;;;;;;;;;;;x;;
 

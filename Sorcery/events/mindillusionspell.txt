@@ -7,26 +7,22 @@ character_event = {
 	is_triggered_only = yes
 	option = {
 			name = mindillusionspell.1a
-	
-		event_target:mindillusiontarget = {	
-		opinion = { modifier = opinion_mind_control who = ROOT years = 100000 }
-		}
-		character_event = { id = spellcost.1 }			
+		character_event = { id = mindillusionspell.2 }			
 	}		
 	option = {
 			name = mindillusionspell.1b
-			event_target:mindillusiontarget = {
-				ROOT = {
-					opinion = { modifier = mind_control_revoke who = FROM years = 100000 }
-					opinion = { modifier = mind_control_execute who = FROM years = 100000 }		
-					opinion = { modifier = mind_control_banish who = FROM years = 100000 }					
-				}		
-		}
-		character_event = { id = spellcost.2 }	
+#			event_target:mindillusiontarget = {
+#				ROOT = {
+#					opinion = { modifier = mind_control_revoke who = FROM years = 100000 }
+#					opinion = { modifier = mind_control_execute who = FROM years = 100000 }		
+#					opinion = { modifier = mind_control_banish who = FROM years = 100000 }					
+#				}		
+#		}
+		character_event = { id = mindillusionspell.3 }	
 		}
 	option = {
 			name = mindillusionspell.1c
-			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { ROOT = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
+			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = ROOT modifier = opinion_mind_control } } event_target:mindillusiontarget = { ROOT = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
 			event_target:mindillusiontarget = {	
 				abdicate_to = ROOT
 			}	
@@ -42,4 +38,121 @@ character_event = {
 			}
 			character_event = { id = spellcost.10 }	
 		}
+}
+
+character_event = {
+	id = mindillusionspell.2
+	desc = mindillusionspell.2_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+			name = mindillusionspell.2a
+	
+		event_target:mindillusiontarget = {	
+		opinion = { modifier = opinion_mind_influence who = ROOT years = 10 }
+		}
+		character_event = { id = spellcost.1 }			
+	}		
+
+		option = {
+			name = mindillusionspell.2b
+		event_target:mindillusiontarget = {		
+#		opinion = { modifier = opinion_mind_dark_whispers who = event_target:influencetarget  years = 10 }				
+			any_realm_character = { 
+				reverse_opinion = { modifier = opinion_mind_dark_whispers who = FROM years = 10 }
+			}
+			any_independent_ruler = { 
+				reverse_opinion = { modifier = opinion_mind_dark_whispers who = FROM years = 10 }
+			}
+			any_friend = {
+				reverse_opinion = { modifier = opinion_mind_dark_whispers who = FROM years = 10 }			
+			}	
+			religion_head ={
+				reverse_opinion = { modifier = opinion_mind_dark_whispers who = FROM years = 10 }
+			} 
+		}		
+		character_event = { id = spellcost.1 }			
+	}	
+
+		option = {
+			name = mindillusionspell.2c
+		trigger = { event_target:mindillusiontarget = { opinion = { who = ROOT value = 100 }}}
+		event_target:mindillusiontarget = {	
+		opinion = { modifier = opinion_mind_control who = ROOT years = 1000 }
+		}
+		character_event = { id = spellcost.1 }			
+	}
+		option = {
+			name = mindillusionspell.2d
+			character_event = { id = mindillusionspell.1 }
+		}
+}
+
+character_event = {
+	id = mindillusionspell.3
+	desc = mindillusionspell.3_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = mindillusionspell.3a
+		event_target:mindillusiontarget = {	
+			add_trait = lunatic
+		}
+		character_event = { id = spellcost.1 }
+	}
+	option = {
+		name = mindillusionspell.3b
+		event_target:mindillusiontarget = {	
+			add_trait = paranoid	
+		}
+		character_event = { id = spellcost.1 }
+	}
+	option = {
+		name = mindillusionspell.3c
+		event_target:mindillusiontarget = {	
+			add_trait = craven
+		}
+		character_event = { id = spellcost.1 }
+	}	
+	option = {
+		name = mindillusionspell.3d
+			character_event = { id = mindillusionspell.4 }
+	}	
+}
+
+character_event = {
+	id = mindillusionspell.4
+	desc = mindillusionspell.4_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = mindillusionspell.4a
+		event_target:mindillusiontarget = {	
+			add_trait = depressed
+		}
+		character_event = { id = spellcost.1 }
+	}
+	option = {
+		name = mindillusionspell.4b
+		trigger =  { check_variable = { which = "magic_power" value = 3   } } 	
+		event_target:mindillusiontarget = {	
+			add_trait = imbecile
+		}
+		character_event = { id = spellcost.3 }
+	}
+	option = {
+		name = mindillusionspell.4c
+		trigger =  { check_variable = { which = "magic_power" value = 5   } } 			
+		event_target:mindillusiontarget = {	
+			add_trait = incapable
+		}
+		character_event = { id = spellcost.5 }
+	}	
+	option = {
+		name = mindillusionspell.4d
+			character_event = { id = mindillusionspell.1 }
+	}	
 }

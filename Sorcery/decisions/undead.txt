@@ -1,7 +1,7 @@
 title_decisions = {
 	2summon_undead = {
-			filter = sub_realm
-		ai_target_filter  = self
+			filter = sub_realm_owned
+		ai_target_filter  = sub_realm_owned
 		is_mercenary = yes	
 		from_potential = {
 			check_variable = { which = "magic_power" value = 5 }	 			

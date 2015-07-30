@@ -1,10 +1,6 @@
 10450580 = {
 	name = "di Roma"
 	divine_blood = yes
-	pc_marriage = yes
-	bs_marriage = yes	
-	max_wives = 4
-	max_concubines = 12
-	culture = "greek"	
+	culture = "italian"	
 }
 
