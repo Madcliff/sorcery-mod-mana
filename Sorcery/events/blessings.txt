@@ -1,0 +1,42 @@
+namespace = blessings
+character_event = {
+	id = blessings.1 
+	desc = blessings.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = blessings.1a
+		event_target:blessingsloc = {	
+			add_province_modifier  = { name = magic_subjugation duration = 720 } 
+		}
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}
+	option = {
+		name = blessings.1b
+		event_target:blessingsloc = {	
+			add_province_modifier  = { name = magic_preparation duration = 720 } 
+		}
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}	
+	option = {
+		name = blessings.1c
+		event_target:blessingsloc = {	
+			add_province_modifier  = { name = magic_time duration = 720 } 
+		}
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }	
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}		
+	option = {
+		name = blessings.1d
+		character_event = { id = blessings.1 }
+	}
+}

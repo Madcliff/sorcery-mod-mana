@@ -1,16 +1,26 @@
 namespace = spellcost
 
 character_event = {
-	id = spellcost.1
-	desc = spellcost.1_desc
-	picture = GFX_evt_child_reading
+
+	id = spellcost.100
     hide_window = yes	
 	is_triggered_only = yes
 	
 		
-	option = {
-		name = spellcost.1b	
-		trigger = { check_variable = { which = "magic_power" value = 1   } } 
+	immediate = {
+		trigger = { check_variable = { which = "magic_power" value = "var1"   } } 
+		subtract_variable  = { which = "magic_power" which  = "var1" }
+	}	
+}
+
+character_event = {
+	id = spellcost.1
+    hide_window = yes	
+	is_triggered_only = yes
+	
+		
+	immediate = {
+		limit = { check_variable = { which = "magic_power" value = 1   } } 
 			change_variable = { which = "magic_power" value = -1 }
 			any_realm_character = {
 				limit = {
@@ -22,23 +32,19 @@ character_event = {
 							trait = Mentalist 
 							trait = Alchemist 
 							trait = Herbalist 
-							} 
 						} 
-					}
-#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+					} 
 				}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
 			}
-	
+	}	
 }
 character_event = {
 	id = spellcost.2
-	desc = spellcost.2_desc
-	picture = GFX_evt_child_reading
     hide_window = yes	
 	is_triggered_only = yes
 			
-	option = {
-		name = spellcost.1b	
+	immediate = {
 		trigger = { check_variable = { which = "magic_power" value = 2   } } 
 			change_variable = { which = "magic_power" value = -2 }
 			any_realm_character = {
@@ -63,15 +69,12 @@ character_event = {
 
 character_event = {
 	id = spellcost.3
-	desc = spellcost.3_desc
-	picture = GFX_evt_child_reading
     hide_window = yes	
 	is_triggered_only = yes
 	
 
 		
-	option = {
-		name = spellcost.1b	
+	immediate = {
 		trigger =  { check_variable = { which = "magic_power" value = 3   } } 
 			change_variable = { which = "magic_power" value = -3 }
 			any_realm_character = {
@@ -95,13 +98,10 @@ character_event = {
 
 character_event = {
 	id = spellcost.4
-	desc = spellcost.4_desc
-	picture = GFX_evt_child_reading
     hide_window = yes	
 	is_triggered_only = yes
 			
-	option = {
-		name = spellcost.1b	
+	immediate = {
 		trigger = { check_variable = { which = "magic_power" value = 4   } } 
 			change_variable = { which = "magic_power" value = -4 }
 			any_realm_character = {
@@ -127,13 +127,10 @@ character_event = {
 
 character_event = {
 	id = spellcost.5
-	desc = spellcost.5_desc
-	picture = GFX_evt_child_reading
     hide_window = yes	
 	is_triggered_only = yes
 			
-	option = {
-		name = spellcost.1b	
+	immediate = {
 		trigger = { check_variable = { which = "magic_power" value = 5   } } 
 			change_variable = { which = "magic_power" value = -5 }
 			any_realm_character = {
@@ -159,13 +156,10 @@ character_event = {
 
 character_event = {
 	id = spellcost.10
-	desc = spellcost.10_desc
-	picture = GFX_evt_child_reading
     hide_window = yes	
 	is_triggered_only = yes
 			
-	option = {
-		name = spellcost.1b	
+	immediate = {
 		trigger = { check_variable = { which = "magic_power" value = 10   } } 
 			change_variable = { which = "magic_power" value = -10 }
 			any_realm_character = {

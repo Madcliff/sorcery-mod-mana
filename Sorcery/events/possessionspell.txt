@@ -12,7 +12,8 @@ character_event = {
 			add_trait = lunatic
 			add_trait = paranoid			
 			}
-			character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}			
@@ -23,7 +24,8 @@ character_event = {
 			add_trait = possessed	
 			add_trait = craven			
 		}
-			character_event = { id = spellcost.1 }	
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
@@ -34,7 +36,8 @@ character_event = {
 			add_trait = depressed
 			add_trait = stressed
 			}
-			character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
@@ -44,7 +47,8 @@ character_event = {
 		event_target:possessiontarget = {	
 			add_trait = imbecile
 			}
-			character_event = { id = spellcost.3 }		
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }	
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }				
 		}

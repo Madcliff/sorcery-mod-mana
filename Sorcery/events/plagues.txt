@@ -11,7 +11,8 @@ character_event = {
 		event_target:plagues = {	
 			add_trait = has_tuberculosis
 			}
-			character_event = { id = spellcost.1 }	
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}			
@@ -21,7 +22,8 @@ character_event = {
 		event_target:plagues = {	
 			add_trait = has_small_pox		
 		}
-			character_event = { id = spellcost.1 }	
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
@@ -31,7 +33,8 @@ character_event = {
 		event_target:plagues = {	
 			add_trait = has_typhus
 			}
-			character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 		}
@@ -40,8 +43,10 @@ character_event = {
 		trigger =  { check_variable = { which = "magic_power" value = 3   } } 	
 		event_target:plagues = {	
 			add_trait = has_bubonic_plague
+			activate_disease = bubonic_plague
 			}
-			character_event = { id = spellcost.3 }
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }				
 		}
@@ -86,6 +91,7 @@ character_event = {
 				trigger =  { event_target:spellcostcast = { check_variable =  { which = "magic_power" value = 3   } } } 
 		event_target:plagues = {	
 			add_trait = has_bubonic_plague
+			activate_disease = bubonic_plague
 			}
 				event_target:spellcostcast = {
 				character_event = { id = spellcost.3 }							

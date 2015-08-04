@@ -13,7 +13,8 @@ character_event = {
 					banish = yes 
 					}
 #					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
-				character_event = { id = spellcost.1 }	
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }	
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }					
 				}
@@ -25,7 +26,8 @@ character_event = {
 					banish = yes 					
 					}
 #					any_realm_character = { limit = { at_location } opinion = { modifier = opinion_magickill_disfigure who = FROM years = 10 } }
-				character_event = { id = spellcost.1 }	
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }	
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }					
 				}
@@ -38,7 +40,8 @@ character_event = {
 						killer = FROM 
 					}
 				}
-				character_event = { id = spellcost.3 }		
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }		
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }					
 			}						

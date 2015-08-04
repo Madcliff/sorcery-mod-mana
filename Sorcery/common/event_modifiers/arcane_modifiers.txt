@@ -90,3 +90,39 @@ fireball1 = {
 		icon = 12
 		local_revolt_risk = -0.5 
 	}
+
+curse_of_the_damned = {
+	general_opinion = -100 
+}
+curse_of_martial = {
+	martial = -5 
+}
+curse_of_intrigue = {
+	intrigue = -5 
+}
+curse_of_stewardship = {
+	stewardship = -5 
+}
+curse_of_learning = {
+	learning = -5 
+}
+curse_of_diplomacy = {
+	diplomacy = -5 
+}
+curse_of_combat = { 
+	combat_rating = -5
+}
+curse_of_fertility = { 
+	fertility = -25
+}
+curse_of_health = { 
+	health = -1
+}
+
+precognition = {
+	tech_growth_modifier = 1000.0
+	military_techpoints  = 100.0
+	cultural_techpoints  = 100.0
+	economic_techpoints  = 100.0
+	
+}

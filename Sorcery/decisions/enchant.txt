@@ -12,9 +12,14 @@ targetted_decisions = {
 		}
 	
 		potential = {
+		character = FROM 
+			is_playable = yes
+			NOT = { trait = incapable }
+			trait = Sorcery
+			ai = no
+		
 		}
-		allow = { 	
-		}
+		allow = { OR = {trait = Sorcery trait = Mentalist} }
 		
 		effect = {	
 		any_realm_lord  = {

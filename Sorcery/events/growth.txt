@@ -55,7 +55,7 @@ character_event = {
 	border = GFX_event_normal_frame_war
     hide_window = yes	
 	trigger = {
-		trait = undying
+		trait = Undying
 	}
 	
 	mean_time_to_happen  = { 

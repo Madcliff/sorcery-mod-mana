@@ -89,7 +89,6 @@ firestorm = {
 			trait = Sorcery
 			trait = War_Mage
 			}
-			learning = 10
 			has_character_flag = firestorm
 		}
 		

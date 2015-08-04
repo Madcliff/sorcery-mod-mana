@@ -14,7 +14,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					maintenance_multiplier = 0.0
@@ -28,7 +28,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					reinforces = yes
@@ -43,7 +43,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					reinforces = yes	
@@ -57,7 +57,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					reinforces = yes
@@ -71,7 +71,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					reinforces = yes
@@ -85,7 +85,7 @@ character_event = {
 					province = event_target:undeadloc 
 					home = event_target:undeadloc
 					troops = {
-						Skeletons = { 500 500 }		
+						heavy_infantry = { 500 500 }		
 					}
 					attrition = 0.0
 					reinforces = yes
@@ -96,99 +96,6 @@ character_event = {
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }						
 			}			
-	option = {
-		name = skeleton.2a		
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc
-					troops = {
-						Daemons = { 50 50 }		
-					}
-					attrition = 0.0
-					reinforces = yes
-					maintenance_multiplier = 0.0
-					reinforce_rate_multiplier = 2
-					merge = yes						
-					}		
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc					
-					troops = {
-						Daemons = { 50 50 }							
-					}
-						attrition = 0.0
-						reinforces = yes
-						maintenance_multiplier = 0.0
-						reinforce_rate_multiplier = 2
-					merge = yes							
-					}			
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc
-					troops = {
-						Daemons = { 50 50 }								
-					}
-						attrition = 0.0
-						reinforces = yes
-						maintenance_multiplier = 0.0	
-						reinforce_rate_multiplier = 2
-					merge = yes							
-					}	
-			set_character_flag = sorcery			
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 365 } }					
-			}
-	option = {
-		name = skeleton.3a						
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc
-					troops = {
-						DreadKnights = { 200 200 }							
-					}
-					attrition = 0.0
-					reinforces = yes
-					maintenance_multiplier = 0.0	
-					reinforce_rate_multiplier = 2
-					merge = yes						
-					}				
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc
-					troops = {
-						DreadKnights = { 200 200 }								
-					}
-						attrition = 0.0
-						reinforces = yes
-						maintenance_multiplier = 0.0	
-						reinforce_rate_multiplier = 2						
-					merge = yes							
-					}			
-				spawn_unit = {
-					owner = ROOT
-					leader = none
-					province = event_target:undeadloc 
-					home = event_target:undeadloc
-					troops = {
-						DreadKnights = { 200 200 }							
-					}
-						attrition = 0.0
-						reinforces = yes
-						maintenance_multiplier = 0.0
-						reinforce_rate_multiplier = 2
-					merge = yes							
-					}	
-			set_character_flag = sorcery			
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 300 } }					
-				}
+
 }
 

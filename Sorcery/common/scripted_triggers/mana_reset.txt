@@ -1,0 +1,5 @@
+mana_reset_trigger = {
+	not = {
+		check_variable = { which = "magic_power" value = 0 }
+	}      
+}

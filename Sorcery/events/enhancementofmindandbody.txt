@@ -10,11 +10,15 @@ character_event = {
 		
 		option = {
 		name = ritual.1a	
-			add_trait = fair
-			add_trait = genius	
-			add_trait = strong
-			add_trait = unyielding_leader
-			add_trait = brave
-			add_trait = patient	
-		}
+			event_target:ritualtarget = {			
+				add_trait = fair
+				add_trait = genius	
+				add_trait = strong
+				add_trait = unyielding_leader
+				add_trait = brave
+				add_trait = patient		
+			}
+		set_variable = {which = "var1" value = 3}
+		character_event = { id = spellcost.100 }		
+	}
 	}

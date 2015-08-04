@@ -1,0 +1,43 @@
+namespace = premonitions
+character_event = {
+	id = premonitions.1 
+	desc = whispersdamned.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = premonitions.1a
+		add_character_modifier = { name = magic_illusion duration = 3650 } 
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }	
+	}
+	option = {
+		name = premonitions.1b
+		add_character_modifier = { name = magic_awareness duration = 3650 } 
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+	}	
+	option = {
+		name = premonitions.1c
+		hidden_tooltip = { character_event = { id = foresight.1 } }
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+	}		
+	option = {
+		name = premonitions.1d
+		location = { 
+			add_province_modifier  = { name = precognition duration = 720 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+		set_character_flag = sorcery
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+#		character_event = { id = premonitions.1 }
+	}
+}

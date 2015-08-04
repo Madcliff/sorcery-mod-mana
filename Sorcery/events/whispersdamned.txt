@@ -6,21 +6,110 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-			name = whispersdamned.1a
-	
+		name = whispersdamned.1a
 		event_target:whispersdamned = {	
-		add_trait = Whispers_of_the_Damned
-			}
-		}			
+			add_character_modifier = { name = curse_of_the_damned duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}
+	option = {
+		name = whispersdamned.1b
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_fertility duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}	
+	option = {
+		name = whispersdamned.1c
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_health duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}		
+	option = {
+		name = whispersdamned.1d
+		character_event = { id = whispersdamned.2 }
+	}
 }
-
-
-
-
-
 
 character_event = {
 	id = whispersdamned.2 
+	desc = whispersdamned.2_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = whispersdamned.2a
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_martial duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}
+	option = {
+		name = whispersdamned.2b
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_intrigue duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}	
+	option = {
+		name = whispersdamned.2c
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_stewardship duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}		
+	option = {
+		name = whispersdamned.2d
+		character_event = { id = whispersdamned.3 }
+	}
+}
+
+character_event = {
+	id = whispersdamned.3 
+	desc = whispersdamned.1_desc
+	picture = GFX_evt_mongols
+	
+	is_triggered_only = yes
+	option = {
+		name = whispersdamned.3a
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_learning duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}
+	option = {
+		name = whispersdamned.3b
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_diplomacy duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}	
+	option = {
+		name = whispersdamned.3c
+		event_target:whispersdamned = {	
+			add_character_modifier = { name = curse_of_combat duration = 3650 } 
+		}
+		set_variable = {which = "var1" value = 1}
+		character_event = { id = spellcost.100 }
+	}		
+	option = {
+		name = whispersdamned.3d
+		character_event = { id = whispersdamned.1 }
+	}
+}
+
+
+character_event = {
+	id = whispersdamned.200 
 	desc = whispersdamned.2_desc
 	picture = GFX_evt_mongols
 	

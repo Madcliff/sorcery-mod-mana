@@ -25,8 +25,9 @@ character_event = {
 			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = ROOT modifier = opinion_mind_control } } event_target:mindillusiontarget = { ROOT = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
 			event_target:mindillusiontarget = {	
 				abdicate_to = ROOT
-			}	
-			character_event = { id = spellcost.5 }	
+			}
+			set_variable = {which = "var1" value = 5}
+			character_event = { id = spellcost.100 }	
 		}
 	option = {
 			name = mindillusionspell.1d
@@ -36,7 +37,8 @@ character_event = {
 					set_defacto_liege = ROOT 
 				}				
 			}
-			character_event = { id = spellcost.10 }	
+			set_variable = {which = "var1" value = 10}
+			character_event = { id = spellcost.100 }
 		}
 }
 
@@ -52,7 +54,8 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_influence who = ROOT years = 10 }
 		}
-		character_event = { id = spellcost.1 }			
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }			
 	}		
 
 		option = {
@@ -72,7 +75,8 @@ character_event = {
 				reverse_opinion = { modifier = opinion_mind_dark_whispers who = FROM years = 10 }
 			} 
 		}		
-		character_event = { id = spellcost.1 }			
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }		
 	}	
 
 		option = {
@@ -81,7 +85,8 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_control who = ROOT years = 1000 }
 		}
-		character_event = { id = spellcost.1 }			
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }		
 	}
 		option = {
 			name = mindillusionspell.2d
@@ -100,21 +105,24 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = lunatic
 		}
-		character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 	}
 	option = {
 		name = mindillusionspell.3b
 		event_target:mindillusiontarget = {	
 			add_trait = paranoid	
 		}
-		character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 	}
 	option = {
 		name = mindillusionspell.3c
 		event_target:mindillusiontarget = {	
 			add_trait = craven
 		}
-		character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 	}	
 	option = {
 		name = mindillusionspell.3d
@@ -133,7 +141,8 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = depressed
 		}
-		character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 	}
 	option = {
 		name = mindillusionspell.4b
@@ -141,7 +150,8 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = imbecile
 		}
-		character_event = { id = spellcost.3 }
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }
 	}
 	option = {
 		name = mindillusionspell.4c
@@ -149,7 +159,8 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = incapable
 		}
-		character_event = { id = spellcost.5 }
+			set_variable = {which = "var1" value = 5}
+			character_event = { id = spellcost.100 }
 	}	
 	option = {
 		name = mindillusionspell.4d

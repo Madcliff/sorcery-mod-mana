@@ -1,0 +1,34 @@
+namespace = alchemy
+character_event = {
+    id = alchemy.1
+    desc = "alchemy.1_desc"
+    picture = "GFX_fire_magic"	
+	
+    trigger = { 
+        OR = {
+            trait = Sorcery
+            trait = Alchemist
+        }
+	}
+    mean_time_to_happen = {
+        days = 365
+    } 
+	option = {
+		name = Alchemy1.a
+			if = {
+				limit = { NOT = { yearly_income = 40 } }
+				wealth = 100
+			}
+			if = {
+				limit = { 
+					NOT = { yearly_income = 200 } 
+					yearly_income = 40
+				}
+				scaled_wealth = 2.5
+			}
+			if = {
+				limit = { yearly_income = 200 }
+				wealth = 500
+			}
+		}
+}

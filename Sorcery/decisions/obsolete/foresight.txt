@@ -20,8 +20,7 @@ targetted_decisions = {
 		
 		}
 		
-		allow = {
-		}
+		allow = { trait = Sorcery }
 		
 		effect = {	
 			hidden_tooltip = { character_event = { id = foresight.1 } }

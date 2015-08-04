@@ -24,12 +24,12 @@ targetted_decisions = {
 				}
 		
 		effect = {	
-			character_event = {id = ritual.1}
+			save_event_target_as = ritualtarget			
 			set_character_flag = bodyritual
 			FROM = {
 			clr_character_flag = Magic_Divining
-			character_event = { id = spellcost.3 }	
 			set_character_flag = sorcery
+			character_event = {id = ritual.1}
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			}	
 		}

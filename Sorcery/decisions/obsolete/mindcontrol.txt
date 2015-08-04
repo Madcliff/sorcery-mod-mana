@@ -7,7 +7,7 @@ targetted_decisions = {
 			is_playable = yes
 			ai = no
 			check_variable = { which = "magic_power" value = 1 }		
-			NOT = { trait = incapable }
+			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
 			OR = {trait = Sorcery trait = Mentalist}
 		}
 	
@@ -34,6 +34,8 @@ targetted_decisions = {
 			FROM = {			
 			clr_character_flag = Magic_Divining
 			character_event = { id = spellcost.1 }	
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
 			}	
 		}
 		revoke_allowed = {
