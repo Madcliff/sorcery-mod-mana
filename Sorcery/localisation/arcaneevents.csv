@@ -1,3 +1,30 @@
+curses_spell_decision;Curses Spell;x
+curses_spell_decision_desc;Unleash the curses of your will to consume your enemies.;x
+whispersdamned.1;Curses of life, love and health.;x
+whispersdamned.1_desc;You twist the hidden forces of the subtle weave, taking from your victim either life, love, or their children yet unborn;x
+whispersdamned.1a;Let them be damned!;x
+whispersdamned.1b;May they be childless!;x
+whispersdamned.1c;Let life leave them!;x
+whispersdamned.1d;Curses of Martial, Intrigue and Stewardship;x
+whispersdamned.2;Curses of Martial, Intrigue and Stewardship;x
+whispersdamned.2_desc;By twisting the arcane winds of magic, you take from your victim their proficiency in the arts of the ruler.;x
+whispersdamned.2a;Cast their shields and swords asunder!;x
+whispersdamned.2b;Let their plots be known!;x
+whispersdamned.2c;May their relam collapse in ruins!;x
+whispersdamned.2d;Curses of Learning, Diplomacy and Combat;x
+whispersdamned.3;Curses of Learning, Diplomacy and Combat;x
+whispersdamned.3_desc;The twisting nether strikes at your enemies ability to learn things anew, hold peace in their time, and indeed their very ability to hold a sword.x
+whispersdamned.3a;Let their wits wander!;x
+whispersdamned.3b;Let their words fail them!;x
+whispersdamned.3c;May their sword shatter!;x
+whispersdamned.3d;Curses of life, love and health.;x
+
+
+magic_blessings_descison;Blessings Spell;x
+magic_blessings_descison_desc;Bless your Province;x
+
+
+
 militarytrait.1a;Unyielding Leader, Flanker, Narrow Flank Leader;;;;;;;;x
 militarytrait.1b;Trickster, Organizer, Expermenter;;;;;;;;x
 militarytrait.1c;Siege Leader, Aggressive Leader, Defensive Leader;;;;;;;;x

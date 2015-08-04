@@ -191,8 +191,7 @@ sorceryfocus.10d;Invite death and pluck the secrets from the ether.;;;;;;x
 1broken_mindandbody_decision_desc;By conjuring forth the forces of chaos you wrack your targets body with deformities.;;;;;;x
 
 
-1Whispers_of_damned_decision;Mind Magic:Curse of the Damned;;;;;;x
-1Whispers_of_damned_decision_desc;You curse your enemy to suffer the fate of the hated.;;;;;;x
+
 
 
 2trainapprentice;Sorcery:Train an Apprentice;;;;;;x
@@ -217,8 +216,7 @@ siegeoffire.1_desc;You conjure forth your hellfires and let them rage against th
 1mind_control_request_decision_desc;Control the minds of others through your Mentalist;;;;;;x
 1possession_request_decision;Mind Magic:Curse of Possession(Mentalist);;;;;;x
 1possession_request_decision_desc;Curse others with a possession through your Mentalist;;;;;;x
-1Whispers_of_damned_request_decision;Mind Magic:Cast Whispers of the Damned(pet wizard);;;;;;x
-1Whispers_of_damned_request_decision_desc;You order your subject wizard to unleash the dark whispers;;;;;;x
+
 
 
 2transmute_request_decision;Alchemy:Transmute Gold(Alchemist);;;;;;x

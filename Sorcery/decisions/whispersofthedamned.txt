@@ -1,5 +1,5 @@
 targetted_decisions = {
-	1Whispers_of_damned_decision = {
+	curses_spell_decision = {
 			
 		ai_target_filter   = all
 		filter = all
