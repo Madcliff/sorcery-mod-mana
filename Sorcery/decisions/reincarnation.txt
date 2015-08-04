@@ -75,6 +75,13 @@ targetted_decisions = {
 			}
 			character_event = { id = RoI.10001}
 			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
+			copy_random_personality_trait = FROM
 			set_character_flag = sorcery
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 1800 } }			
 			
