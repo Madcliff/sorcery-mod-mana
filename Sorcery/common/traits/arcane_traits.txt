@@ -11,6 +11,15 @@ Sorcery = {
 	same_opinion_if_same_religion = 50	
     customizer = yes
 	random = no	
+	command_modifier = {
+		speed = 0.4
+		retreat = 0.4
+		morale_defence = 0.4		
+		morale_offence = 0.4		
+		siege = 0.4		
+		winter_supply  = 1
+		
+	}	
 	}	
 Mentalist = { 
 	ruler_designer_cost = -50
@@ -19,6 +28,10 @@ Mentalist = {
 	intrigue = 1
     	customizer = yes
 	random = no	
+	command_modifier = {
+		morale_defence = 0.4		
+		morale_offence = 0.4		
+	}	
 }
 Alchemist = {
 	ruler_designer_cost = -50
@@ -27,6 +40,9 @@ Alchemist = {
 	stewardship = 1
     customizer = yes
 	random = no	
+	command_modifier = {
+		siege = 0.8		
+	}	
 }
 War_Mage = {
 	ruler_designer_cost = -50
@@ -35,6 +51,10 @@ War_Mage = {
 	martial = 1
     customizer = yes
 	random = no	
+	command_modifier = {
+		speed = 0.4
+		retreat = 0.4
+	}	
 }	
 Herbalist = {
 	ruler_designer_cost = -50
@@ -43,6 +63,9 @@ Herbalist = {
     learning = 1	
     customizer = yes
 	random = no	
+	command_modifier = {
+		winter_supply  = 1
+	}	
 }	
 Undying = {
 	ruler_designer_cost = 100	

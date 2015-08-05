@@ -331,7 +331,7 @@ character_event = {
 	option = {
 		name = mindillusionspell.301a
 		event_target:mindillusiontarget = {	
-		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = lustful } } 
+		trigger =  { check_variable = { which = "magic_power" value = 1   }  not = { trait = lustful } } 
 			add_trait = lustful
 		}
 			set_variable = {which = "var1" value = 1}
