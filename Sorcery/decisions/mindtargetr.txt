@@ -1,0 +1,33 @@
+targetted_decisions = {
+	1mind_target_decision = {
+			
+		ai_target_filter   = all
+		filter = all
+		from_potential = {
+			is_playable = yes
+			ai = no
+			OR = {trait = Sorcery trait = Mentalist}
+		}
+	
+		potential = {
+		OR = {
+		NOT = { character = FROM  } 
+		NOT = { has_character_modifier = magic_shield }
+		}
+		}
+		allow = { 
+				}
+		NOT = { character = FROM  }		
+		}
+		
+		effect = {	
+			save_event_target_as = mindtarget			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	}
