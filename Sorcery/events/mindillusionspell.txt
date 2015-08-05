@@ -23,51 +23,51 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.2.1a
-		character_event = { id = mindillusionspell.2.1 }
+		name = mindillusionspell.2a
+		character_event = { id = mindillusionspell.201 }
 		}
 	option = {
-		name = mindillusionspell.2.2b	
-		character_event = { id = mindillusionspell.2.2 }
+		name = mindillusionspell.2b	
+		character_event = { id = mindillusionspell.202 }
 		}
 	option = {
-		name = mindillusionspell.2.2c	
+		name = mindillusionspell.2c	
 		character_event = { id = mindillusionspell.1 }
 		}
 }
 
 character_event = {
-	id = mindillusionspell.2.1
-	desc = mindillusionspell.2a_desc
+	id = mindillusionspell.201
+	desc = mindillusionspell.201a_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.2.1.1a
-		character_event = { id = mindillusionspell.2.1.1 }
+		name = mindillusionspell.201a
+		character_event = { id = mindillusionspell.20101 }
 		}
 	option = {
-		name = mindillusionspell.2.1.2b	
-		character_event = { id = mindillusionspell.2.1.2 }
+		name = mindillusionspell.201b	
+		character_event = { id = mindillusionspell.20102 }
 		}		
 	option = {
-		name = mindillusionspell.2.1.2c	
-		character_event = { id = mindillusionspell.2.1.3 }
+		name = mindillusionspell.201c	
+		character_event = { id = mindillusionspell.20103 }
 		}
 	option = {
-		name = mindillusionspell.2.1.3d	
+		name = mindillusionspell.201d	
 		character_event = { id = mindillusionspell.2 }
 		}
 }
 
 character_event = {
-	id = mindillusionspell.2.1.1
-	desc = mindillusionspell.2.1.1_desc
+	id = mindillusionspell.20101
+	desc = mindillusionspell.20101_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-			name = mindillusionspell.2a
+			name = mindillusionspell.20101a
 	
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_influence who = ROOT years = 10 }
@@ -75,10 +75,18 @@ character_event = {
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}		
-
+	option = {
+			name = mindillusionspell.20101b
+	
+		event_target:mindillusiontarget = {	
+		opinion = { modifier = opinion_mind_dark_whispers who = ROOT years = 10 }
+		}
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }			
+	}	
 
 		option = {
-			name = mindillusionspell.2.1.1c
+			name = mindillusionspell.20101c
 		trigger = { event_target:mindillusiontarget = { opinion = { who = ROOT value = 100 }}}
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_control who = ROOT years = 1000 }
@@ -87,20 +95,20 @@ character_event = {
 			character_event = { id = spellcost.100 }		
 	}
 		option = {
-			name = mindillusionspell.2.1.1d
-			character_event = { id = mindillusionspell.2.1 }
+			name = mindillusionspell.20101d
+			character_event = { id = mindillusionspell.201 }
 		}
 }
 
 
 character_event = {
-	id = mindillusionspell.2.1.2
-	desc = mindillusionspell.2.1.2_desc
+	id = mindillusionspell.20102
+	desc = mindillusionspell.20102_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-			name = mindillusionspell.2.1.2a
+			name = mindillusionspell.20102a
 		event_target:mindillusiontarget = {	
 		 	add_friend = ROOT
 		}
@@ -108,7 +116,7 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}		
 	option = {
-			name = mindillusionspell.2.1.2b
+			name = mindillusionspell.20102b
 		event_target:mindillusiontarget = {	
 		 	add_lover  = ROOT
 		}
@@ -116,7 +124,7 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}	
 	option = {
-			name = mindillusionspell.2.1.2c
+			name = mindillusionspell.20102c
 		event_target:mindillusiontarget = {	
 		 	add_rival = ROOT
 		}
@@ -124,20 +132,20 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}
 		option = {
-			name = mindillusionspell.2.1.2d
-			character_event = { id = mindillusionspell.2.1 }
+			name = mindillusionspell.20102d
+			character_event = { id = mindillusionspell.201 }
 		}
 }	
 	
 character_event = {
-	id = mindillusionspell.2.1.3
-	desc = mindillusionspell.3_desc
+	id = mindillusionspell.20103
+	desc = mindillusionspell.20103_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 		
 	option = {
-			name = mindillusionspell.2.1.3a
+			name = mindillusionspell.20103a
 			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = ROOT modifier = opinion_mind_control } } event_target:mindillusiontarget = { ROOT = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
 			event_target:mindillusiontarget = {	
 				abdicate_to = ROOT
@@ -146,7 +154,7 @@ character_event = {
 			character_event = { id = spellcost.100 }	
 		}
 	option = {
-			name = mindillusionspell.2.1.3b
+			name = mindillusionspell.20103b
 			trigger = { ROOT = { higher_tier_than = event_target:mindillusiontarget }  check_variable = { which = "magic_power" value = 10   } event_target:mindillusiontarget = { independent = yes }   NOT = { ROOT = { is_liege_or_above = event_target:mindillusiontarget } }} 			
 			event_target:mindillusiontarget = {
 				FROM = { 
@@ -157,8 +165,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 		}
 	option = {
-		name = mindillusionspell.2.1.3c
-		character_event = { id = mindillusionspell.2.1 }			
+		name = mindillusionspell.20103c
+		character_event = { id = mindillusionspell.201 }			
 	}		
 }
 
@@ -167,47 +175,54 @@ character_event = {
 
 
 character_event = {
-	id = mindillusionspell.2.2
-	desc = mindillusionspell.2.2a_desc
+	id = mindillusionspell.202
+	desc = mindillusionspell.202_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.2.1.1a
-		character_event = { id = mindillusionspell.2.2.1 }
+		name = mindillusionspell.202a
+		character_event = { id = mindillusionspell.20201 }
 		}
 	option = {
-		name = mindillusionspell.2.1.2b	
-		character_event = { id = mindillusionspell.2.2.2 }
+		name = mindillusionspell.202b	
+		character_event = { id = mindillusionspell.20202 }
 		}		
 	option = {
-		name = mindillusionspell.2.1.2c	
-		character_event = { id = mindillusionspell.2.2.3 }
+		name = mindillusionspell.202c	
+		character_event = { id = mindillusionspell.20203 }
 		}
 	option = {
-		name = mindillusionspell.2.1.3d	
+		name = mindillusionspell.202d	
 		character_event = { id = mindillusionspell.2 }
 		}
 }
 
 character_event = {
-	id = mindillusionspell.2.2.1
-	desc = mindillusionspell.2.2.1_desc
+	id = mindillusionspell.20201
+	desc = mindillusionspell.20201_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-			name = mindillusionspell.2.2.1a
+			name = mindillusionspell.20201a
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_influence who = event_target:mindtarget years = 10 }
 		}
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}		
-
+	option = {
+			name = mindillusionspell.20201b
+		event_target:mindillusiontarget = {	
+		opinion = { modifier = opinion_mind_dark_whispers who = event_target:mindtarget years = 10 }
+		}
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }			
+	}
 
 		option = {
-			name = mindillusionspell.2.2.1c
+			name = mindillusionspell.20201c
 		trigger = { event_target:mindillusiontarget = { opinion = { who = event_target:mindtarget value = 100 }}}
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_control who = event_target:mindtarget years = 1000 }
@@ -216,20 +231,20 @@ character_event = {
 			character_event = { id = spellcost.100 }		
 	}
 		option = {
-			name = mindillusionspell.2.2.1d
-			character_event = { id = mindillusionspell.2.2 }
+			name = mindillusionspell.20201d
+			character_event = { id = mindillusionspell.202 }
 		}
 }
 
 
 character_event = {
-	id = mindillusionspell.2.2.2
-	desc = mindillusionspell.2.2.2_desc
+	id = mindillusionspell.20202
+	desc = mindillusionspell.20202_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-			name = mindillusionspell.2.2.2a
+			name = mindillusionspell.20202a
 		event_target:mindillusiontarget = {	
 		 	add_friend = event_target:mindtarget
 		}
@@ -237,7 +252,7 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}		
 	option = {
-			name = mindillusionspell.2.2.2b
+			name = mindillusionspell.20202b
 		event_target:mindillusiontarget = {	
 		 	add_lover  = event_target:mindtarget
 		}
@@ -245,7 +260,7 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}	
 	option = {
-			name = mindillusionspell.2.2.2c
+			name = mindillusionspell.20202c
 		event_target:mindillusiontarget = {	
 		 	add_rival = event_target:mindtarget
 		}
@@ -253,21 +268,21 @@ character_event = {
 			character_event = { id = spellcost.100 }			
 	}
 		option = {
-			name = mindillusionspell.2.1.2d
-			character_event = { id = mindillusionspell.2.2 }
+			name = mindillusionspell.20102d
+			character_event = { id = mindillusionspell.202 }
 		}
 }	
 	
 character_event = {
-	id = mindillusionspell.2.2.3
-	desc = mindillusionspell.2.2.3_desc
+	id = mindillusionspell.20203
+	desc = mindillusionspell.20203_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 		
 	option = {
-			name = mindillusionspell.2.2.3a
-			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = event_target:mindtarget modifier = opinion_mind_control } } event_target:mindillusiontarget = { event_target:mindtarget = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
+			name = mindillusionspell.20203a
+			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = root modifier = opinion_mind_control } } event_target:mindillusiontarget = { event_target:mindtarget = { is_guardian = yes } }} check_variable = { which = "magic_power" value = 5   } } 					
 			event_target:mindillusiontarget = {	
 				abdicate_to = event_target:mindtarget
 			}
@@ -275,8 +290,8 @@ character_event = {
 			character_event = { id = spellcost.100 }	
 		}
 	option = {
-			name = mindillusionspell.2.2.3b
-			trigger = { event_target:mindtarget = { higher_tier_than = event_target:mindillusiontarget }  check_variable = { which = "magic_power" value = 10   } event_target:mindillusiontarget = { independent = yes }   NOT = { event_target:mindtarget = { is_liege_or_above = event_target:mindillusiontarget } }} 			
+			name = mindillusionspell.20203b
+			trigger = { OR = { event_target:mindillusiontarget = { trait = lunatic  } event_target:mindillusiontarget = { has_opinion_modifier = { who = root modifier = opinion_mind_control } } event_target:mindillusiontarget = { event_target:mindtarget = { is_guardian = yes } }} event_target:mindtarget = { higher_tier_than = event_target:mindillusiontarget }  check_variable = { which = "magic_power" value = 10   } event_target:mindillusiontarget = { independent = yes }   NOT = { event_target:mindtarget = { is_liege_or_above = event_target:mindillusiontarget } }} 			
 			event_target:mindillusiontarget = {
 				FROM = { 
 					set_defacto_liege = event_target:mindtarget 
@@ -286,8 +301,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 		}
 	option = {
-		name = mindillusionspell.2.2.3c
-		character_event = { id = mindillusionspell.2.2 }			
+		name = mindillusionspell.20203c
+		character_event = { id = mindillusionspell.202 }			
 	}		
 }
 
@@ -298,23 +313,23 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.3.1
-		character_event = { id = mindillusionspell.3.1 }
+		name = mindillusionspell.301
+		character_event = { id = mindillusionspell.301 }
 		}
 	option = {
-		name = mindillusionspell.3.2	
-		character_event = { id = mindillusionspell.3.2 }
+		name = mindillusionspell.302	
+		character_event = { id = mindillusionspell.302 }
 		}
 }
 
 character_event = {
-	id = mindillusionspell.3.1
-	desc = mindillusionspell3.1_desc
+	id = mindillusionspell.301
+	desc = mindillusionspell301_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.3.1a
+		name = mindillusionspell.301a
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = lustful } } 
 			add_trait = lustful
@@ -323,7 +338,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.3.1b
+		name = mindillusionspell.301b
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = chaste } } 	
 			add_trait = chaste	
@@ -332,7 +347,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.3.1c
+		name = mindillusionspell.301c
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = gluttonous } } 	
 			add_trait = gluttonous
@@ -341,19 +356,19 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}	
 	option = {
-		name = mindillusionspell.3.1d
-			character_event = { id = mindillusionspell.4.1 }
+		name = mindillusionspell.301d
+			character_event = { id = mindillusionspell.401 }
 	}	
 }
 
 character_event = {
-	id = mindillusionspell.4.1
+	id = mindillusionspell.401
 	desc = mindillusionspell.4.1_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.4.1a
+		name = mindillusionspell.401a
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = temperate } } 		
 			add_trait = temperate
@@ -362,7 +377,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.1b
+		name = mindillusionspell.401b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = greedy } } 
 		event_target:mindillusiontarget = {	
 			add_trait = greedy 
@@ -371,7 +386,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.1c
+		name = mindillusionspell.401c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = charitable } } 
 		event_target:mindillusiontarget = {	
 			add_trait = charitable 
@@ -380,8 +395,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.1d
-			character_event = { id = mindillusionspell.5.1}
+		name = mindillusionspell.401d
+			character_event = { id = mindillusionspell.501}
 	}	
 	
 }
@@ -393,7 +408,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.5.1a
+		name = mindillusionspell.501a
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = slothful } } 		
 			add_trait = slothful
@@ -402,7 +417,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.1b
+		name = mindillusionspell.501b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = diligent } }  	
 		event_target:mindillusiontarget = {	
 			add_trait = diligent 
@@ -411,7 +426,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.1c
+		name = mindillusionspell.501c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = envious } } 
 		event_target:mindillusiontarget = {	
 			add_trait = envious 
@@ -420,20 +435,20 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.1d
-			character_event = { id = mindillusionspell.6.1}
+		name = mindillusionspell.501d
+			character_event = { id = mindillusionspell.601}
 	}	
 	
 }
 
 character_event = {
-	id = mindillusionspell.6.1
-	desc = mindillusionspell.6.1_desc
+	id = mindillusionspell.601
+	desc = mindillusionspell.601_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.6.1a
+		name = mindillusionspell.601a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = kind } } 		
 		event_target:mindillusiontarget = {	
 			add_trait = kind
@@ -442,7 +457,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.1b
+		name = mindillusionspell.601b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = wroth } } 
 		event_target:mindillusiontarget = {	
 			add_trait = wroth 
@@ -451,7 +466,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.1c
+		name = mindillusionspell.601c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = patient } } 
 		event_target:mindillusiontarget = {	
 			add_trait = patient 
@@ -460,21 +475,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.1d
-			character_event = { id = mindillusionspell.7.1}
+		name = mindillusionspell.601d
+			character_event = { id = mindillusionspell.701}
 	}	
 	
 }
 	
 
 character_event = {
-	id = mindillusionspell.7.1
-	desc = mindillusionspell.7.1_desc
+	id = mindillusionspell.701
+	desc = mindillusionspell.701_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.7.1a
+		name = mindillusionspell.701a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = proud } } 		
 		event_target:mindillusiontarget = {			
 			add_trait = proud
@@ -483,7 +498,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.1b
+		name = mindillusionspell.701b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = humble } } 
 		event_target:mindillusiontarget = {	
 			add_trait = humble 
@@ -492,7 +507,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.1c
+		name = mindillusionspell.701c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = deceitful } } 	
 		event_target:mindillusiontarget = {	
 			add_trait = deceitful 
@@ -501,21 +516,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.1d
-			character_event = { id = mindillusionspell.8.1}
+		name = mindillusionspell.701d
+			character_event = { id = mindillusionspell.801}
 	}	
 	
 }
 
 
 character_event = {
-	id = mindillusionspell.8.1
-	desc = mindillusionspell.8.1_desc
+	id = mindillusionspell.801
+	desc = mindillusionspell.801_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.8.1a
+		name = mindillusionspell.801a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = craven } } 
 		event_target:mindillusiontarget = {	
 
@@ -525,7 +540,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.1b
+		name = mindillusionspell.801b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = honest } } 	
 		event_target:mindillusiontarget = {	
 			add_trait = honest 
@@ -534,7 +549,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.1c
+		name = mindillusionspell.801c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = brave } } 
 		event_target:mindillusiontarget = {	
 			add_trait = brave 
@@ -543,21 +558,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.1d
-			character_event = { id = mindillusionspell.9.1}
+		name = mindillusionspell.801d
+			character_event = { id = mindillusionspell.901}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.9.1
-	desc = mindillusionspell.9.1_desc
+	id = mindillusionspell.901
+	desc = mindillusionspell.901_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.9.1a
+		name = mindillusionspell.901a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = shy } } 		
 		event_target:mindillusiontarget = {	
 			add_trait = shy
@@ -566,7 +581,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.1b
+		name = mindillusionspell.901b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = gregarious } } 	
 		event_target:mindillusiontarget = {	
 			add_trait = gregarious 
@@ -575,7 +590,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.1c
+		name = mindillusionspell.901c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = ambitious } }  	
 		event_target:mindillusiontarget = {	
 			add_trait = ambitious 
@@ -584,8 +599,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.1d
-			character_event = { id = mindillusionspell.10.1}
+		name = mindillusionspell.901d
+			character_event = { id = mindillusionspell.1001}
 	}	
 	
 }	
@@ -593,13 +608,13 @@ character_event = {
 
 
 character_event = {
-	id = mindillusionspell.10.1
-	desc = mindillusionspell.10.1_desc
+	id = mindillusionspell.1001
+	desc = mindillusionspell.1001_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.10.1a
+		name = mindillusionspell.1001a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = content } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = content
@@ -608,7 +623,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.1b
+		name = mindillusionspell.1001b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = arbitrary } }  
 		event_target:mindillusiontarget = {	
 			add_trait = arbitrary 
@@ -617,7 +632,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.1c
+		name = mindillusionspell.1001c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = just } }  	
 		event_target:mindillusiontarget = {	
 			add_trait = just 
@@ -626,21 +641,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.1d
-			character_event = { id = mindillusionspell.11.1}
+		name = mindillusionspell.1001d
+			character_event = { id = mindillusionspell.1101}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.11.1
-	desc = mindillusionspell.11.1_desc
+	id = mindillusionspell.1101
+	desc = mindillusionspell.1101_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.11.1a
+		name = mindillusionspell.1101a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = cynical } }  			
 		event_target:mindillusiontarget = {	
 			add_trait = cynical
@@ -649,7 +664,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.1b
+		name = mindillusionspell.1101b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = zealous } }  	 	
 		event_target:mindillusiontarget = {	
 			add_trait = zealous 
@@ -658,7 +673,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.1c
+		name = mindillusionspell.1101c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = paranoid } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = paranoid 
@@ -667,21 +682,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.1d
-			character_event = { id = mindillusionspell.12.1}
+		name = mindillusionspell.1101d
+			character_event = { id = mindillusionspell.1201}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.12.1
-	desc = mindillusionspell.12.1_desc
+	id = mindillusionspell.1201
+	desc = mindillusionspell.1201_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.12.1a
+		name = mindillusionspell.1201a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = trusting } }  			
 		event_target:mindillusiontarget = {	
 			add_trait = trusting
@@ -690,7 +705,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.1b
+		name = mindillusionspell.1201b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = cruel } }  	 	
 		event_target:mindillusiontarget = {	
 			add_trait = cruel 
@@ -699,7 +714,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.1c
+		name = mindillusionspell.1201c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = sympathy_christendom } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_christendom 
@@ -708,20 +723,20 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.1d
-			character_event = { id = mindillusionspell.13.1}
+		name = mindillusionspell.1201d
+			character_event = { id = mindillusionspell.1301}
 	}	
 	
 }	
 
 character_event = {
-	id = mindillusionspell.13.1
-	desc = mindillusionspell.13.1_desc
+	id = mindillusionspell.1301
+	desc = mindillusionspell.1301_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.13.1a
+		name = mindillusionspell.1301a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = sympathy_pagans } }  			
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_pagans
@@ -730,7 +745,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.1b
+		name = mindillusionspell.1301b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = sympathy_islam } }  	 	
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_islam 
@@ -739,7 +754,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.1c
+		name = mindillusionspell.1301c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = sympathy_zoroastrianism } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_zoroastrianism 
@@ -748,21 +763,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.1d
-			character_event = { id = mindillusionspell.14.1}
+		name = mindillusionspell.1301d
+			character_event = { id = mindillusionspell.1401}
 	}	
 	
 }
 
 
 character_event = {
-	id = mindillusionspell.14.1
-	desc = mindillusionspell.14.1_desc
+	id = mindillusionspell.1401
+	desc = mindillusionspell.1401_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.14.1a
+		name = mindillusionspell.1401a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = stressed } }  			
 		event_target:mindillusiontarget = {	
 			add_trait = stressed
@@ -771,7 +786,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.1b
+		name = mindillusionspell.1401b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = drunkard } }  	 	
 		event_target:mindillusiontarget = {	
 			add_trait = drunkard 
@@ -780,7 +795,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.1c
+		name = mindillusionspell.1401c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = homosexual } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = homosexual 
@@ -789,7 +804,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.1d
+		name = mindillusionspell.1401d
 			character_event = { id = mindillusionspell.15.1}
 	}	
 	
@@ -799,13 +814,13 @@ character_event = {
 
 
 character_event = {
-	id = mindillusionspell.15.1
-	desc = mindillusionspell.14.1_desc
+	id = mindillusionspell.1501
+	desc = mindillusionspell.1501_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.15.1a
+		name = mindillusionspell.1501a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = lunatic } }  			
 		event_target:mindillusiontarget = {	
 			add_trait = lunatic
@@ -814,7 +829,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.1b
+		name = mindillusionspell.1501b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } not = { trait = possessed } }  	 	
 		event_target:mindillusiontarget = {	
 			add_trait = possessed 
@@ -823,7 +838,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.1c
+		name = mindillusionspell.1501c
 		trigger =  { check_variable = { which = "magic_power" value = 10   } not = { trait = incapable } }  		
 		event_target:mindillusiontarget = {	
 			add_trait = incapable 
@@ -832,7 +847,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.1d
+		name = mindillusionspell.1501d
 			character_event = { id = mindillusionspell.3}
 	}	
 	
@@ -845,13 +860,13 @@ character_event = {
 	
 	
 character_event = {
-	id = mindillusionspell.3.2
-	desc = mindillusionspell3.2_desc
+	id = mindillusionspell.302
+	desc = mindillusionspell302_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.3.2a
+		name = mindillusionspell.302a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = lustful  } 		
 		event_target:mindillusiontarget = {	
 			remove_trait = lustful
@@ -860,7 +875,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.3.2b
+		name = mindillusionspell.302b
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = chaste }  	
 			remove_trait = chaste	
@@ -869,7 +884,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.3.2c
+		name = mindillusionspell.302c
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = gluttonous } 	
 			remove_trait = gluttonous
@@ -878,19 +893,19 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}	
 	option = {
-		name = mindillusionspell.3.2d
-			character_event = { id = mindillusionspell.4.2 }
+		name = mindillusionspell.302d
+			character_event = { id = mindillusionspell.402 }
 	}	
 }
 
 character_event = {
-	id = mindillusionspell.4.2
-	desc = mindillusionspell.4.2_desc
+	id = mindillusionspell.402
+	desc = mindillusionspell.402_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.4.2a
+		name = mindillusionspell.402a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = temperate } 		
 		event_target:mindillusiontarget = {			
 			remove_trait = temperate
@@ -899,7 +914,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.2b
+		name = mindillusionspell.402b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = greedy } 
 		event_target:mindillusiontarget = {	
 			remove_trait = greedy 
@@ -908,7 +923,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.2c
+		name = mindillusionspell.402c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = charitable } 
 		event_target:mindillusiontarget = {	
 			remove_trait = charitable 
@@ -917,20 +932,20 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.4.2d
-			character_event = { id = mindillusionspell.5.2}
+		name = mindillusionspell.402d
+			character_event = { id = mindillusionspell.502}
 	}	
 	
 }
 	
 	character_event = {
-	id = mindillusionspell.5.2
-	desc = mindillusionspell.5.2_desc
+	id = mindillusionspell.502
+	desc = mindillusionspell.502_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.5.2a
+		name = mindillusionspell.502a
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = slothful  } 			
 		event_target:mindillusiontarget = {		
 			remove_trait = slothful
@@ -939,7 +954,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.2b
+		name = mindillusionspell.502b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = diligent }  	
 		event_target:mindillusiontarget = {	
 			remove_trait = diligent 
@@ -948,7 +963,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.2c
+		name = mindillusionspell.502c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = envious }  
 		event_target:mindillusiontarget = {	
 			remove_trait = envious 
@@ -957,20 +972,20 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.5.2d
-			character_event = { id = mindillusionspell.6.2}
+		name = mindillusionspell.502d
+			character_event = { id = mindillusionspell.602}
 	}	
 	
 }
 
 character_event = {
-	id = mindillusionspell.6.2
+	id = mindillusionspell.602
 	desc = mindillusionspell.6.2_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.6.2a
+		name = mindillusionspell.602a
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = kind }  		
 		event_target:mindillusiontarget = {	
 			remove_trait = kind
@@ -979,7 +994,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.2b
+		name = mindillusionspell.602b
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = wroth } 
 		event_target:mindillusiontarget = {	
 			remove_trait = wroth 
@@ -988,7 +1003,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.2c
+		name = mindillusionspell.602c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = patient } 
 		event_target:mindillusiontarget = {	
 			remove_trait = patient 
@@ -997,21 +1012,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.6.2d
-			character_event = { id = mindillusionspell.7.2}
+		name = mindillusionspell.602d
+			character_event = { id = mindillusionspell.702}
 	}	
 	
 }
 	
 
 character_event = {
-	id = mindillusionspell.7.2
-	desc = mindillusionspell.7.2_desc
+	id = mindillusionspell.702
+	desc = mindillusionspell.702_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.7.2a
+		name = mindillusionspell.702a
 		event_target:mindillusiontarget = {	
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = proud } 		
 			remove_trait = proud
@@ -1020,7 +1035,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.2b
+		name = mindillusionspell.702b
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = humble }  
 		event_target:mindillusiontarget = {	
 			remove_trait = humble 
@@ -1029,7 +1044,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.2c
+		name = mindillusionspell.702c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = deceitful  } 	
 		event_target:mindillusiontarget = {	
 			remove_trait = deceitful 
@@ -1038,21 +1053,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.7.2d
-			character_event = { id = mindillusionspell.8.2}
+		name = mindillusionspell.702d
+			character_event = { id = mindillusionspell.802}
 	}	
 	
 }
 
 
 character_event = {
-	id = mindillusionspell.8.2
-	desc = mindillusionspell.8.2_desc
+	id = mindillusionspell.802
+	desc = mindillusionspell.802_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.8.2a
+		name = mindillusionspell.802a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = craven }  
 		event_target:mindillusiontarget = {	
 
@@ -1062,7 +1077,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.2b
+		name = mindillusionspell.802b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = honest }  	
 		event_target:mindillusiontarget = {	
 			remove_trait = honest 
@@ -1071,7 +1086,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.2c
+		name = mindillusionspell.802c
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = brave }  
 		event_target:mindillusiontarget = {	
 			remove_trait = brave 
@@ -1080,21 +1095,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.8.2d
-			character_event = { id = mindillusionspell.9.2}
+		name = mindillusionspell.802d
+			character_event = { id = mindillusionspell.902}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.9.2
-	desc = mindillusionspell.9.2_desc
+	id = mindillusionspell.902
+	desc = mindillusionspell.902_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.9.2a
+		name = mindillusionspell.902a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = shy  } 		
 		event_target:mindillusiontarget = {	
 			remove_trait = shy
@@ -1103,7 +1118,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.2b
+		name = mindillusionspell.902b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = gregarious }  	
 		event_target:mindillusiontarget = {	
 			remove_trait = gregarious 
@@ -1112,7 +1127,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.2c
+		name = mindillusionspell.902c
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = ambitious  }  	
 		event_target:mindillusiontarget = {	
 			remove_trait = ambitious 
@@ -1121,8 +1136,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.9.2d
-			character_event = { id = mindillusionspell.10.2}
+		name = mindillusionspell.902d
+			character_event = { id = mindillusionspell.1002}
 	}	
 	
 }	
@@ -1130,13 +1145,13 @@ character_event = {
 
 
 character_event = {
-	id = mindillusionspell.10.2
-	desc = mindillusionspell.10.2_desc
+	id = mindillusionspell.1002
+	desc = mindillusionspell.1002_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.10.2a
+		name = mindillusionspell.1002a
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = content }  		
 		event_target:mindillusiontarget = {	
 			remove_trait = content
@@ -1145,7 +1160,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.2b
+		name = mindillusionspell.1002b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = arbitrary  }  
 		event_target:mindillusiontarget = {	
 			remove_trait = arbitrary 
@@ -1154,7 +1169,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.2c
+		name = mindillusionspell.1002c
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = just  }  	
 		event_target:mindillusiontarget = {	
 			remove_trait = just 
@@ -1163,21 +1178,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.10.2d
-			character_event = { id = mindillusionspell.11.2}
+		name = mindillusionspell.1002d
+			character_event = { id = mindillusionspell.1102}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.11.2
-	desc = mindillusionspell.11.2_desc
+	id = mindillusionspell.1102
+	desc = mindillusionspell.1102_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.11.2a
+		name = mindillusionspell.1102a
 		trigger =  { check_variable = { which = "magic_power" value = 1   }  trait = cynical }   			
 		event_target:mindillusiontarget = {	
 			remove_trait = cynical
@@ -1186,7 +1201,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.2b
+		name = mindillusionspell.1102b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = zealous }  	 	
 		event_target:mindillusiontarget = {	
 			remove_trait = zealous 
@@ -1195,7 +1210,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.2c
+		name = mindillusionspell.1102c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = paranoid }  		
 		event_target:mindillusiontarget = {	
 			remove_trait = paranoid 
@@ -1204,21 +1219,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.11.2d
-			character_event = { id = mindillusionspell.12.2}
+		name = mindillusionspell.1102d
+			character_event = { id = mindillusionspell.1202}
 	}	
 	
 }	
 
 
 character_event = {
-	id = mindillusionspell.12.2
-	desc = mindillusionspell.12.2_desc
+	id = mindillusionspell.1202
+	desc = mindillusionspell.1202_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.12.2a
+		name = mindillusionspell.1202a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = trusting }   			
 		event_target:mindillusiontarget = {	
 			remove_trait = trusting
@@ -1227,7 +1242,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.2b
+		name = mindillusionspell.1202b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = cruel }   	 	
 		event_target:mindillusiontarget = {	
 			remove_trait = cruel 
@@ -1236,7 +1251,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.2c
+		name = mindillusionspell.1202c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = sympathy_christendom }   		
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_christendom 
@@ -1245,20 +1260,20 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.12.2d
-			character_event = { id = mindillusionspell.13.2}
+		name = mindillusionspell.1202d
+			character_event = { id = mindillusionspell.1302}
 	}	
 	
 }	
 
 character_event = {
-	id = mindillusionspell.13.2
-	desc = mindillusionspell.13.2_desc
+	id = mindillusionspell.1302
+	desc = mindillusionspell.1302_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.13.2a
+		name = mindillusionspell.1302a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = sympathy_pagans }   			
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_pagans
@@ -1267,7 +1282,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.2b
+		name = mindillusionspell.1302b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = sympathy_islam }   	 	
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_islam 
@@ -1276,7 +1291,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.2c
+		name = mindillusionspell.1302c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = sympathy_zoroastrianism }   		
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_zoroastrianism 
@@ -1285,21 +1300,21 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.13.2d
-			character_event = { id = mindillusionspell.14.2}
+		name = mindillusionspell.1302d
+			character_event = { id = mindillusionspell.1402}
 	}	
 	
 }
 
 
 character_event = {
-	id = mindillusionspell.14.2
-	desc = mindillusionspell.14.2_desc
+	id = mindillusionspell.1402
+	desc = mindillusionspell.1402_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.14.2a
+		name = mindillusionspell.1402a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = stressed }   			
 		event_target:mindillusiontarget = {	
 			remove_trait = stressed
@@ -1308,7 +1323,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.2b
+		name = mindillusionspell.1402b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = drunkard } 	 	
 		event_target:mindillusiontarget = {	
 			remove_trait = drunkard 
@@ -1317,7 +1332,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.2c
+		name = mindillusionspell.1402c
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = homosexual }  		
 		event_target:mindillusiontarget = {	
 			remove_trait = homosexual 
@@ -1326,8 +1341,8 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.14.2d
-			character_event = { id = mindillusionspell.15.2}
+		name = mindillusionspell.1402d
+			character_event = { id = mindillusionspell.1502}
 	}	
 	
 }
@@ -1336,13 +1351,13 @@ character_event = {
 
 
 character_event = {
-	id = mindillusionspell.15.2
-	desc = mindillusionspell.15.2_desc
+	id = mindillusionspell.1502
+	desc = mindillusionspell.1502_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.15.2a
+		name = mindillusionspell.1502a
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = lunatic }   			
 		event_target:mindillusiontarget = {	
 			remove_trait = lunatic
@@ -1351,7 +1366,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.2b
+		name = mindillusionspell.1502b
 		trigger =  { check_variable = { which = "magic_power" value = 1   } trait = possessed }  	 	
 		event_target:mindillusiontarget = {	
 			remove_trait = possessed 
@@ -1360,7 +1375,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.2c
+		name = mindillusionspell.1502c
 		trigger =  { check_variable = { which = "magic_power" value = 10   } trait = incapable }		
 		event_target:mindillusiontarget = {	
 			remove_trait = incapable 
@@ -1369,7 +1384,7 @@ character_event = {
 			character_event = { id = spellcost.100 }
 	}
 	option = {
-		name = mindillusionspell.15.2d
+		name = mindillusionspell.1502d
 			character_event = { id = mindillusionspell.3}
 	}	
 	
