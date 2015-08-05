@@ -1,19 +1,18 @@
 targetted_decisions = {
 	1mind_target_decision = {
-			
 		ai_target_filter   = all
 		filter = all
 		from_potential = {
 			is_playable = yes
 			ai = no
-			OR = {trait = Sorcery trait = Mentalist}
+			OR = {
+				trait = Sorcery 
+				trait = Mentalist
+			}
 		}
 	
 		potential = {
-		OR = {
-		NOT = { character = FROM  } 
-		NOT = { has_character_modifier = magic_shield }
-		}
+			NOT = { has_character_modifier = magic_shield }
 		}
 		allow = { 		
 		}
@@ -28,4 +27,4 @@ targetted_decisions = {
 			factor = 1
 		}
 	}	
-	}
+}
