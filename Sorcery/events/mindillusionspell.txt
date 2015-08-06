@@ -1028,8 +1028,8 @@ character_event = {
 	is_triggered_only = yes
 	option = {
 		name = mindillusionspell.702a
+		trigger =  { check_variable = { which = "magic_power" value = 1   } event_target:mindillusiontarget = { trait = proud } }		
 		event_target:mindillusiontarget = {	
-		trigger =  { check_variable = { which = "magic_power" value = 1   } event_target:mindillusiontarget = { trait = proud } }
 		remove_trait = proud
 		}
 			set_variable = {which = "var1" value = 1}

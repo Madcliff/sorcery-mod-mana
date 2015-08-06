@@ -1,0 +1,369 @@
+
+character_event = {
+	id = spellcost.1
+    hide_window = yes	
+	is_triggered_only = yes
+	
+		
+	immediate = {
+		limit = { check_variable = { which = "magic_power" value = 1   } } 
+			change_variable = { which = "magic_power" value = -1 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+						} 
+					} 
+				}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+			}
+	}	
+}
+character_event = {
+	id = spellcost.2
+    hide_window = yes	
+	is_triggered_only = yes
+			
+	immediate = {
+		trigger = { check_variable = { which = "magic_power" value = 2   } } 
+			change_variable = { which = "magic_power" value = -2 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+				}
+			}
+	
+
+}
+
+character_event = {
+	id = spellcost.3
+    hide_window = yes	
+	is_triggered_only = yes
+	
+
+		
+	immediate = {
+		trigger =  { check_variable = { which = "magic_power" value = 3   } } 
+			change_variable = { which = "magic_power" value = -3 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+				}
+			}
+	
+}
+
+character_event = {
+	id = spellcost.4
+    hide_window = yes	
+	is_triggered_only = yes
+			
+	immediate = {
+		trigger = { check_variable = { which = "magic_power" value = 4   } } 
+			change_variable = { which = "magic_power" value = -4 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+				}
+			}
+	
+
+}
+
+
+character_event = {
+	id = spellcost.5
+    hide_window = yes	
+	is_triggered_only = yes
+			
+	immediate = {
+		trigger = { check_variable = { which = "magic_power" value = 5   } } 
+			change_variable = { which = "magic_power" value = -5 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+				}
+			}
+	
+
+}
+
+
+character_event = {
+	id = spellcost.10
+    hide_window = yes	
+	is_triggered_only = yes
+			
+	immediate = {
+		trigger = { check_variable = { which = "magic_power" value = 10   } } 
+			change_variable = { which = "magic_power" value = -10 }
+			any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = ROOT years = 10 }
+				}
+			}
+	
+
+}
+
+
+
+
+character_event = {
+	id = spellcost.21
+	desc = spellcost.1_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 1   } } }			
+		event_target:spellcostcast = { change_variable = { which = "magic_power" value = -1 }}
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = event_target:spellcostcast  years = 10 }
+				}			
+			} 
+			
+		}
+		
+}
+character_event = {
+	id = spellcost.22
+	desc = spellcost.2_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 2   } } }			
+	event_target:spellcostcast = { change_variable = { which = "magic_power" value = -2 }}
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = PREVPREV years = 10 }
+				}			
+			} 
+			
+		}
+		
+}
+
+character_event = {
+	id = spellcost.23
+	desc = spellcost.3_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 3   } }} 			
+		event_target:spellcostcast = { change_variable = { which = "magic_power" value = -3 }}
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = event_target:spellcostcast years = 10 }
+				}			
+			} 
+	
+			
+		}
+		
+}
+
+character_event = {
+	id = spellcost.24
+	desc = spellcost.4_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 4   } }} 			
+				event_target:spellcostcast = { change_variable = { which = "magic_power" value = -4 }}
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = PREVPREV years = 10 }
+				}			
+			} 
+			}
+		
+}
+
+
+
+character_event = {
+	id = spellcost.25
+	desc = spellcost.5_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 5   } } }			
+		event_target:spellcostcast = {	change_variable = { which = "magic_power" value = -5 } }
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = PREVPREV years = 10 }
+				}			
+			} 
+			
+			
+		}
+		
+}
+
+
+
+character_event = {
+	id = spellcost.30
+	desc = spellcost.10_desc
+	picture = GFX_evt_child_reading
+    hide_window = yes	
+	is_triggered_only = yes
+	
+	option = {
+		name = spellcost.1a
+		trigger =  { event_target:spellcostcast = { check_variable = { which = "magic_power" value = 10   } } }			
+		event_target:spellcostcast = { change_variable = { which = "magic_power" value = -10 } }
+		ROOT = {	any_realm_character = {
+				limit = {
+					is_priest = yes	
+					NOT = { 
+						OR = { 
+							trait = Sorcery 
+							trait = War_Mage 
+							trait = Mentalist 
+							trait = Alchemist 
+							trait = Herbalist 
+							} 
+						} 
+					}
+#				opinion = { modifier = opinion_magic_priest who = PREVPREV years = 10 }
+				}			
+			}
+			
+		}
+	
+}
