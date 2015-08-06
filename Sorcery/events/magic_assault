@@ -1,0 +1,321 @@
+namespace = magical_assault
+
+character_event = {
+	id = magic_assault.1
+	triggered_only = yes
+	immediate = {
+	root ={
+		if = {
+			limit = {learning = 1}
+				set_variable = {which = magic_attack = 1}
+			}
+			if = {
+			limit = {learning = 2}
+				set_variable = {which = magic_attack = 2}
+			}
+			if = {
+			limit = {learning = 3}
+				set_variable = {which = magic_attack = 3}
+			}
+			if = {
+			limit = {learning = 4}
+				set_variable = {which = magic_attack = 4}
+			}
+			if = {
+			limit = {learning = 5}
+				set_variable = {which = magic_attack = 5}
+			}
+			if = {
+			limit = {learning = 6}
+				set_variable = {which = magic_attack = 6}
+			}
+			if = {
+			limit = {learning = 7}
+				set_variable = {which = magic_attack = 7}
+			}
+			if = {
+			limit = {learning = 8}
+				set_variable = {which = magic_attack = 8}
+			}
+			if = {
+			limit = {learning = 9}
+				set_variable = {which = magic_attack = 9}
+			}
+			if = {
+			limit = {learning = 10}
+				set_variable = {which = magic_attack = 10}
+			}
+			if = {
+			limit = {learning = 11}
+				set_variable = {which = magic_attack = 11}
+			}
+			if = {
+			limit = {learning = 12}
+				set_variable = {which = magic_attack = 12}
+			}
+			if = {
+			limit = {learning = 13}
+				set_variable = {which = magic_attack = 13}
+			}
+			if = {
+			limit = {learning = 14}
+				set_variable = {which = magic_attack = 14}
+			}
+			if = {
+			limit = {learning = 15}
+				set_variable = {which = magic_attack = 15}
+			}
+			if = {
+			limit = {learning = 16}
+				set_variable = {which = magic_attack = 16}
+			}
+			if = {
+			limit = {learning = 17}
+				set_variable = {which = magic_attack = 17}
+			}
+			if = {
+			limit = {learning = 18}
+				set_variable = {which = magic_attack = 18}
+			}
+			if = {
+			limit = {learning = 19}
+				set_variable = {which = magic_attack = 19}
+			}
+			if = {
+			limit = {learning = 20}
+				set_variable = {which = magic_attack = 20}
+			}
+			if = {
+			limit = {learning = 21}
+				set_variable = {which = magic_attack = 21}
+			}
+			if = {
+			limit = {learning = 22}
+				set_variable = {which = magic_attack = 22}
+			}
+			if = {
+			limit = {learning = 23}
+				set_variable = {which = magic_attack = 23}
+			}
+			if = {
+			limit = {learning = 24}
+				set_variable = {which = magic_attack = 24}
+			}
+			if = {
+			limit = {learning = 25}
+				set_variable = {which = magic_attack = 25}
+			}
+			if = {
+			limit = {learning = 26}
+				set_variable = {which = magic_attack = 26}
+			}
+			if = {
+			limit = {learning = 27}
+				set_variable = {which = magic_attack = 27}
+			}
+			if = {
+			limit = {learning = 28}
+				set_variable = {which = magic_attack = 28}
+			}
+			if = {
+			limit = {learning = 29}
+				set_variable = {which = magic_attack = 29}
+			}
+			if = {
+			limit = {learning = 30}
+				set_variable = {which = magic_attack = 30}
+			}
+			character_event = magical_assault.2 
+		}
+	}
+}
+character_event = {
+	id = magic_assault.2
+	triggered_only = yes
+	immediate = {
+		event_target:defender = {
+			if = { 
+				limit = {
+					nor = {
+						trait = Sorcery
+						trait = Mentalist
+						trait = Herbalist
+						trait = War_Mage
+						trait = Alchemist
+					}
+				}
+				if = {
+					limit = {combat_rating = 0}
+						set_variable = {which = magic_attack_mortal = 1}
+					}
+				if = {
+					limit = {combat_rating = 3}
+						set_variable = {which = magic_attack_mortal = 2}
+					}
+				if = {				
+					limit = {combat_rating = 4}
+						set_variable = {which = magic_attack_mortal = 3}
+					}
+				if = {
+					limit = {combat_rating = 5}
+						set_variable = {which = magic_attack_mortal = 4}
+					}
+				if = {				
+					limit = {combat_rating = 6}
+						set_variable = {which = magic_attack_mortal = 5}
+					}
+				if = {
+					limit = {combat_rating = 7}
+						set_variable = {which = magic_attack_mortal = 6}
+					}
+				if = {				
+					limit = {combat_rating = 8}
+						set_variable = {which = magic_attack_mortal = 7}
+					}
+				if = {
+					limit = {combat_rating = 9}
+						set_variable = {which = magic_attack_mortal = 8}
+					}
+				if = {				
+					limit = {combat_rating = 10}
+						set_variable = {which = magic_attack_mortal = 9}
+					}
+				if = {
+					limit = {combat_rating = 11}
+						set_variable = {which = magic_attack_mortal = 10}
+					}
+			}
+			if = {
+				limit = {
+					OR = {
+						trait = Sorcery
+						trait = Mentalist
+						trait = Herbalist
+						trait = War_Mage
+						trait = Alchemist					
+					}
+				}
+				if = {
+					limit = {learning = 1}
+						set_variable = {which = magic_attack = 1}
+					}
+				if = {
+					limit = {learning = 2}
+						set_variable = {which = magic_attack = 2}
+					}
+				if = {
+					limit = {learning = 3}
+						set_variable = {which = magic_attack = 3}
+					}
+				if = {
+					limit = {learning = 4}
+						set_variable = {which = magic_attack = 4}
+					}
+				if = {
+					limit = {learning = 5}
+						set_variable = {which = magic_attack = 5}
+					}
+				if = {
+					limit = {learning = 6}
+						set_variable = {which = magic_attack = 6}
+					}
+				if = {
+					limit = {learning = 7}
+						set_variable = {which = magic_attack = 7}
+					}
+				if = {
+					limit = {learning = 8}
+						set_variable = {which = magic_attack = 8}
+					}
+				if = {
+					limit = {learning = 9}
+						set_variable = {which = magic_attack = 9}
+					}
+				if = {
+					limit = {learning = 10}
+						set_variable = {which = magic_attack = 10}
+					}
+				if = {
+					limit = {learning = 11}
+						set_variable = {which = magic_attack = 11}
+					}
+				if = {
+					limit = {learning = 12}
+						set_variable = {which = magic_attack = 12}
+					}
+				if = {
+					limit = {learning = 13}
+						set_variable = {which = magic_attack = 13}
+					}
+				if = {
+					limit = {learning = 14}
+						set_variable = {which = magic_attack = 14}
+					}
+				if = {
+					limit = {learning = 15}
+						set_variable = {which = magic_attack = 15}
+					}
+				if = {
+					limit = {learning = 16}
+						set_variable = {which = magic_attack = 16}
+					}
+				if = {
+					limit = {learning = 17}
+						set_variable = {which = magic_attack = 17}
+					}
+				if = {
+					limit = {learning = 18}
+						set_variable = {which = magic_attack = 18}
+					}
+				if = {
+					limit = {learning = 19}
+						set_variable = {which = magic_attack = 19}
+					}
+				if = {
+					limit = {learning = 20}
+						set_variable = {which = magic_attack = 20}
+					}
+				if = {
+					limit = {learning = 21}
+						set_variable = {which = magic_attack = 21}
+					}
+				if = {
+					limit = {learning = 22}
+						set_variable = {which = magic_attack = 22}
+					}
+				if = {
+					limit = {learning = 23}
+						set_variable = {which = magic_attack = 23}
+					}
+				if = {
+					limit = {learning = 24}
+						set_variable = {which = magic_attack = 24}
+				}
+					if = {
+					limit = {learning = 25}
+						set_variable = {which = magic_attack = 25}
+				}
+				if = {
+					limit = {learning = 26}
+						set_variable = {which = magic_attack = 26}
+				}
+				if = {
+					limit = {learning = 27}
+						set_variable = {which = magic_attack = 27}
+				}
+				if = {
+					limit = {learning = 28}
+						set_variable = {which = magic_attack = 28}
+				}
+				if = {
+					limit = {learning = 29}
+						set_variable = {which = magic_attack = 29}
+				}
+				if = {
+					limit = {learning = 30}
+						set_variable = {which = magic_attack = 30}
+				}		
+			}	
+		}
+	}
+}

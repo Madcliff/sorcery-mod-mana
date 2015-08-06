@@ -1,0 +1,157 @@
+1mind_illusion_decision;Mind Magic:Mental Manipulation;x
+1mind_illusion_decision_desc;Use your magices to alter the minds of the world to see things your way.;x
+mindillusionspell.1;Mental Manipulation;x
+mindillusionspell.1_desc;Your powers let you shape the very perception of reality!;x
+mindillusionspell.2;Shape Opinion;x
+mindillusionspell.2_desc;Shift the opinion of characters, make them love you, hate you, worship you, or make them feel so towards another.;x
+mindillusionspell.3;Personality Manipulation;x
+mindillusionspell.3_desc;A most powerful and delicate art, subtly shift the core personality of another.;x
+mindillusionspell.201;Shape Opinion of Self;x
+mindillusionspell.201_desc;Shift the opinion of characters, with respect of you.;x
+mindillusionspell.202;Shape Opinion of another;x
+mindillusionspell.202_desc;Shift the opinion of characters, with respect to another.;x
+mindillusionspell.20101;Manipulation of opinion.;x
+mindillusionspell.20101_desc;Manipulate the direct opinion another has of you, culminating with binding their loyalty.;x
+mindillusionspell.20101a;Postive Whispers;x
+mindillusionspell.20101b;Dark Whispers;x
+mindillusionspell.20101c;Mind Control;x
+mindillusionspell.20101d;Menu;x
+mindillusionspell.20102;Manipulate Relationships;x
+mindillusionspell.20102_desc;Make the subject your friend, enemy or lover.;x
+mindillusionspell.20102a;Make Friend;x
+mindillusionspell.20102b;Make Lover;x
+mindillusionspell.20102c;Make Rival;x
+mindillusionspell.20102d;Menu;x
+mindillusionspell.20103;Control Action;x
+mindillusionspell.20103_desc;Having taken control of the subjects mind, it is within your powers to force their action.;x
+mindillusionspell.20103a;Abdicate to;x
+mindillusionspell.20103b;Swear Fealty;x
+mindillusionspell.20103c;Menu;x
+
+mindillusionspell.20201;Manipulation of opinion.;x
+mindillusionspell.20201_desc;Manipulate the direct opinion another has of the object of fixation, culminating with binding their loyalty.;x
+mindillusionspell.20201a;Postive Whispers;x
+mindillusionspell.20201b;Dark Whispers;x
+mindillusionspell.20201c;Mind Control;x
+mindillusionspell.20201d;Menu;x
+mindillusionspell.20202;Manipulate Relationships;x
+mindillusionspell.20202_desc;Make the subject the object of fixation's, friend, enemy or lover.;x
+mindillusionspell.20202a;Make Friend;x
+mindillusionspell.20202b;Make Lover;x
+mindillusionspell.20202c;Make Rival;x
+mindillusionspell.20202d;Menu;x
+mindillusionspell.20203;Control Action;x
+mindillusionspell.20203_desc;Having taken control of the subjects mind, it is within your powers to force their action with respect to the object of fixation.;x
+mindillusionspell.20203a;Abdicate to;x
+mindillusionspell.20203b;Swear Fealty;x
+mindillusionspell.20203c;Menu;x
+
+mindillusionspell.301;Add Personality Trait;x
+mindillusionspell.301_desc;Add a personality trait to the target;x
+mindillusionspell.302;Remove Personality Trait;x
+mindillusionspell.302_desc;Remove a personality trait from the target;x
+mindillusionspell.301a;Add Lustful;x
+mindillusionspell.301b;Add Chaste;x
+mindillusionspell.301c;Add Gluttonous;x
+mindillusionspell.301d;Next Page;x
+mindillusionspell.401a;Add Temperate;x
+mindillusionspell.401b;Add Greedy;x
+mindillusionspell.401c;Add Charitable;x
+mindillusionspell.401d;Next Page;x
+mindillusionspell.501a;Add Slothful;x
+mindillusionspell.501b;Add Diligent;x
+mindillusionspell.501c;Add Envious;x
+mindillusionspell.501d;Next Page;x
+mindillusionspell.601a;Add Kind;x
+mindillusionspell.601b;Add Wroth;x
+mindillusionspell.601c;Add Patient;x
+mindillusionspell.601d;Next Page;x
+mindillusionspell.701a;Add Proud;x
+mindillusionspell.701b;Add Humble;x
+mindillusionspell.701c;Add Decietful;x
+mindillusionspell.701d;Next Page;x
+mindillusionspell.801a;Add Craven;x
+mindillusionspell.801b;Add Honest;x
+mindillusionspell.801c;Add Brave;x
+mindillusionspell.801d;Next Page;x
+mindillusionspell.901a;Add Shy;x
+mindillusionspell.901b;Add Gregarious;x
+mindillusionspell.901c;Add Ambitious;x
+mindillusionspell.901d;Next Page;x
+mindillusionspell.1001a;Add Cotent;x
+mindillusionspell.1001b;Add Arbitrary;x
+mindillusionspell.1001c;Add Just;x
+mindillusionspell.1001d;Next Page;x
+mindillusionspell.1101a;Add Cynical;x
+mindillusionspell.1101b;Add Zealous;x
+mindillusionspell.1101c;Add Paranoid;x
+mindillusionspell.1101d;Next Page;x
+mindillusionspell.1201a;Add Trusting;x
+mindillusionspell.1201b;Add Cruel;x
+mindillusionspell.1201c;Add Sympathy for Christians;x
+mindillusionspell.1201d;Next Page;x
+mindillusionspell.1301a;Add Sympathy for Pagans;x
+mindillusionspell.1301b;Add Sympathy for Muslims;x
+mindillusionspell.1301c;Add Sympathy for Zoroastrianism;x
+mindillusionspell.1301d;Next Page;x
+mindillusionspell.1401a;Add Stressed;x
+mindillusionspell.1401b;Add Drunkard;x
+mindillusionspell.1401c;Add Gluttonous;x
+mindillusionspell.1401d;Next Homosexual;x
+mindillusionspell.1501a;Add Lunatic;x
+mindillusionspell.1501b;Add Possessed;x
+mindillusionspell.1501c;Add Inapable;x
+mindillusionspell.1501d;Menu;x
+
+mindillusionspell.302a;Remove Lustful;x
+mindillusionspell.302b;Remove Chaste;x
+mindillusionspell.302c;Remove Gluttonous;x
+mindillusionspell.302d;Next Page;x
+mindillusionspell.402a;Remove Temperate;x
+mindillusionspell.402b;Remove Greedy;x
+mindillusionspell.402c;Remove Charitable;x
+mindillusionspell.402d;Next Page;x
+mindillusionspell.502a;Remove Slothful;x
+mindillusionspell.502b;Remove Diligent;x
+mindillusionspell.502c;Remove Envious;x
+mindillusionspell.502d;Next Page;x
+mindillusionspell.602a;Remove Kind;x
+mindillusionspell.602b;Remove Wroth;x
+mindillusionspell.602c;Remove Patient;x
+mindillusionspell.602d;Next Page;x
+mindillusionspell.702a;Remove Proud;x
+mindillusionspell.702b;Remove Humble;x
+mindillusionspell.702c;Remove Decietful;x
+mindillusionspell.702d;Next Page;x
+mindillusionspell.802a;Remove Craven;x
+mindillusionspell.802b;Remove Honest;x
+mindillusionspell.802c;Remove Brave;x
+mindillusionspell.802d;Next Page;x
+mindillusionspell.902a;Remove Shy;x
+mindillusionspell.902b;Remove Gregarious;x
+mindillusionspell.902c;Remove Ambitious;x
+mindillusionspell.902d;Next Page;x
+mindillusionspell.1002a;Remove Cotent;x
+mindillusionspell.1002b;Remove Arbitrary;x
+mindillusionspell.1002c;Remove Just;x
+mindillusionspell.1002d;Next Page;x
+mindillusionspell.1102a;Remove Cynical;x
+mindillusionspell.1102b;Remove Zealous;x
+mindillusionspell.1102c;Remove Paranoid;x
+mindillusionspell.1102d;Next Page;x
+mindillusionspell.1202a;Remove Trusting;x
+mindillusionspell.1202b;Remove Cruel;x
+mindillusionspell.1202c;Remove Sympathy for Christians;x
+mindillusionspell.1202d;Next Page;x
+mindillusionspell.1302a;Remove Sympathy for Pagans;x
+mindillusionspell.1302b;Remove Sympathy for Muslims;x
+mindillusionspell.1302c;Remove Sympathy for Zoroastrianism;x
+mindillusionspell.1302d;Next Page;x
+mindillusionspell.1402a;Remove Stressed;x
+mindillusionspell.1402b;Remove Drunkard;x
+mindillusionspell.1402c;Remove Gluttonous;x
+mindillusionspell.1402d;Next Homosexual;x
+mindillusionspell.1502a;Remove Lunatic;x
+mindillusionspell.1502b;Remove Possessed;x
+mindillusionspell.1502c;Remove Inapable;x
+mindillusionspell.1502d;Menu;x

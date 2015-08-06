@@ -2,60 +2,60 @@ namespace = mindillusionspell
 
 character_event = {
 	id = mindillusionspell.1
-	desc = mindillusionspell.1a_desc
+	desc = mindillusionspell.1_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.1a
+		name = mindillusionspell.2
 		character_event = { id = mindillusionspell.2 }
 		}
 	option = {
-		name = mindillusionspell.1b	
+		name = mindillusionspell.3	
 		character_event = { id = mindillusionspell.3 }
 		}
 }
 
 character_event = {
 	id = mindillusionspell.2
-	desc = mindillusionspell.2a_desc
+	desc = mindillusionspell.2_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.2a
+		name = mindillusionspell.201
 		character_event = { id = mindillusionspell.201 }
 		}
 	option = {
-		name = mindillusionspell.2b	
+		name = mindillusionspell.202	
 		character_event = { id = mindillusionspell.202 }
 		}
 	option = {
-		name = mindillusionspell.2c	
+		name = mindillusionspell.1	
 		character_event = { id = mindillusionspell.1 }
 		}
 }
 
 character_event = {
 	id = mindillusionspell.201
-	desc = mindillusionspell.201a_desc
+	desc = mindillusionspell.201_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.201a
+		name = mindillusionspell.20101
 		character_event = { id = mindillusionspell.20101 }
 		}
 	option = {
-		name = mindillusionspell.201b	
+		name = mindillusionspell.20102	
 		character_event = { id = mindillusionspell.20102 }
 		}		
 	option = {
-		name = mindillusionspell.201c	
+		name = mindillusionspell.20103	
 		character_event = { id = mindillusionspell.20103 }
 		}
 	option = {
-		name = mindillusionspell.201d	
+		name = mindillusionspell.2	
 		character_event = { id = mindillusionspell.2 }
 		}
 }
@@ -67,8 +67,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-			name = mindillusionspell.20101a
-	
+			name = mindillusionspell.20101a	
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_influence who = ROOT years = 10 }
 		}
@@ -181,19 +180,19 @@ character_event = {
 	
 	is_triggered_only = yes
 	option = {
-		name = mindillusionspell.202a
+		name = mindillusionspell.20201
 		character_event = { id = mindillusionspell.20201 }
 		}
 	option = {
-		name = mindillusionspell.202b	
+		name = mindillusionspell.20202	
 		character_event = { id = mindillusionspell.20202 }
 		}		
 	option = {
-		name = mindillusionspell.202c	
+		name = mindillusionspell.20203	
 		character_event = { id = mindillusionspell.20203 }
 		}
 	option = {
-		name = mindillusionspell.202d	
+		name = mindillusionspell.2	
 		character_event = { id = mindillusionspell.2 }
 		}
 }
@@ -320,6 +319,10 @@ character_event = {
 		name = mindillusionspell.302	
 		character_event = { id = mindillusionspell.302 }
 		}
+	option = {
+		name = mindillusionspell.1	
+		character_event = { id = mindillusionspell.1 }
+		}		
 }
 
 character_event = {
@@ -805,7 +808,7 @@ character_event = {
 	}
 	option = {
 		name = mindillusionspell.1401d
-			character_event = { id = mindillusionspell.15.1}
+			character_event = { id = mindillusionspell.1501}
 	}	
 	
 }
@@ -981,7 +984,7 @@ character_event = {
 
 character_event = {
 	id = mindillusionspell.602
-	desc = mindillusionspell.6.2_desc
+	desc = mindillusionspell.602_desc
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
