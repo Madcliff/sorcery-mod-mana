@@ -17,12 +17,12 @@ targetted_decisions = {
 		allow = {	
 		}
 	effect = {
-			character_event = { id = spellcost.3 }
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery
 			set_character_flag = firestorm
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }			
-			hidden_tooltip = { character_event = { id = cooldown.2 days = 15 } }	
-			change_phase_to = skirmish	
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
+			hidden_tooltip = { character_event = { id = cooldown.2 days = 35 } }	
 		}
 		ai_will_do = {
 			factor = 1000

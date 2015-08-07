@@ -9,32 +9,19 @@ character_event = {
 
 	option = {
 		name = fieldoffire.1a		
-				any_current_enemy = {
-					limit = { 
-						at_location = event_target:fireballloc
-						in_command = yes
-						prisoner = no
-					}
-						troops = -10
-						morale = -10
-						set_character_flag = war_mage_fof_event					
-				}	
-				any_current_enemy = {
-					any_realm_character = {
-						limit = { 
-							at_location = event_target:fireballloc
-							in_command = yes
-							prisoner = no
-							NOT = { has_character_flag = war_mage_fof_event }
-						}
-							troops = -10
-							morale = -10
-						set_character_flag = war_mage_fof_event					
-					}			
+		random_current_enemy = {
+			limit = {
+				any_army = {
+					location = { event_target:fireballloc}
 				}
-			}	
-		
+			}
+			morale = -1
+			troops = -1
+			leader = {
+				death = yes
+			}
+		}		
+	}
 }
-
 
 

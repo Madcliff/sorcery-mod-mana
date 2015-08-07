@@ -26,7 +26,8 @@ targetted_decisions = {
 		effect = {	
 		set_character_flag =  Magic_Divining
 			FROM = {
-			character_event = { id = spellcost.3 }				
+				set_variable = {which = "var1" value = 5}
+				character_event = { id = spellcost.100 }
 			}	
 		}
 		revoke_allowed = {
