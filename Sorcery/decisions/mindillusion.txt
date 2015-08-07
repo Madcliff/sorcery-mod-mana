@@ -29,12 +29,28 @@ targetted_decisions = {
 		effect = {	
 			save_event_target_as = mindillusiontarget			
 			FROM = {
-			clr_character_flag = Magic_Divining
-			character_event = {id = mindillusionspell.1 }	
-			character_event = { id = spellcost.1 }	
+
+				any_opinion_modifier_target = {
+					limit = {
+						reverse_has_opinion_modifier = {
+							who = PREV
+							modifier = mindmanip
+						}
+					}
+					save_event_target_as = mindtarget
+					reverse_remove_opinion = {
+						who = PREV
+						modifier = mindmanip
+					}
+				}
+				clr_character_flag = Magic_Divining
+				character_event = {id = mindillusionspell.1 }	
+				character_event = { id = spellcost.1 }	
 						set_character_flag = sorcery
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
-			}	
+				hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
+
+	
+		}
 		}
 		revoke_allowed = {
 			always = no

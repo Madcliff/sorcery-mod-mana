@@ -18,7 +18,13 @@ targetted_decisions = {
 		}
 		
 		effect = {	
-			save_event_target_as = mindtarget			
+			FROM = {
+				opinion = {
+					who = ROOT
+					modifier = mindmanip
+					months = 12000
+				}
+			}		
 		}
 		revoke_allowed = {
 			always = no

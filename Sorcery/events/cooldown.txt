@@ -28,3 +28,18 @@ character_event = {
 			clr_character_flag = firestorm
 	}
 	}
+namespace = mindtriggerdummy
+
+ 
+character_event = {
+	id = "mindtriggerdummy.1"
+	desc = "growth.1"
+	picture = GFX_event_roi_reincarnation
+	border = GFX_event_normal_frame_war
+    hide_window = no
+    is_triggered_only = yes	
+	
+	option = {
+	        name = cooldown.100
+	}
+	}
