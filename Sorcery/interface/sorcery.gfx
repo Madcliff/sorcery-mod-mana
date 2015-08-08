@@ -49,148 +49,31 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-	spriteType = {
-		name = "GFX_trait_Mage"
-		texturefile = "gfx/traits/fire_and_blood.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_plot_sorcery"
-		texturefile = "gfx/traits/reborn_in_fire.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	} 
-	spriteType = {
-		name = "GFX_plot_immortal"
-		texturefile = "gfx/traits/reborn_in_fire.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	} 	
-	spriteType = {
-		name = "GFX_plot_heal_character"
-		texturefile = "gfx/traits/reborn_in_fire.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	} 
-	spriteType = {
-		name = "GFX_plot_posession"
-		texturefile = "gfx/ambitions/plot_kill_spouse.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_plot_Whispers_of_the_Damned"
-		texturefile = "gfx/ambitions/plot_kill_spouse.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_plot_brokenmindandbody"
-		texturefile = "gfx/ambitions/plot_kill_spouse.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_plot_mindcontrol"
-		texturefile = "gfx/ambitions/plot_kill_spouse.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-        # Cast spell raging winds
-	spriteType = {
-		name = "GFX_cast_spell_raging_winds"  
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell charm
-	spriteType = {
-		name = "GFX_cast_spell_charm"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell firestorm
-	spriteType = {
-		name = "GFX_cast_spell_firestorm"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell firestorm
-	spriteType = {
-		name = "GFX_cast_spell_siege_firestorm"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell ritual_of_rebirth
-	spriteType = {
-		name = "GFX_cast_spell_ritual_of_rebirth"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell dragon_bond
-	spriteType = {
-		name = "GFX_cast_spell_dragon_bond"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Cast spell flaming_weapons
-	spriteType = {
-		name = "GFX_cast_spell_flaming_weapons"
-		texturefile = "gfx\\interface\\decision_icon_cast_spell.tga"
-	}
-        # Make a blood sacrifice
-	spriteType = {
-		name = "GFX_make_blood_sacrifice"
-		texturefile = "gfx\\interface\\decision_icon_make_blood_sacrifice.tga"
-	}
-        # SPELL: use dragon candle
-	spriteType = {
-		name = "GFX_cast_spell_fire_divination"  
-		texturefile = "gfx\\interface\\decision_icon_dragonglass_candle.tga"
-	}
-        # Pass dragon candle to child
-	spriteType = {
-		name = "GFX_give_dragonglass_candle_to_child"  
-		texturefile = "gfx\\interface\\decision_icon_dragonglass_candle.tga"
-	}
-        # Ask for arcane mentor
-	spriteType = {
-		name = "GFX_ask_for_arcane_mentor"  
-		texturefile = "gfx\\interface\\decision_icon_arcane_master.tga"
-	}
-	spriteType = {
-		name = "GFX_focus_sorcery"
-		texturefile = "gfx/ambitions/focus_scholarship.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}	
+
 	spriteType = {
 		name = "GFX_trait_Mentalist"
-		texturefile = "gfx/ambitions/focus_scholarship.tga"
+		texturefile = "gfx/traits/favorable_winds.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
 		name = "GFX_trait_Alchemist"
-		texturefile = "gfx/ambitions/focus_theology.tga"
+		texturefile = "gfx/traits/dragonglass_candle.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
 	spriteType = {
 		name = "GFX_trait_Herbalist"
-		texturefile = "gfx/ambitions/focus_hunting.tga"
+		texturefile = "gfx/traits/undying.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
 		name = "GFX_trait_War_Mage"
-		texturefile = "gfx/ambitions/focus_war.tga"
+		texturefile = "gfx/traits/forbidden_arts.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"

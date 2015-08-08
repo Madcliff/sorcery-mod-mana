@@ -9,6 +9,7 @@ character_event = {
 
 	option = {
 		name = fieldoffire.1a		
+		
 		any_current_enemy = {
 			limit = {
 				any_army = {
