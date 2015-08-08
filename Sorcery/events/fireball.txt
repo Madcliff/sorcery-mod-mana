@@ -9,14 +9,14 @@ character_event = {
 
 	option = {
 		name = fieldoffire.1a		
-		random_current_enemy = {
+		any_current_enemy = {
 			limit = {
 				any_army = {
 					location = { event_target:fireballloc}
 				}
 			}
-			morale = -1
-			troops = -1
+			morale = -10
+			troops = -10
 			leader = {
 				death = yes
 			}
