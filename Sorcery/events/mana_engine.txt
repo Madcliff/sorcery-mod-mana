@@ -1,40 +1,4 @@
 namespace = mana
-# SPELL SYSTEM: main magic power change event
-#character_event = {
-#    id = mana.1
-#    desc = ""
-#    hide_window = yes
-#    
-#    trigger = {
-#		OR = {
-#        trait = Sorcery
-#		trait = Mentalist
-#		trait = War_Mage
-#		trait = Alchemist
-#		trait = Herbalist
-#		}
-#		}
-#    
-#	  mean_time_to_happen = {
-#        days = 180
-#    }
-#    immediate = {
-# 
-#		if = {
-#			limit = { not = { check_variable = { which = "magic_power" value = 0 }}}                       
-#			set_variable = { which = "magic_power" value = 0 }
-#			}
-#            if = {
-#                limit = { 
-#						check_variable = { which = "magic_power" value = 0 }
-#					}
-#                character_event = { id = mana.201}  
-#                }
-                
-   
-#    }
-    #no option (hidden event)
-#}
 
 character_event = {
     id = mana.2
@@ -52,49 +16,18 @@ character_event = {
         if = {
 			limit = {
 				check_variable = { which = "magic_power" value = 0 } 
-				OR = {
-					AND = { 
-						NOT = { 
-							trait = Sorcery 
-						}
-						NOT = { 	
-							check_variable = { which = "magic_power" value = 100 } 
-						}
-					}
-					AND = { 
-						trait = Sorcery
-						NOT = { 
-							check_variable = { which = "magic_power" value = 250 } 
-						}
-					}
-					AND = { 
-						trait = Sorcery
-						trait = Undying
-						NOT = { 
-							check_variable = { which = "magic_power" value = 10000 } 
-						}
-					}
+
+				NOT = { 	
+					check_variable = { which = "magic_power" which = "mana_max" } 
 				}
 			}
+		}
 			character_event = { id = mana.201}  
         }
 	}
 }
 
-character_event = {
-    id = mana.200
-    desc = mana.200_desc
-    picture = "GFX_fire_magic"
-    is_triggered_only = yes
-    
-    option = {
-        name = mana.200a
-		if = { 
-		limit = { check_variable = { which = "magic_power" value = 3 }}
-			change_variable = { which = "magic_power" value = -1 }}
-		}
-		
-    }
+
 	
 character_event = {
     id = mana.201
@@ -105,27 +38,106 @@ character_event = {
         name = mana.201a
 		if = {
 			limit = { check_variable = { which = "magic_power" value = 0 }}                       
-			change_variable = { which = "magic_power" value = 1 }
-		}
-		if = {
-			limit = { trait = Sorcery }
-			change_variable = { which = "magic_power" value = 2 }
+			add_variable = { which = "magic_power" which = "mana_gain" }
 		}
 
 	} 
 }
 
+
+character_event = {
+    id = mana.996
+    hide_window = yes
+    
+    trigger = { 
+        OR = {
+            trait = Mentalist
+            trait = War_Mage
+            trait = Herbalist
+        }
+		not = { has_character_flag = manamaxweak }
+        }        
+
+ 
+     
+    mean_time_to_happen = {
+        days = 1            
+    }  
+    immediate = {
+        name = mana_loc
+        set_character_flag = manamaxweak
+        set_variable = { which = "mana_max" value = 500 }
+    }
+}
+
+
+character_event = {
+    id = mana.997
+    hide_window = yes
+    
+    trigger = { 
+            trait = Sorcery
+		}
+		not = { has_character_flag = manamaxstrong }
+        }        
+
+ 
+     
+    mean_time_to_happen = {
+        days = 1            
+    }  
+    immediate = {
+        name = mana_loc
+        set_character_flag = manamaxstrong
+        set_variable = { which = "mana_max" value = 50000 }
+    }
+}
+
+
+character_event = {
+    id = mana.998
+    hide_window = yes
+    
+    trigger = { 
+            trait = Sorcery
+		}
+		not = { has_character_flag = manacoststrong }
+        }        
+
+ 
+     
+    mean_time_to_happen = {
+        days = 1            
+    }  
+    immediate = {
+        name = mana_loc
+        set_character_flag = manacoststrong
+        set_variable = { which = "mana_gain" value = 5 }
+    }
+}
 character_event = {
     id = mana.999
-    desc = ""
-    picture = "GFX_fire_magic"	
-    hide_window = no
+    hide_window = yes
     
-   is_triggered_only = yes
-    
-		option = {
-		name = mana_loc
-		}
+    trigger = { 
+        OR = {
+            trait = Mentalist
+            trait = War_Mage
+            trait = Herbalist
+        }
+		not = { has_character_flag = manacostweak }
+        }        
+
+ 
+     
+    mean_time_to_happen = {
+        days = 1            
+    }  
+    immediate = {
+        name = mana_loc
+        set_character_flag = manacostweak
+        set_variable = { which = "mana_gain" value = 1 }
+    }
 }
 
 
