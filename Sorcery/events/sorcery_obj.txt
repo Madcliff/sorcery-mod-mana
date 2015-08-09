@@ -12,7 +12,6 @@ character_event = {
 		NOT = { trait = Sorcery }	
 		OR = {
 			NOT = {trait = War_Mage}
-			NOT = {trait = Alchemist}
 			NOT = {trait = Mentalist}
 			NOT = {trait = Herbalist}			
 			}
@@ -63,12 +62,6 @@ mean_time_to_happen = {
 				add_trait = War_Mage			
 		}
 	option = {
-		name = sorceryobj.1b
-		trigger = { not = {trait = Alchemist}}
-
-		add_trait = Alchemist			
-		}
-	option = {
 		name = sorceryobj.1c
 		trigger = { not = {trait = Mentalist}}
 		add_trait = Mentalist				
@@ -97,7 +90,6 @@ character_event = {
 		NOT = { trait = incapable }
 		trait = War_Mage 
 		trait = Mentalist
-		trait = Alchemist
 		trait = Herbalist
 		NOT = { trait = Sorcery }
 

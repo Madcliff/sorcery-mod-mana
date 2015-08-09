@@ -13,7 +13,6 @@ character_event = {
 			trait = Sorcery
 			trait = Mentalist
 			trait = War_Mage
-			trait = Alchemist
 			trait = Herbalist
 	}
 	}
@@ -21,7 +20,7 @@ character_event = {
 	mean_time_to_happen  = { 
 		years = 5
 	modifier = {
-		factor = 0.5 # Increases chances by half
+		factor = 1 # Increases chances by half
 		trait = Sorcery
 	}		
 	}
@@ -40,10 +39,10 @@ character_event = {
 		}		
 		random = {
 			chance = 50
-#			fertility = 0.25 = 1
+			fertility = 0.05 
 		}
 
-		health = 1
+		health = 2
 	}
 }
 
@@ -72,6 +71,6 @@ character_event = {
 		change_learning = 1		
 #		fertility = 0.05
 		
-		health = 1
+		health = 5
 	}
 }

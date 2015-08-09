@@ -41,13 +41,7 @@ character_event = {
     hide_window = yes
     
     trigger = {
-		OR = {
-			trait = Sorcery
-			trait = Mentalist
-			trait = War_Mage
-			trait = Alchemist
-			trait = Herbalist
-		}
+		has_character_flag = mana_engine
 	}
 		
     mean_time_to_happen = {
@@ -64,20 +58,20 @@ character_event = {
 							trait = Sorcery 
 						}
 						NOT = { 	
-							check_variable = { which = "magic_power" value = 10 } 
+							check_variable = { which = "magic_power" value = 100 } 
 						}
 					}
 					AND = { 
 						trait = Sorcery
 						NOT = { 
-							check_variable = { which = "magic_power" value = 25 } 
+							check_variable = { which = "magic_power" value = 250 } 
 						}
 					}
 					AND = { 
 						trait = Sorcery
 						trait = Undying
 						NOT = { 
-							check_variable = { which = "magic_power" value = 1000 } 
+							check_variable = { which = "magic_power" value = 10000 } 
 						}
 					}
 				}
@@ -144,7 +138,6 @@ character_event = {
             trait = Sorcery
             trait = Mentalist
             trait = War_Mage
-            trait = Alchemist
             trait = Herbalist
         }
 		not = { has_character_flag = mana_engine }

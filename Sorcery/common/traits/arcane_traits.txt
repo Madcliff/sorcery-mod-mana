@@ -1,8 +1,13 @@
 # All arcane traits are here
-	
+Alchemist = {
+	education = yes
+	learning = 10
+	random = no
+}	
+
 Sorcery = {
 	ruler_designer_cost	= 20
-	opposites = { Mentalist Alchemist War_Mage Herbalist}
+	opposites = { Mentalist War_Mage Herbalist}
     learning = 5	
 	intrigue = 2	
 	stewardship = 2	
@@ -33,17 +38,7 @@ Mentalist = {
 		morale_offence = 0.4		
 	}	
 }
-Alchemist = {
-	ruler_designer_cost = -50
-	health = 1
-    learning = 1
-	stewardship = 1
-    customizer = yes
-	random = no	
-	command_modifier = {
-		siege = 0.8		
-	}	
-}
+
 War_Mage = {
 	ruler_designer_cost = -50
 	health = 1
@@ -74,10 +69,4 @@ Undying = {
 	random = no
 	}		
 	
-Whispers_of_the_Damned = {
-	general_opinion = -10000
-    customizer = no
-	random = no
-}
-
 

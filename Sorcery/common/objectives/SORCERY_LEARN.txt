@@ -110,5 +110,20 @@ obj_study_magic = {
 	abort_effect = {
 	}
 	effect = {
+		random_list = {
+		  25 = {
+			give_nickname = nick_the_wise
+		  }
+		  25 = {
+			give_nickname = nick_the_black
+		  }
+		  25 = {
+			give_nickname = nick_the_accursed
+		  }
+		  25 = {
+			give_nickname = nick_dragon
+		  }
+		}
+	set_special_character_title = HIGH_MAGISTER
 	}
 }

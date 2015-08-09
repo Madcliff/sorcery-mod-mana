@@ -8,10 +8,22 @@ character_event = {
 	
 	option = {
 		name = immortalspell.1a
-#		wealth = -20000
+
 		add_trait = Undying
-#		health = 200
- #       change_variable = { which = "magic_power" value = -20 }
+		}
+
+	}
+character_event = {
+	id = immortalspell.2
+	desc = immortalspell.2_desc
+	picture = GFX_evt_child_reading
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = immortalspell.1a
+
+		remove_trait = Undying
 		}
 
 	}

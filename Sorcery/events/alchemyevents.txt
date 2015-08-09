@@ -6,7 +6,6 @@ character_event = {
 	
     trigger = { 
         OR = {
-            trait = Sorcery
             trait = Alchemist
         }
 	}
@@ -15,6 +14,27 @@ character_event = {
     } 
 	option = {
 		name = Alchemy1.a
+			if = { 
+			limit = {NOT = { independent = yes }}
+			liege = {
+					if = {
+						limit = { NOT = { yearly_income = 40 } }
+					wealth = 100
+					}
+					if = {
+					limit = { 
+						NOT = { yearly_income = 200 } 
+						yearly_income = 40
+					}
+						scaled_wealth = 2.5
+					}
+					if = {
+					limit = { yearly_income = 200 }
+						wealth = 500					
+					}
+				}
+			}
+			break = yes
 			if = {
 				limit = { NOT = { yearly_income = 40 } }
 				wealth = 100
@@ -29,6 +49,179 @@ character_event = {
 			if = {
 				limit = { yearly_income = 200 }
 				wealth = 500
+			}
+		}
+}
+
+character_event = {
+    id = alchemy.2
+    desc = "alchemy.1_desc"
+    picture = "GFX_fire_magic"	
+	
+    trigger = { 
+		trait = Alchemist
+		NOT = has_character_flag = elixer_of_life
+		OR = { 
+			AND = {
+				num_of_prisoners = 10
+				wealth = 2000
+			}
+			AND = {
+				liege = {
+					num_of_prisoners = 10
+					wealth = 2000
+				}
+			}
+			
+		}
+	}
+    mean_time_to_happen = {
+        days = 3650
+    } 
+	option = {
+		name = Alchemy1.a
+			if = {
+				limit = { 
+					num_of_prisoners = 10
+					wealth = 2000			
+				}
+				set_character_flag = elixer_of_life
+				wealth = -2000
+				
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}				
+			}
+			break = yes
+			if = {
+				limit = {
+					liege = {
+					num_of_prisoners = 10
+					wealth = 2000
+					}
+				liege = { 
+					wealth = -2000
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+						any_courtier = {
+						limit = { prisoner = yes }
+							death= {
+								death_reason = death_sacrificed
+							}
+						}
+				}
+				set_character_flag = elixer_of_life
+				
+				}
 			}
 		}
 }
