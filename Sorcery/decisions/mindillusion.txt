@@ -45,7 +45,6 @@ targetted_decisions = {
 				}
 				clr_character_flag = Magic_Divining
 				character_event = {id = mindillusionspell.1 }	
-				character_event = { id = spellcost.1 }	
 						set_character_flag = sorcery
 				hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
 
