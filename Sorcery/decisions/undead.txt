@@ -1,4 +1,4 @@
-\title_decisions = {
+title_decisions = {
 	2summon_undead = {
 			filter = sub_realm_owned
 		ai_target_filter  = sub_realm_owned

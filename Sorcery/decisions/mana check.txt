@@ -19,7 +19,6 @@ targetted_decisions = {
 		}
 		
 		effect = {	
-			hidden_tooltip = { character_event = { id = mana.999 } }
 	
 		}
 		revoke_allowed = {

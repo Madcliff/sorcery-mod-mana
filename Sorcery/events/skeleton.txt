@@ -1,4 +1,4 @@
-\namespace = skeleton
+namespace = skeleton
 character_event = {
 	id = skeleton.1
 	desc = skeleton.1_desc

@@ -64,16 +64,14 @@ targetted_decisions = {
 		allow =  {
 			FROM = { 
 				any_realm_character = { 
-					limit = {
-						OR = {
-							trait = Sorcery 
-							trait = Herbalist
-						} 
-						check_variable = { which = "magic_power" value = 1 }
-						OR = {
-							at_location = ROOT
-							has_character_flag = Magic_Divining
-						}
+					OR = {
+						trait = Sorcery 
+						trait = Herbalist
+					} 
+					check_variable = { which = "magic_power" value = 1 }
+					OR = {
+						at_location = ROOT
+						has_character_flag = Magic_Divining
 					}
 				}
 			}
