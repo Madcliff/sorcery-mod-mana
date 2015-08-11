@@ -146,8 +146,8 @@ character_event = {
 							death= {
 								death_reason = death_sacrificed
 							}
-						}				
-			}
+						}
+				}				
 			break = yes
 			if = {
 				limit = {
@@ -221,7 +221,6 @@ character_event = {
 				}
 				set_character_flag = elixer_of_life
 				
-				}
 			}
 		}
 }
