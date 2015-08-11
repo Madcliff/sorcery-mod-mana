@@ -27,9 +27,9 @@ character_event = {
 			if = { limit = { trait = possessed } remove_trait = possessed }
 			if = { limit = { trait = depressed } remove_trait = depressed }
 			if = { limit = { trait = inbred } remove_trait = inbred }
-			if = { limit = { trait = disfigured } remove_trait = disfigured }
+			#if = { limit = { trait = disfigured } remove_trait = disfigured }
 			if = { limit = { trait = crippled } remove_trait = crippled }
-			if = { limit = { trait = blinded_age } remove_trait = blinded_age}
+			#if = { limit = { trait = blinded_age } remove_trait = blinded_age}
 		}
 	}
 	
@@ -48,10 +48,10 @@ character_event = {
 				if = { limit = { trait = has_small_pox } remove_trait = has_small_pox }
 				if = { limit = { trait = has_aztec_disease } remove_trait = has_aztec_disease }
 				if = { limit = { has_character_modifier = minor_disease_herpes } }  
-				if = { limit = { trait = has_bloody_flux } remove_trait = has_bloody_flux }
-				if = { limit = { trait = has_grey_plague } remove_trait = has_grey_plague }
-				if = { limit = { trait = has_greyscale } remove_trait = has_greyscale }
-				if = { limit = { trait = has_red_death } remove_trait = has_red_death }
+				#if = { limit = { trait = has_bloody_flux } remove_trait = has_bloody_flux }
+				#if = { limit = { trait = has_grey_plague } remove_trait = has_grey_plague }
+				#if = { limit = { trait = has_greyscale } remove_trait = has_greyscale }
+				#if = { limit = { trait = has_red_death } remove_trait = has_red_death }
 				if = { limit = { trait = has_pox } remove_trait = has_pox }
 
 				remove_character_modifier = minor_disease_herpes   
