@@ -9,7 +9,7 @@
 #	lose_effect: fires when a title is lost if dismissal_trigger evaluates to false
 #	The other fields are all character modifiers.
 
-job_chancellor = {
+job_viceroy = {
 	attribute = diplomacy
 	dignity = 0.33
 	opinion_effect = 15
