@@ -22,7 +22,7 @@ title_decisions = {
 			location = { 	
 				save_event_target_as = blessingsloc	
 			}
-		hidden_tooltip = { character_event = { id = blessings.1  } }
+		FROM = { character_event = { id = blessings.1  } }
 		}
 		revoke_allowed = {
 			always = no

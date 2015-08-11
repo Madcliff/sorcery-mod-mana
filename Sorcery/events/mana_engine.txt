@@ -21,7 +21,6 @@ character_event = {
 					check_variable = { which = "magic_power" which = "mana_max" } 
 				}
 			}
-		}
 			character_event = { id = mana.201}  
         }
 	}
@@ -76,8 +75,7 @@ character_event = {
     hide_window = yes
     
     trigger = { 
-            trait = Sorcery
-		}
+        trait = Sorcery
 		not = { has_character_flag = manamaxstrong }
         }        
 
@@ -90,31 +88,11 @@ character_event = {
         name = mana_loc
         set_character_flag = manamaxstrong
         set_variable = { which = "mana_max" value = 50000 }
+		set_variable = { which = "mana_gain" value = 5 }
     }
 }
 
 
-character_event = {
-    id = mana.998
-    hide_window = yes
-    
-    trigger = { 
-            trait = Sorcery
-		}
-		not = { has_character_flag = manacoststrong }
-        }        
-
- 
-     
-    mean_time_to_happen = {
-        days = 1            
-    }  
-    immediate = {
-        name = mana_loc
-        set_character_flag = manacoststrong
-        set_variable = { which = "mana_gain" value = 5 }
-    }
-}
 character_event = {
     id = mana.999
     hide_window = yes
@@ -137,6 +115,7 @@ character_event = {
         name = mana_loc
         set_character_flag = manacostweak
         set_variable = { which = "mana_gain" value = 1 }
+        set_variable = { which = "mana_max" value = 100 }		
     }
 }
 
