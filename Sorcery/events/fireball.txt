@@ -13,7 +13,7 @@ character_event = {
 		any_current_enemy = {
 			limit = {
 				any_army = {
-					location = { event_target:fireballloc}
+					location = {event_target:fireballloc}
 				}
 			}
 			morale = -10

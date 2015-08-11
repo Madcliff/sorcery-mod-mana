@@ -41,7 +41,6 @@ targetted_decisions = {
 			dynasty = FROM
 			FROM = {
 			clr_character_flag = Magic_Divining
-			character_event = { id = spellcost.10 }	
 			abdicate_to = ROOT
 			death = {
 				death_reason = death_natural

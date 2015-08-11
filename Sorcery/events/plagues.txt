@@ -65,7 +65,8 @@ character_event = {
 			add_trait = has_tuberculosis
 			}
 			event_target:spellcostcast = {
-				character_event = { id = spellcost.1 }							
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }				
 				}
 		}			
 	option = {
@@ -75,7 +76,8 @@ character_event = {
 			add_trait = has_small_pox		
 		}
 				event_target:spellcostcast = {
-				character_event = { id = spellcost.1 }							
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }						
 				}		
 		}
 	option = {
@@ -84,7 +86,10 @@ character_event = {
 		event_target:plagues = {	
 			add_trait = has_typhus
 			}
-			character_event = { id = spellcost.1 }				
+				event_target:spellcostcast = {
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }						
+				}				
 		}
 	option = {
 			name = plagues.1d
@@ -94,7 +99,8 @@ character_event = {
 			activate_disease = bubonic_plague
 			}
 				event_target:spellcostcast = {
-				character_event = { id = spellcost.3 }							
+			set_variable = {which = "var1" value = 3}
+			character_event = { id = spellcost.100 }						
 				}		
 		}
 }

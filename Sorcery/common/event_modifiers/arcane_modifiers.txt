@@ -121,8 +121,9 @@ curse_of_health = {
 
 precognition = {
 	tech_growth_modifier = 1000.0
-	military_techpoints  = 100.0
-	cultural_techpoints  = 100.0
-	economic_techpoints  = 100.0
-	
+	capital = {
+		military_techpoints  = 100.0
+		cultural_techpoints  = 100.0
+		economic_techpoints  = 100.0
+	}
 }
