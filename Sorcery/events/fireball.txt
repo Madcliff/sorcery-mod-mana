@@ -9,10 +9,7 @@ character_event = {
 
 	option = {
 		name = fieldoffire.1a		
-
-		event_target:fireballloc = {
-			add_province_modifier = {name = fireball duration = 15 }	
-		}
+		
 		any_current_enemy = {
 			limit = {
 				any_army = {
@@ -24,11 +21,7 @@ character_event = {
 			leader = {
 				death = yes
 			}
-		}
-		set_variable = {which = "var1" value = 5}
-		character_event = { id = spellcost.100 }
-		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
+		}		
 	}
 }
 

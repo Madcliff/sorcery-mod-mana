@@ -7,13 +7,7 @@ targetted_decisions = {
 				check_variable = { which = "magic_power" value = 1 }	
 			is_playable = yes
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
-			}
+			OR = {trait = Sorcery trait = Herbalist}
 			ai = no
 			}
 	
@@ -23,6 +17,7 @@ targetted_decisions = {
 		allow = { 
 					OR = { 
 						ROOT = { at_location = FROM } 			
+						FROM = { any_realm_character = { trait = Conduit at_location = ROOT }	}
 						FROM = { has_character_flag = Magic_Divining }						
 					}
 

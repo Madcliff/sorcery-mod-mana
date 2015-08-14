@@ -7,13 +7,7 @@ title_decisions = {
 			check_variable = { which = "magic_power" value = 5 }	 			
 			is_playable = yes
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
-			}
+			OR = {trait = Sorcery trait = War_Mage}
 			ai = no
 			}
 	

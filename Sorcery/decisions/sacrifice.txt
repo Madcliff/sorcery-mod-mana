@@ -7,13 +7,7 @@ targetted_decisions = {
 			is_playable = yes
 			ai = no			
 			NOT = { trait = incapable }
-			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
-			}			
+			OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}			
 		}
 	
 		potential = {
@@ -35,8 +29,7 @@ targetted_decisions = {
 			}
 			hidden_tooltip = {
 				FROM = {
-					change_variable = { which = "magic_power" value = 1 }
-					clr_character_flag = sorcery	
+			change_variable = { which = "magic_power" value = 5 }
 				}
 			}
 			death = {

@@ -7,13 +7,7 @@ settlement_decisions = {
 			is_playable = yes
 			ai = no			
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
-			}
+			OR = {trait = Sorcery trait = Alchemist}
 			check_variable = { which = "magic_power" value = 1 }
 			}
 	

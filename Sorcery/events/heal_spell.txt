@@ -31,11 +31,6 @@ character_event = {
 			if = { limit = { trait = crippled } remove_trait = crippled }
 			#if = { limit = { trait = blinded_age } remove_trait = blinded_age}
 		}
-		clr_character_flag = Magic_Divining
-		set_variable = {which = "var1" value = 1}
-		character_event = { id = spellcost.100 }
-		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
 	}
 	
 	option = {
@@ -61,23 +56,12 @@ character_event = {
 
 				remove_character_modifier = minor_disease_herpes   
 			}
-		clr_character_flag = Magic_Divining
-		set_variable = {which = "var1" value = 1}
-		character_event = { id = spellcost.100 }
-		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
 	}
 		
 	option = {
 		name = healspell.1c	
 			event_target:healtarget = {		
 				if = { limit = { trait = Whispers_of_the_Damned } remove_trait = Whispers_of_the_Damned}
-				if = { limit = { has_opinion_modifier = { who = FROM modifier = opinion_mind_control } } remove_opinion = { who = FROM modifier = opinion_mind_control }}			
-			}
-		clr_character_flag = Magic_Divining
-		set_variable = {which = "var1" value = 1}
-		character_event = { id = spellcost.100 }
-		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
+				if = { limit = { has_opinion_modifier = { who = FROM modifier = opinion_mind_control } } remove_opinion = { who = FROM modifier = opinion_mind_control }}			}
 		}
 	}

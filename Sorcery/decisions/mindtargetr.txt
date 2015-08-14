@@ -6,11 +6,8 @@ targetted_decisions = {
 			is_playable = yes
 			ai = no
 			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
+				trait = Sorcery 
+				trait = Mentalist
 			}
 		}
 	

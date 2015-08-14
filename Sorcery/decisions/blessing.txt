@@ -7,13 +7,7 @@ title_decisions = {
 			is_playable = yes
 			ai = no			
 			NOT = {	OR = { trait = incapable has_character_flag = sorcery } }
-			OR = {
-				trait = magister
-				trait = grand_sorcerer
-				trait = sorcerer
-				trait = sorcery_adept 
-				trait = sorcery_inniate
-			}
+			trait = Sorcery 
 			check_variable = { which = "magic_power" value = 1 }
 			}
 	
@@ -28,56 +22,7 @@ title_decisions = {
 			location = { 	
 				save_event_target_as = blessingsloc	
 			}
-			FROM = {
-				if = {
-					limit = { trait = sorcery_inniate}
-					random_list = {
-						50 = {
-							character_event = { id = blessings.1  } 
-							} 
-						50 = {
-							character_event = { id = fizzile.1 }
-						}
-					}
-				}
-				if = {
-					limit = { trait = sorcery_adept}
-					random_list = {
-						65 = {
-							character_event = { id = blessings.1  } 
-							} 
-						35 = {
-							character_event = { id = fizzile.1 }
-						}
-					}
-				}
-				if = {
-					limit = { trait = sorcerer}
-					random_list = {
-						80 = {
-							character_event = { id = blessings.1  } 
-							} 
-						20 = {
-							character_event = { id = fizzile.1 }
-						}
-					}
-				}
-				if = {
-					limit = { trait = grand_sorcerer}
-					random_list = {
-						95 = {
-							character_event = { id = blessings.1  } 
-							} 
-						5 = {
-							character_event = { id = fizzile.1 }
-						}
-					}
-				}
-				if = {
-					limit = { trait = magister}	
-					character_event = { id = blessings.1  }
-				}
-			}
+		FROM = { character_event = { id = blessings.1  } }
 		}
 		revoke_allowed = {
 			always = no
