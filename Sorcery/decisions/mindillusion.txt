@@ -8,7 +8,13 @@ targetted_decisions = {
 			ai = no
 			check_variable = { which = "magic_power" value = 1 }		
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {trait = Sorcery trait = Mentalist}
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}
 		}
 	
 		potential = {
@@ -26,29 +32,59 @@ targetted_decisions = {
 		}
 		
 		effect = {	
-			save_event_target_as = mindillusiontarget			
-			FROM = {
+			save_event_target_as = mindillusiontarget	
 
-				any_opinion_modifier_target = {
-					limit = {
-						reverse_has_opinion_modifier = {
-							who = PREV
-							modifier = mindmanip
+			FROM = {
+				if = {
+					limit = { trait = sorcery_inniate}
+					random_list = {
+						50 = {
+							character_event = { id = mindillusionspell.1  } 
+							} 
+						50 = {
+							character_event = { id = fizzile.1 }
 						}
 					}
-					save_event_target_as = mindtarget
-					reverse_remove_opinion = {
-						who = PREV
-						modifier = mindmanip
+				}
+				if = {
+					limit = { trait = sorcery_adept}
+					random_list = {
+						65 = {
+							character_event = { id = mindillusionspell.1  } 
+							} 
+						35 = {
+							character_event = { id = fizzile.1 }
+						}
 					}
 				}
-				clr_character_flag = Magic_Divining
-				character_event = {id = mindillusionspell.1 }	
-						set_character_flag = sorcery
-				hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
-
-	
-		}
+				if = {
+					limit = { trait = sorcerer}
+					random_list = {
+						80 = {
+							character_event = { id = mindillusionspell.1  } 
+							} 
+						20 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = grand_sorcerer}
+					random_list = {
+						95 = {
+							character_event = { id = mindillusionspell.1  } 
+							} 
+						5 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = magister}	
+					character_event = { id = mindillusionspell.1  }
+				}
+			}
+			
 		}
 		revoke_allowed = {
 			always = no
