@@ -94,7 +94,9 @@ character_event = {
 					merge = yes				
 					}
 			set_character_flag = sorcery			
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }						
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }	
+			set_variable = {which = "var1" value = 5}
+			character_event = { id = spellcost.100 }				
 			}			
 
 }

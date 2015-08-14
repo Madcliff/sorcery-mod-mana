@@ -1,5 +1,5 @@
-manacheck;Magic:Mana Check.;;;;;;;;x
-manacheck_desc;Check your mana level;;;;;;;;x
+manacheck;[Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
+manacheck_desc;[Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
 HIGH_MAGISTER;High Magister;x
 Time_Boost;Alchemy:Transform Time;;;;;;;;x
 Time_Boost_desc;Move your province beyond time;;;;;;;;x
@@ -249,16 +249,6 @@ fieldoffire.2b;NO!;;;;;;x
 fieldoffire.2b_desc;Let them live;;;;;;x
 
 magic_shield;Magic Shield;;;;;;x
-Sorcery;Sorcerer;;;;;;x
-Mentalist;Mentalist;;;;;;x
-Alchemist;Alchemist;;;;;;x
-Herbalist;Herbalist;;;;;;x
-War_Mage;War Mage;;;;;;x
-Sorcery_desc;Sorcerer;;;;;;x
-Mentalist_desc;Mentalist;;;;;;x
-Alchemist_desc;Alchemist;;;;;;x
-Herbalist_desc;Herbalist;;;;;;x
-War_Mage_desc;War Mage;;;;;;x
 2magicshield_decision;Sorcery:Magic Shield;;;;;;x
 2magicshield_decision_desc;A shield of magic that prevents harmful spells;;;;;;x
 

@@ -9,11 +9,12 @@ character_event = {
 		has_ambition = obj_study_magic 
 		prisoner = no
 		NOT = { trait = incapable }
-		NOT = { trait = Sorcery }	
+		NOT = { trait = magister }
 		OR = {
-			NOT = {trait = War_Mage}
-			NOT = {trait = Mentalist}
-			NOT = {trait = Herbalist}			
+			NOT = {trait = grand_sorcerer}
+			NOT = {trait = sorcerer}
+			NOT = {trait = sorcery_adept}		
+			NOT = {trait = sorcery_inniate}				
 			}
 	}
 mean_time_to_happen = {
@@ -58,44 +59,29 @@ mean_time_to_happen = {
 }
 	option = {
 		name = sorceryobj.1a
-		trigger = { not = {trait = War_Mage}}
-				add_trait = War_Mage			
+		trigger = { not = {trait = sorcery_inniate}}
+				add_trait = sorcery_inniate	
+				set_variable = { which = "spellscast" value = 0 } 				
 		}
-	option = {
-		name = sorceryobj.1c
-		trigger = { not = {trait = Mentalist}}
-		add_trait = Mentalist				
-		}
-	option = {
-		name = sorceryobj.1d
-		trigger = {not = {trait = Herbalist}}
-		add_trait = Herbalist		
-		}		
-
-	
-	
 }
 
-
-
+	
 character_event = {
-	id = sorceryobj.5
-	desc = sorceryobj.5_desc
+	id = sorceryobj.2
+	desc = sorceryobj.2_desc
 	picture = GFX_evt_comet
 	border = GFX_event_normal_frame_religion
 
 	trigger = {
 		has_ambition = obj_study_magic 
 		prisoner = no
+		trait = sorcery_inniate
 		NOT = { trait = incapable }
-		trait = War_Mage 
-		trait = Mentalist
-		trait = Herbalist
-		NOT = { trait = Sorcery }
-
+		NOT = { trait = magister }
+		check_variable = { which = "spellscast" value = 4 }				
 	}
 mean_time_to_happen = {
-	years = 1
+	years = 5
 	modifier = {
 		factor = 2 # Decreases chances by half
 		NOT = { trait = genius }
@@ -135,14 +121,142 @@ mean_time_to_happen = {
 	
 }
 	option = {
-		name = sorceryobj.5a
-		random_list = {
-		60 = { character_event = { id = sorceryobj.51} }
-		35 = { add_trait = lunatic character_event = { id = sorceryobj.51} }
-		5 = { character_event = { id = sorceryobj.99} }
+		name = sorceryobj.2a
+		trigger = { not = {trait = trait = sorcery_adept}}
+				add_trait = trait = sorcery_adept	
+				set_variable = { which = "spellscast" value = 0 } 				
+		}
+}
+
+
+character_event = {
+	id = sorceryobj.3
+	desc = sorceryobj.3_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		trait = sorcery_adept
+		NOT = { trait = incapable }
+		NOT = { trait = magister }
+		check_variable = { which = "spellscast" value = 4 }
+
 	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
 }
+	option = {
+		name = sorceryobj.3a
+		trigger = { not = {trait = sorcerer}}
+				add_trait = sorcerer		
+				set_variable = { which = "spellscast" value = 0 } 				
+		}
+}	
+
+
+
+
+character_event = {
+	id = sorceryobj.4
+	desc = sorceryobj.4_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_magic 
+		prisoner = no
+		trait = sorcerer
+		NOT = { trait = incapable }
+		NOT = { trait = magister }
+		check_variable = { which = "spellscast" value = 4 }
+
+	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
 }
+	option = {
+		name = sorceryobj.4a
+		trigger = { not = {trait = grand_sorcerer}}
+				add_trait = grand_sorcerer	
+				set_variable = { which = "spellscast" value = 0 } 				
+		}
+}	
 
 character_event = {
     id = sorceryobj.51

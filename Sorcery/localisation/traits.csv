@@ -4,7 +4,7 @@ Alchemist;Alchemist;;;;;;x
 Herbalist;Herbalist;;;;;;x
 War_Mage;War Mage;;;;;;x
 Sorcery_desc;Sorcerer, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
-Mentalist_desc;Mentalist, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x;;;;;;x
+Mentalist_desc;Mentalist, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
 Alchemist_desc;Alchemist;;;;;;x
-Herbalist_desc;Herbalist, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x;;;;;;x
-War_Mage_desc;War Mage, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x;;;;;;x
+Herbalist_desc;Herbalist, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
+War_Mage_desc;War Mage, [Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x

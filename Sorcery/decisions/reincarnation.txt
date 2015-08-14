@@ -9,13 +9,18 @@ targetted_decisions = {
 			is_playable = yes
 			at_location = THIS				
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {trait = Sorcery trait = Mentalist}
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}
 			age = 30
 		}
 	
 		potential = {
-		trait = possessed
-		at_location = FROM			
+			has_opinion_modifier = { who = from modifier = opinion_mind_control }		
 		NOT = { age = 20 }
 		}
 		

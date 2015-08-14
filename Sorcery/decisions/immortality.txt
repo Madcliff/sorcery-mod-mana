@@ -6,60 +6,40 @@ targetted_decisions = {
 	
 		from_potential = {
 		ai = no		
-		OR = {
-			at_location = ROOT		
-			is_playable = yes	
-			has_character_flag = elixer_of_life
-			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {trait = Sorcery trait = Alchemist }
-			}
-			any_realm_character = { 
-			at_location = ROOT 
-			has_character_flag = elixer_of_life 
+			random_realm_character = { 
+				at_location = ROOT 
+				has_character_flag = elixer_of_life 
 				NOT = {	
-					OR= { 
-						trait = incapable 
-						has_character_flag = sorcery
-					}
+					trait = incapable 
 				}
-			OR = {
-				trait = Sorcery 
 				trait = Alchemist 
-			}
 			}
 		}
 	
 		potential = {
-		NOT = {
-		trait = Undying
-		}
+			NOT = {
+				trait = Undying
+			}
 		}
 		
-		allow = { 
-					OR = { 
-						ROOT = { at_location = FROM } 			
-						FROM = { any_realm_character = { trait = Alchemist} at_location = ROOT }	}
-					}
-				}
-		
-		effect = {	
-			hidden_tooltip = { character_event = { id = immortalspell.1 } }
-			hidden_tooltip = { character_event = { id = immortalspell.2 years = 50 } }
-			FROM = {
-			if = {
-				limit = {any_realm_character = {has_character_flag = elixer_of_life at_location = ROOT }}
-				any_realm_character = {
-					limit = { has_character_flag = elixer_of_life at_location = ROOT }
-					has_character_flag = elixer_of_life
-					clr_character_flag = elixer_of_life
-					set_character_flag = sorcery
-					hidden_tooltip = { character_event = { id = cooldown.1 days = 720 } }	
+		allow = { 		
+				FROM = { 
+					random_realm_character = { 
+						trait = Alchemist 
+						at_location = ROOT 
+						has_character_flag = elixer_of_life  
+					}	
 				}
 			}
-			if = {
-				limit = { NOT = {any_realm_character = {has_character_flag = elixer_of_life at_location = ROOT }}}
-				set_character_flag = sorcery
-				hidden_tooltip = { character_event = { id = cooldown.1 days = 720 } }			
+		
+		effect = {	
+			character_event = { id = immortalspell.1 } 
+			character_event = { id = immortalspell.2 years = 50 } 
+			FROM = { 					
+				random_realm_character = {
+					limit = { has_character_flag = elixer_of_life at_location = ROOT }
+					clr_character_flag = elixer_of_life
+				}
 			}
 		}
 		revoke_allowed = {

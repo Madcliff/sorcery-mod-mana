@@ -10,19 +10,71 @@ targetted_decisions = {
 		}
 	
 		potential = {
-			OR = {trait = Sorcery trait = War_Mage}		 
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}	 
 			in_command = yes
 			prisoner = no
 		}
 		allow = {	
 		}
 	effect = {
-			set_variable = {which = "var1" value = 3}
-			character_event = { id = spellcost.100 }
-			set_character_flag = sorcery
-			set_character_flag = firestorm
-			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
-			hidden_tooltip = { character_event = { id = cooldown.2 days = 35 } }	
+	
+	
+		FROM = {
+				if = {
+					limit = { trait = sorcery_inniate}
+					random_list = {
+						50 = {
+							character_event = { id = firestomtactictrigger.1  } 
+							} 
+						50 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = sorcery_adept}
+					random_list = {
+						65 = {
+							character_event = { id = firestomtactictrigger.1  } 
+							} 
+						35 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = sorcerer}
+					random_list = {
+						80 = {
+							character_event = { id = firestomtactictrigger.1  } 
+							} 
+						20 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = grand_sorcerer}
+					random_list = {
+						95 = {
+							character_event = { id = firestomtactictrigger.1  } 
+							} 
+						5 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = magister}	
+					character_event = { id = firestomtactictrigger.1  }
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1000
@@ -30,4 +82,4 @@ targetted_decisions = {
 			
 			
 	}
-	}
+}

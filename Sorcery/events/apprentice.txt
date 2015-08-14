@@ -14,12 +14,6 @@ character_event = {
 		}
 		}
 		option = {		
-		name = apprentice.1b
-		event_target:apprentice = {		
-		add_trait = Alchemist
-		}
-		}
-		option = {		
 		name = apprentice.1c
 		event_target:apprentice = {		
 		add_trait = Mentalist

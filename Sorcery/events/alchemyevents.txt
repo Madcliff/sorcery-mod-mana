@@ -60,7 +60,7 @@ character_event = {
 	
     trigger = { 
 		trait = Alchemist
-		NOT = has_character_flag = elixer_of_life
+		NOT = { has_character_flag = elixer_of_life}
 		OR = { 
 			AND = {
 				num_of_prisoners = 10
@@ -87,7 +87,6 @@ character_event = {
 				}
 				set_character_flag = elixer_of_life
 				wealth = -2000
-				
 						any_courtier = {
 						limit = { prisoner = yes }
 							death= {
@@ -147,8 +146,8 @@ character_event = {
 							death= {
 								death_reason = death_sacrificed
 							}
-						}				
-			}
+						}
+				}				
 			break = yes
 			if = {
 				limit = {
@@ -156,6 +155,7 @@ character_event = {
 					num_of_prisoners = 10
 					wealth = 2000
 					}
+				}
 				liege = { 
 					wealth = -2000
 						any_courtier = {
@@ -221,7 +221,6 @@ character_event = {
 				}
 				set_character_flag = elixer_of_life
 				
-				}
 			}
 		}
 }

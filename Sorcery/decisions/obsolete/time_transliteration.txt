@@ -7,7 +7,13 @@ settlement_decisions = {
 			is_playable = yes
 			ai = no			
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			OR = {trait = Sorcery trait = Alchemist}
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}
 			check_variable = { which = "magic_power" value = 1 }
 			}
 	
@@ -20,7 +26,8 @@ settlement_decisions = {
 		effect = {	
 				refill_holding_levy = yes
 			FROM = {
-			character_event = { id = spellcost.1 }
+			set_variable = {which = "var1" value = 1}
+			character_event = { id = spellcost.100 }
 			set_character_flag = sorcery
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }			
 			}	

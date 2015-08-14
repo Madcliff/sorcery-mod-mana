@@ -6,6 +6,21 @@ character_event = {
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
+	immediate = {
+		any_opinion_modifier_target = {
+			limit = {
+				reverse_has_opinion_modifier = {
+					who = PREV
+					modifier = mindmanip
+				}
+			}
+			save_event_target_as = mindtarget
+			reverse_remove_opinion = {
+				who = PREV
+				modifier = mindmanip
+			}
+		}
+	}
 	option = {
 		name = mindillusionspell.2
 		character_event = { id = mindillusionspell.2 }
@@ -72,7 +87,10 @@ character_event = {
 		opinion = { modifier = opinion_mind_influence who = ROOT years = 10 }
 		}
 			set_variable = {which = "var1" value = 1}
-			character_event = { id = spellcost.100 }			
+			character_event = { id = spellcost.100 }
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
 	}		
 	option = {
 			name = mindillusionspell.20101b
@@ -82,6 +100,9 @@ character_event = {
 		}
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
 	}	
 
 		option = {
@@ -90,6 +111,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_control who = ROOT years = 1000 }
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }		
 	}
@@ -111,6 +135,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_friend = ROOT
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}		
@@ -119,6 +146,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_lover  = ROOT
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}	
@@ -127,6 +157,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_rival = ROOT
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}
@@ -149,6 +182,9 @@ character_event = {
 			event_target:mindillusiontarget = {	
 				abdicate_to = ROOT
 			}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			set_variable = {which = "var1" value = 5}
 			character_event = { id = spellcost.100 }	
 		}
@@ -160,6 +196,9 @@ character_event = {
 					set_defacto_liege = ROOT 
 				}				
 			}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			set_variable = {which = "var1" value = 10}
 			character_event = { id = spellcost.100 }
 		}
@@ -208,6 +247,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_influence who = event_target:mindtarget years = 10 }
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}		
@@ -216,6 +258,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_dark_whispers who = event_target:mindtarget years = 10 }
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}
@@ -226,6 +271,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		opinion = { modifier = opinion_mind_control who = event_target:mindtarget years = 1000 }
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }		
 	}
@@ -247,6 +295,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_friend = event_target:mindtarget
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}		
@@ -255,6 +306,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_lover  = event_target:mindtarget
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}	
@@ -263,6 +317,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		 	add_rival = event_target:mindtarget
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }			
 	}
@@ -285,6 +342,9 @@ character_event = {
 			event_target:mindillusiontarget = {	
 				abdicate_to = event_target:mindtarget
 			}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			set_variable = {which = "var1" value = 5}
 			character_event = { id = spellcost.100 }	
 		}
@@ -296,6 +356,9 @@ character_event = {
 					set_defacto_liege = event_target:mindtarget 
 				}				
 			}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			set_variable = {which = "var1" value = 10}
 			character_event = { id = spellcost.100 }
 		}
@@ -337,6 +400,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = lustful
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -346,6 +412,9 @@ character_event = {
 		event_target:mindillusiontarget = {		
 			add_trait = chaste	
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -355,6 +424,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = gluttonous
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}	
@@ -376,6 +448,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = temperate
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -385,6 +460,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = greedy 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -394,6 +472,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = charitable 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -416,6 +497,9 @@ character_event = {
 		event_target:mindillusiontarget = {		
 			add_trait = slothful
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -425,6 +509,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = diligent 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -434,6 +521,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = envious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -456,6 +546,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = kind
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -465,6 +558,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = wroth 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -474,6 +570,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = patient 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -497,6 +596,9 @@ character_event = {
 		event_target:mindillusiontarget = {			
 			add_trait = proud
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -506,6 +608,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = humble 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -515,6 +620,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = deceitful 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -539,6 +647,9 @@ character_event = {
 
 			add_trait = craven
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -548,6 +659,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = honest 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -557,6 +671,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = brave 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -580,6 +697,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = shy
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -589,6 +709,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = gregarious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -598,6 +721,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = ambitious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -622,6 +748,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = content
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -631,6 +760,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = arbitrary 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -640,6 +772,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = just 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -663,6 +798,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = cynical
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -672,6 +810,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = zealous 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -681,6 +822,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = paranoid 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -704,6 +848,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = trusting
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -713,6 +860,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = cruel 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -722,6 +872,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_christendom 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -744,6 +897,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_pagans
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }			
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -753,6 +909,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_islam 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -762,6 +921,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = sympathy_zoroastrianism 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -785,6 +947,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = stressed
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -794,6 +959,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = drunkard 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -803,6 +971,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = homosexual 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -828,6 +999,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = lunatic
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -846,6 +1020,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			add_trait = incapable 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 10}
 			character_event = { id = spellcost.100 }
 	}
@@ -874,6 +1051,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = lustful
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -884,6 +1064,9 @@ character_event = {
 	
 			remove_trait = chaste	
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -893,6 +1076,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = gluttonous
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}	
@@ -914,6 +1100,9 @@ character_event = {
 		event_target:mindillusiontarget = {			
 			remove_trait = temperate
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -923,6 +1112,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = greedy 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -932,6 +1124,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = charitable 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -954,6 +1149,9 @@ character_event = {
 		event_target:mindillusiontarget = {		
 			remove_trait = slothful
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -963,6 +1161,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = diligent 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -972,6 +1173,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = envious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -994,6 +1198,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = kind
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1003,6 +1210,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = wroth 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1012,6 +1222,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = patient 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1035,6 +1248,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 		remove_trait = proud
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1044,6 +1260,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = humble 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1053,6 +1272,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = deceitful 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1077,6 +1299,9 @@ character_event = {
 
 			remove_trait = craven
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1086,6 +1311,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = honest 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1095,6 +1323,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = brave 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1127,6 +1358,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = gregarious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1136,6 +1370,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = ambitious 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1160,6 +1397,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = content
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1169,6 +1409,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = arbitrary 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1178,6 +1421,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = just 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1201,6 +1447,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = cynical
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1210,6 +1459,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = zealous 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1219,6 +1471,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = paranoid 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1242,6 +1497,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = trusting
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1251,6 +1509,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = cruel 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1260,6 +1521,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_christendom 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1282,6 +1546,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_pagans
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1291,6 +1558,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_islam 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1300,6 +1570,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = sympathy_zoroastrianism 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1323,6 +1596,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = stressed
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1332,6 +1608,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = drunkard 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1341,6 +1620,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = homosexual 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1366,6 +1648,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = lunatic
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1375,6 +1660,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = possessed 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 1}
 			character_event = { id = spellcost.100 }
 	}
@@ -1384,6 +1672,9 @@ character_event = {
 		event_target:mindillusiontarget = {	
 			remove_trait = incapable 
 		}
+			clr_character_flag = Magic_Divining
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }		
 			set_variable = {which = "var1" value = 10}
 			character_event = { id = spellcost.100 }
 	}
