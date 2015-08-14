@@ -7,7 +7,13 @@ targetted_decisions = {
 			check_variable = { which = "magic_power" value = 3 }
 			is_playable = yes
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
-			trait = Sorcery
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}
 			ai = no
 			}
 	
@@ -15,7 +21,13 @@ targetted_decisions = {
 				character = FROM
 			is_playable = yes
 			NOT = { trait = incapable }
-			trait = Sorcery
+			OR = {
+				trait = magister
+				trait = grand_sorcerer
+				trait = sorcerer
+				trait = sorcery_adept 
+				trait = sorcery_inniate
+			}
 			ai = no
 				
 		}
@@ -25,10 +37,8 @@ targetted_decisions = {
 		
 		effect = {	
 		set_character_flag =  Magic_Divining
-			FROM = {
-				set_variable = {which = "var1" value = 5}
-				character_event = { id = spellcost.100 }
-			}	
+		set_variable = {which = "var1" value = 5}
+		character_event = { id = spellcost.100 }
 		}
 		revoke_allowed = {
 			always = no
