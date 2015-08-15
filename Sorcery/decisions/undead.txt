@@ -26,12 +26,58 @@ title_decisions = {
 		}
 		
 		effect = {	
-		location = {
-		save_event_target_as = undeadloc	
-		}
-			
+			location = {
+				save_event_target_as = undeadloc	
+			}
 			FROM = {
-			hidden_tooltip = { character_event = { id = skeleton.1 } }			
+				if = {
+					limit = { trait = sorcery_inniate}
+					random_list = {
+						50 = {
+							character_event = { id = skeleton.1  } 
+							} 
+						50 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = sorcery_adept}
+					random_list = {
+						65 = {
+							character_event = { id = skeleton.1  } 
+							} 
+						35 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = sorcerer}
+					random_list = {
+						80 = {
+							character_event = { id = skeleton.1  } 
+							} 
+						20 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = grand_sorcerer}
+					random_list = {
+						95 = {
+							character_event = { id = skeleton.1  } 
+							} 
+						5 = {
+							character_event = { id = fizzile.1 }
+						}
+					}
+				}
+				if = {
+					limit = { trait = magister}	
+					character_event = { id = skeleton.1  }
+				}
 			}	
 		}
 		revoke_allowed = {
