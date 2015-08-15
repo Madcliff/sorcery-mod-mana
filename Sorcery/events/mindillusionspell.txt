@@ -20,6 +20,9 @@ character_event = {
 				modifier = mindmanip
 			}
 		}
+
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
 	}
 	option = {
 		name = mindillusionspell.2

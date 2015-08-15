@@ -6,7 +6,11 @@ character_event = {
 	picture = "GFX_dracarys"
 
 	is_triggered_only = yes
-
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}
+	
 	option = {
 		name = fieldoffire.1a		
 

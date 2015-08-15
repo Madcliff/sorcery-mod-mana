@@ -5,6 +5,11 @@ character_event = {
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}	
+	
 	option = {
 		name = premonitions.1a
 		add_character_modifier = { name = magic_illusion duration = 3650 } 
@@ -12,6 +17,7 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
 		hidden_tooltip = { character_event = { id = cooldown.1 days = 90 } }	
+		
 	}
 	option = {
 		name = premonitions.1b
@@ -19,7 +25,8 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
+		
 	}	
 	option = {
 		name = premonitions.1c
@@ -27,7 +34,8 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
+				
 	}		
 	option = {
 		name = premonitions.1d
@@ -37,7 +45,8 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
+				
 #		character_event = { id = premonitions.1 }
 	}
 }

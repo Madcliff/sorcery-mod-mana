@@ -4,6 +4,10 @@ character_event = {
 	desc = enchanting.1_desc
 	picture = GFX_evt_mongols
 	is_triggered_only = yes
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}	
 	option = {
 		name = enchanting.1d
 			any_realm_lord  = {
