@@ -5,6 +5,10 @@ character_event = {
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}	
 	option = {
 		name = whispersdamned.1a
 		event_target:whispersdamned = {	
@@ -14,7 +18,7 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }		
 	}
 	option = {
 		name = whispersdamned.1b
@@ -25,7 +29,7 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
 	}	
 	option = {
 		name = whispersdamned.1c
@@ -36,7 +40,8 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
+
 	}		
 	option = {
 		name = whispersdamned.1d
@@ -59,7 +64,7 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } } 		
 	}
 	option = {
 		name = whispersdamned.2b
@@ -70,7 +75,7 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }	
 	}	
 	option = {
 		name = whispersdamned.2c
@@ -116,6 +121,7 @@ character_event = {
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
 		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+	
 	}	
 	option = {
 		name = whispersdamned.3c
@@ -126,7 +132,8 @@ character_event = {
 		character_event = { id = spellcost.100 }
 		clr_character_flag = Magic_Divining		
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }			
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 180 } }
+	
 	}		
 	option = {
 		name = whispersdamned.3d
