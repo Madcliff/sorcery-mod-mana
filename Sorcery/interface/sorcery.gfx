@@ -1,33 +1,42 @@
 
 spriteTypes = {
 	spriteType = {
-		name = "GFX_trait_arcane_novice"
+		name = "GFX_trait_sorcery_inniate"
 		texturefile = "gfx/traits/arcane_novice.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_arcane_adept"
+		name = "GFX_trait_sorcery_adept"
 		texturefile = "gfx/traits/arcane_adept.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_arcane_scholar"
+		name = "GFX_trait_arcane_sorcerer"
 		texturefile = "gfx/traits/arcane_scholar.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_Sorcery"
+		name = "GFX_trait_grand_sorcerer"
 		texturefile = "gfx/traits/arcane_master.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
+	spriteType = {
+		name = "GFX_trait_magister"
+		texturefile = "gfx/traits/magister.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+		
+	
 	spriteType = {
 		name = "GFX_trait_blood_magic"
 		texturefile = "gfx/traits/fire_and_blood.tga"
@@ -37,7 +46,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_trait_Undying"
-		texturefile = "gfx/traits/reborn_in_fire.tga"
+		texturefile = "gfx/traits/undying.tga"
 		noOfFrames = 1
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -50,34 +59,6 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
-	spriteType = {
-		name = "GFX_trait_Mentalist"
-		texturefile = "gfx/traits/favorable_winds.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_trait_Alchemist"
-		texturefile = "gfx/traits/dragonglass_candle.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}	
-	spriteType = {
-		name = "GFX_trait_Herbalist"
-		texturefile = "gfx/traits/undying.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}
-	spriteType = {
-		name = "GFX_trait_War_Mage"
-		texturefile = "gfx/traits/forbidden_arts.tga"
-		noOfFrames = 1
-		norefcount = yes
-		effectFile = "gfx/FX/buttonstate.lua"
-	}	
 	
 	spriteType = {
 		name = "GFX_obj_study_magic"
