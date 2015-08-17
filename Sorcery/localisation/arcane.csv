@@ -1,5 +1,5 @@
-manacheck;[Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
-manacheck_desc;[Root.magic_power.GetName] Mana Points are [Root.magic_power.GetValue].;;;;;;x
+manacheck;[Root.magic_power.GetName] Mana Stats.;;;;;;x
+manacheck_desc;[Root.magic_power.GetName] Magic stats are the following. Mana =[Root.magic_power.GetValue] Spell Power = [Root.spell_power.GetValue] Max Mana = [Root.mana_max.GetValue] Mana Gain is [Root.mana_gain.GetValue].;;;;;;x
 HIGH_MAGISTER;High Magister;x
 Time_Boost;Alchemy:Transform Time;;;;;;;;x
 Time_Boost_desc;Move your province beyond time;;;;;;;;x

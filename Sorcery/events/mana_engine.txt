@@ -168,7 +168,6 @@ character_event = {
 			trait = sorcery_adept 
 			trait = sorcery_inniate
 			}
-        }
 		not = { has_character_flag = mana_engine }
         }        
 

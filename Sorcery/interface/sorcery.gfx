@@ -15,7 +15,7 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
-		name = "GFX_trait_arcane_sorcerer"
+		name = "GFX_trait_sorcerer"
 		texturefile = "gfx/traits/arcane_scholar.tga"
 		noOfFrames = 1
 		norefcount = yes
@@ -58,8 +58,6 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
-
-	
 	spriteType = {
 		name = "GFX_obj_study_magic"
 		texturefile = "gfx/traits/arcane_master.tga"
@@ -67,4 +65,50 @@ spriteTypes = {
 		norefcount = yes
 		effectFile = "gfx/FX/buttonstate.lua"
 	}	
+	spriteType = {
+		name = "GFX_obj_study_alchemy"
+		texturefile = "gfx/traits/Alchemymaster.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
+	
+	spriteType = {
+		name = "GFX_trait_novice_alchemist"
+		texturefile = "gfx/traits/alchemybasic.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+
+	spriteType = {
+		name = "GFX_trait_aspiring_alchemist"
+		texturefile = "gfx/traits/alchemyintermediate.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+
+	spriteType = {
+		name = "GFX_trait_alchemist"
+		texturefile = "gfx/traits/alchemyadvanced.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}	
+
+
+	spriteType = {
+		name = "GFX_trait_master_alchemist"
+		texturefile = "gfx/traits/Alchemymaster.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+	}		
 }
+
+
+
+

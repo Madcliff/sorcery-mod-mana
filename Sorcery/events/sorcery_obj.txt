@@ -122,9 +122,9 @@ mean_time_to_happen = {
 }
 	option = {
 		name = sorceryobj.2a
-		trigger = { not = {trait = trait = sorcery_adept}}
-				add_trait = trait = sorcery_adept	
-				set_variable = { which = "spellscast" value = 0 } 				
+		trigger = { not = { trait = sorcery_adept}}
+			add_trait = sorcery_adept	
+			set_variable = { which = "spellscast" value = 0 } 				
 		}
 }
 

@@ -8,7 +8,12 @@ targetted_decisions = {
 			is_playable = yes
 			ai = no			
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}} 
-			trait = Alchemist
+			OR = {
+				trait = master_alchemist
+				trait = alchemist
+				trait = aspiring_alchemist
+				trait = novice_alchemist 
+			}
 		}
 		potential = {
 		OR = {

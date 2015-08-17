@@ -6,13 +6,18 @@ targetted_decisions = {
 	
 		from_potential = {
 		ai = no		
-			random_realm_character = { 
+			any_realm_character = { 
 				at_location = ROOT 
 				has_character_flag = elixer_of_life 
 				NOT = {	
 					trait = incapable 
 				}
-				trait = Alchemist 
+				OR = {
+					trait = master_alchemist
+					trait = alchemist
+					trait = aspiring_alchemist
+					trait = novice_alchemist 
+			}
 			}
 		}
 	
@@ -24,8 +29,13 @@ targetted_decisions = {
 		
 		allow = { 		
 				FROM = { 
-					random_realm_character = { 
-						trait = Alchemist 
+					any_realm_character = { 
+						OR = {
+							trait = master_alchemist
+							trait = alchemist
+							trait = aspiring_alchemist
+							trait = novice_alchemist 
+						}	 
 						at_location = ROOT 
 						has_character_flag = elixer_of_life  
 					}	

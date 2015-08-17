@@ -7,8 +7,8 @@ targetted_decisions = {
 			ai = no		
 			check_variable = { which = "magic_power" value = 10 }	
 			is_playable = yes
-			at_location = THIS				
-			NOT = {	OR= { trait = incapable has_character_flag = sorcery}}
+			at_location = ROOT				
+			NOT = {	OR = { trait = incapable has_character_flag = sorcery}}
 			OR = {
 				trait = magister
 				trait = grand_sorcerer
@@ -25,8 +25,7 @@ targetted_decisions = {
 		}
 		
 		allow = {	
-		at_location = FROM	
-		FROM = { has_character_flag = Magic_Divining }		
+		at_location = FROM			
 		}
 		
 		effect = {	
@@ -45,12 +44,11 @@ targetted_decisions = {
 			set_reincarnation = FROM
 			dynasty = FROM
 			FROM = {
-			clr_character_flag = Magic_Divining
 			abdicate_to = ROOT
-			death = {
-				death_reason = death_natural
-				killer = FROM
-			}
+				death = {
+					death_reason = death_natural
+					killer = FROM
+				}
 			}
 			remove_trait = possessed
 			random = {
@@ -87,6 +85,7 @@ targetted_decisions = {
 			copy_random_personality_trait = FROM
 			copy_random_personality_trait = FROM
 			set_character_flag = sorcery
+			Root = {set_name = [FROM.GetName]}
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 1800 } }			
 			
 

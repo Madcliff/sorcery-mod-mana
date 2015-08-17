@@ -1,0 +1,6 @@
+on_birth = {
+	events = {
+		dynastybuff.1
+		dynastybuff.2
+	}
+}

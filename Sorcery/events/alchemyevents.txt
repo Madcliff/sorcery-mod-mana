@@ -5,9 +5,12 @@ character_event = {
     picture = "GFX_fire_magic"	
 	
     trigger = { 
-        OR = {
-            trait = Alchemist
-        }
+		OR = {
+			trait = master_alchemist
+			trait = alchemist
+				trait = aspiring_alchemist
+				trait = novice_alchemist 
+		}
 	}
     mean_time_to_happen = {
         days = 365
@@ -59,7 +62,12 @@ character_event = {
     picture = "GFX_fire_magic"	
 	
     trigger = { 
-		trait = Alchemist
+		OR = {
+			trait = master_alchemist
+			trait = alchemist
+				trait = aspiring_alchemist
+				trait = novice_alchemist 
+		}
 		NOT = { has_character_flag = elixer_of_life}
 		OR = { 
 			AND = {
