@@ -5,6 +5,12 @@ character_event = {
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
+	
+		immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}
+	
 	option = {
 		name = blessings.1a
 		event_target:blessingsloc = {	
@@ -14,6 +20,7 @@ character_event = {
 		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
+
 	}
 	option = {
 		name = blessings.1b
@@ -24,6 +31,8 @@ character_event = {
 		hidden_tooltip = { character_event = { id = cooldown.1 days = 360 } }
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
+
+		
 	}	
 	option = {
 		name = blessings.1c

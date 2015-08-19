@@ -1,0 +1,19 @@
+10450581 = {
+	name="Ambrosius"
+	# AKA: Olderic
+	dynasty=10450580
+	martial=15
+	diplomacy=15
+	intrigue=15
+	trait="elusive_shadow"	
+	trait="genius"	
+	trait="strong"
+	trait="fair"		
+	stewardship=15
+	learning = 15
+	religion="catholic"
+	culture="italian"
+	740.1.1 = {
+		birth="740.1.1"
+	}
+}

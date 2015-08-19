@@ -5,7 +5,10 @@ character_event = {
 	picture = GFX_evt_child_reading
 	
 	is_triggered_only = yes
-	
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}
 	option = {
 		name = healspell.1a
 		event_target:healtarget = {		
@@ -35,7 +38,7 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
 	}
 	
 	option = {
@@ -65,7 +68,7 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }			
 	}
 		
 	option = {
@@ -78,6 +81,6 @@ character_event = {
 		set_variable = {which = "var1" value = 1}
 		character_event = { id = spellcost.100 }
 		set_character_flag = sorcery
-		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }
+		hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
 		}
 	}

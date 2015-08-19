@@ -5,7 +5,10 @@ character_event = {
 	picture = GFX_evt_mongols
 	
 	is_triggered_only = yes
-
+	immediate ={
+		change_variable = { which = "spellscast" value = 1 } 
+		change_variable = { which = "spell_powercastcount" value = 1 } 		
+	}
 	option = {	
 		name = skeleton.1a				
 				spawn_unit = {
@@ -96,7 +99,7 @@ character_event = {
 			set_character_flag = sorcery			
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }	
 			set_variable = {which = "var1" value = 5}
-			character_event = { id = spellcost.100 }				
+			character_event = { id = spellcost.100 }								
 			}			
 
 }

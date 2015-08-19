@@ -1,0 +1,321 @@
+namespace = dynastybuff
+
+
+character_event = {
+	id = dynastybuff.1
+	desc = "dynastybuff.1"
+	
+	is_triggered_only = yes
+
+	trigger = {
+		dynasty = 10450580
+	}
+	
+	immediate = {
+		if = { 	
+			limit = {	
+				NOT = { trait = ugly }
+				NOT = { trait = fair }
+			}
+			random = {
+				chance = 20
+				add_trait = fair
+			}
+		}
+		remove_trait = inbred
+	}
+
+	option = {
+		name = OK
+	}	
+}
+
+character_event = {
+	id = dynastybuff.2
+	desc = dynastybuff.2_desc
+	
+	is_triggered_only = yes
+
+	trigger = {
+		dynasty = 10450580
+		OR = {
+			AND = {
+				father_even_if_dead = { 
+					OR = {					
+						dynasty = 10450580
+					}
+					dynasty = ROOT 
+				}
+				NOT = { 
+					real_father = { #Does not apply to secret bastards
+						NOT = { 
+							OR = {					
+						dynasty = 10450580
+							}
+						}
+					}
+				}
+			}	
+			mother_even_if_dead = { 
+				OR = {					
+						dynasty = 10450580
+				}
+				dynasty = ROOT 
+			}
+		}	
+	}
+	
+	immediate = {
+		if = { 	
+			limit = {	
+				OR = {	
+					has_character_modifier = abomination_of_incest
+					has_character_modifier = grandchild_of_incest
+					father_even_if_dead = {
+						OR = {					
+						dynasty = 10450580
+						}
+						higher_tier_than = COUNT
+					}
+					mother_even_if_dead = { 	
+						OR = {					
+						dynasty = 10450580
+						}
+						higher_tier_than = COUNT
+					}
+					higher_tier_than = COUNT		
+					father_even_if_dead = { 	
+						OR = {					
+						dynasty = 10450580
+						}
+						is_primary_heir = yes
+						OR = {
+							father_even_if_dead = { higher_tier_than = COUNT }
+							mother_even_if_dead = { higher_tier_than = COUNT }
+						}	
+					}	
+					mother_even_if_dead = { 	
+						OR = {					
+						dynasty = 10450580
+						}
+						is_primary_heir = yes
+						OR = {
+							father_even_if_dead = { higher_tier_than = COUNT }
+							mother_even_if_dead = { higher_tier_than = COUNT }
+						}	
+					}												
+				}	
+			}
+			set_character_flag = flipped
+		}
+	}
+
+	option = {
+		name = "EVTOPTA999900071" #Yes
+		remove_trait = inbred
+		if = { 	
+			limit = {	has_character_flag = flipped }
+			random = {
+				chance = 70
+				character_event = { id = dynastybuff.3 days = 2000 }
+				hidden_tooltip = {
+					remove_trait = slow
+					remove_trait = imbecile
+					remove_trait = genius
+				}
+			}
+		}
+		if = { 	
+			limit = {	NOT = { has_character_flag = flipped } }	
+			random = {
+				chance = 40
+				character_event = { id = dynastybuff.3 days = 2000 }
+				hidden_tooltip = {
+					remove_trait = slow
+					remove_trait = imbecile
+					remove_trait = genius
+				}
+			}
+		}
+		clr_character_flag = flipped	
+	}	
+}	
+
+#targaryen coin flip
+character_event = {
+	id = dynastybuff.3
+	desc = "EVTDESC999900072"
+	picture = "GFX_targaryen_flip"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA999900072" 
+		random_list = {
+			5 = {
+				add_trait = lunatic
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = lunatic
+						character_event = { id = dynastybuff.4 }
+					}
+				}	
+			}
+			10 = {
+				add_trait = possessed
+				set_character_flag = potential_targ_lunatic
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = possessed
+						character_event = { id = dynastybuff.4 }
+					}
+				}	
+			}
+			15 = {
+				add_trait = paranoid
+				set_character_flag = potential_targ_lunatic
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = paranoid
+						character_event = { id = dynastybuff.4 }
+					}
+				}	
+			}
+			20 = {
+				add_trait = wroth
+				set_character_flag = potential_targ_lunatic
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = wroth
+						character_event = { id = dynastybuff.4 }
+					}
+				}	
+			}
+			30 = {
+				add_trait = quick
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = quick
+						character_event = { id = dynastybuff.5 }
+					}
+				}	
+			}
+			20 = {
+				hidden_tooltip = {
+					remove_trait = quick
+				}
+				add_trait = genius	
+				hidden_tooltip = {
+					any_dynasty_member = {
+						limit = {
+							ai = no
+							OR = {
+								any_child = { character = ROOT }
+								any_child = { any_child = { character = ROOT } }
+								any_child = { any_child = { any_child = { character = ROOT } } }
+							}
+						}
+						set_character_flag = genius	
+						character_event = { id = dynastybuff.5 }
+					}
+				}	
+			}
+		}		
+	}	
+}	
+
+#infrom parents lunatic/possesed/paranoid/wroth
+character_event = {
+	id = dynastybuff.4
+	desc = "EVTDESC999900072"
+	picture = "GFX_targaryen_flip"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA999900073" 
+		if = {
+			limit = { has_character_flag = lunatic }
+			tooltip = { FROM = { add_trait = lunatic } }
+			clr_character_flag = lunatic
+		}	
+		if = {
+			limit = { has_character_flag = possessed }
+			tooltip = { FROM = { add_trait = possessed } }
+			clr_character_flag = possessed
+		}	
+		if = {
+			limit = { has_character_flag = paranoid }
+			tooltip = { FROM = { add_trait = paranoid } }
+			clr_character_flag = paranoid
+		}	
+		if = {
+			limit = { has_character_flag = wroth }
+			tooltip = { FROM = { add_trait = wroth } }
+			clr_character_flag = wroth
+		}	
+	}	
+}
+#infrom parents diligent/quick/genius
+character_event = {
+	id = dynastybuff.5
+	desc = "EVTDESC999900072"
+	picture = "GFX_targaryen_flip"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA999900074" 	
+		if = {
+			limit = { has_character_flag = quick }
+			tooltip = { FROM = { add_trait = quick } }
+			clr_character_flag = quick
+		}	
+		if = {
+			limit = { has_character_flag = genius }
+			tooltip = { FROM = { add_trait = genius } }
+			clr_character_flag = genius
+		}
+	}	
+}
+

@@ -1,31 +1,36 @@
 # All arcane traits are here
-master_alchemist = {
+novice_alchemist = {
 	education = yes
-	learning = 10
-	monthly_character_wealth = 25	
-	random = no
-}	
-
-alchemist = {
-	education = yes
-	learning = 7
-	monthly_character_wealth = 15	
+	opposites = { alchemist aspiring_alchemist master_alchemist}
+	learning = 2
+	monthly_character_wealth = 5
 	random = no
 }
 
 aspiring_alchemist = {
 	education = yes
+	opposites = { novice_alchemist alchemist master_alchemist}
 	learning = 5
 	monthly_character_wealth = 10	
 	random = no
 }
 
-novice_alchemist = {
+alchemist = {
 	education = yes
-	learning = 2
-	monthly_character_wealth = 5
+	opposites = { novice_alchemist aspiring_alchemist master_alchemist}
+	learning = 7
+	monthly_character_wealth = 15	
 	random = no
 }
+
+master_alchemist = {
+	education = yes
+	opposites = { novice_alchemist aspiring_alchemist alchemist}
+	learning = 10
+	monthly_character_wealth = 25	
+	random = no
+}	
+
 magister = {
 	ruler_designer_cost	= 20
 	opposites = { grand_sorcerer sorcerer sorcery_adept sorcery_inniate}

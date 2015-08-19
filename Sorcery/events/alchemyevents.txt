@@ -5,52 +5,124 @@ character_event = {
     picture = "GFX_fire_magic"	
 	
     trigger = { 
-        OR = {
-            trait = Alchemist
-        }
+		OR = {
+			trait = master_alchemist
+			trait = alchemist
+			trait = aspiring_alchemist
+			trait = novice_alchemist 
+		}
 	}
     mean_time_to_happen = {
-        days = 365
+        years = 5
+		modifier = {
+			factor = 1.5 # Decreases chances by half
+			NOT = { trait = aspiring_alchemist }
+		}		
+		modifier = {		
+			factor = 3 # Decreases chances by half
+			NOT = { trait = alchemist }
+		}		
+		modifier = {
+			factor = 5 # Decreases chances by half
+			NOT = { trait = master_alchemist }
+		}
     } 
 	option = {
 		name = Alchemy1.a
-			if = { 
-			limit = {NOT = { independent = yes }}
-			liege = {
+		if = {
+			limit = { trait = novice_alchemist }
+				random_list = {
+				50 = {
+					scaled_wealth = 2.5
+					random = {
+						chance = 25
+						piety = -100
+					}
+				}
+				50 = {
+					wealth = -500
+					prestige = -100
+				}
+			}
+		}
+		if = {
+			limit = { trait = aspiring_alchemist }
+				random_list = {
+				65 = {
+					scaled_wealth = 2.5
+					}
+					random = {
+					chance = 25
+					piety = -100
+					}
+				}
+				35 = {
+					wealth = -500
+					prestige = -100
+				}
+			}
+		}
+		if = {
+			limit = { trait = alchemist }
+				random_list = {
+				75 = {
 					if = {
 						limit = { NOT = { yearly_income = 40 } }
-					wealth = 100
+						wealth = 100
 					}
 					if = {
-					limit = { 
-						NOT = { yearly_income = 200 } 
-						yearly_income = 40
-					}
+						limit = {
+							NOT = { yearly_income = 200 } 
+							yearly_income = 40
+						}
 						scaled_wealth = 2.5
 					}
 					if = {
-					limit = { yearly_income = 200 }
-						wealth = 500					
+						limit = { yearly_income = 200 }
+						wealth = 500
+					}
+					random = {
+					chance = 25
+					piety = -100
 					}
 				}
-			}
-			break = yes
-			if = {
-				limit = { NOT = { yearly_income = 40 } }
-				wealth = 100
-			}
-			if = {
-				limit = { 
-					NOT = { yearly_income = 200 } 
-					yearly_income = 40
+				25 = {
+					wealth = -500
+					prestige = -100
 				}
-				scaled_wealth = 2.5
-			}
-			if = {
-				limit = { yearly_income = 200 }
-				wealth = 500
 			}
 		}
+		if = {
+			limit = { trait = master_alchemist }
+				random_list = {
+				85 = {
+					if = {
+						limit = { NOT = { yearly_income = 40 } }
+						wealth = 100
+					}
+					if = {
+						limit = {
+							NOT = { yearly_income = 200 } 
+							yearly_income = 40
+						}
+						scaled_wealth = 2.5
+					}
+					if = {
+						limit = { yearly_income = 200 }
+						wealth = 500
+					}
+					random = {
+					chance = 25
+					piety = -100
+					}
+				}
+				15 = {
+					wealth = -500
+					prestige = -100
+				}
+			}
+		}		
+	}
 }
 
 character_event = {
@@ -59,7 +131,12 @@ character_event = {
     picture = "GFX_fire_magic"	
 	
     trigger = { 
-		trait = Alchemist
+		OR = {
+			trait = master_alchemist
+			trait = alchemist
+			trait = aspiring_alchemist
+			trait = novice_alchemist 
+		}
 		NOT = { has_character_flag = elixer_of_life}
 		OR = { 
 			AND = {
@@ -76,7 +153,36 @@ character_event = {
 		}
 	}
     mean_time_to_happen = {
-        days = 3650
+        years = 75
+		modifier = {
+			factor = 1.5 # Decreases chances by half
+			NOT = { trait = aspiring_alchemist }
+		}		
+		modifier = {		
+			factor = 2 # Decreases chances by half
+			NOT = { trait = alchemist }
+		}		
+		modifier = {
+			factor = 4 # Decreases chances by half
+			NOT = { trait = master_alchemist }
+		}
+		modifier = {
+			factor = 1.5 # Decreases chances by half
+			NOT = { trait = diligent }
+		}
+		modifier = {
+			factor = 2.0 # Decreases chances by half
+			NOT = { trait = genius }
+		}
+		modifier = {
+			factor = 1.5 # Decreases chances by half
+			NOT = { trait = temperate }
+		}
+		modifier = {
+			factor = 1.5 # Decreases chances by half
+			NOT = { trait = patient }
+		}		
+		
     } 
 	option = {
 		name = Alchemy1.a
@@ -85,7 +191,7 @@ character_event = {
 					num_of_prisoners = 10
 					wealth = 2000			
 				}
-				set_character_flag = elixer_of_life
+				change_variable = { which = "elixer_counter" value = 1 }
 				wealth = -2000
 						any_courtier = {
 						limit = { prisoner = yes }
@@ -219,7 +325,7 @@ character_event = {
 							}
 						}
 				}
-				set_character_flag = elixer_of_life
+				change_variable = { which = "elixer_counter" value = 1 }
 				
 			}
 		}

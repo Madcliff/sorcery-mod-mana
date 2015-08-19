@@ -9,19 +9,20 @@ character_event = {
 	border = GFX_event_normal_frame_war
     hide_window = yes	
 	trigger = {
-	OR = {
-			trait = Sorcery
-			trait = Mentalist
-			trait = War_Mage
-			trait = Herbalist
-	}
+		OR = {
+			trait = magister
+			trait = grand_sorcerer
+			trait = sorcerer
+			trait = sorcery_adept 
+			trait = sorcery_inniate
+			}
 	}
 	
 	mean_time_to_happen  = { 
 		years = 5
 	modifier = {
-		factor = 1 # Increases chances by half
-		trait = Sorcery
+		factor = 2 # Increases chances by half
+		trait = magister
 	}		
 	}
 	

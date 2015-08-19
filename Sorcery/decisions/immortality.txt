@@ -6,13 +6,19 @@ targetted_decisions = {
 	
 		from_potential = {
 		ai = no		
-			random_realm_character = { 
+			any_realm_character = { 
 				at_location = ROOT 
-				has_character_flag = elixer_of_life 
 				NOT = {	
 					trait = incapable 
 				}
-				trait = Alchemist 
+				OR = {
+					trait = master_alchemist
+					trait = alchemist
+					trait = aspiring_alchemist
+					trait = novice_alchemist 
+			}				
+				check_variable = {which = "elixer_counter" value = 1}
+
 			}
 		}
 	
@@ -24,21 +30,26 @@ targetted_decisions = {
 		
 		allow = { 		
 				FROM = { 
-					random_realm_character = { 
-						trait = Alchemist 
+					any_realm_character = { 
+						OR = {
+							trait = master_alchemist
+							trait = alchemist
+							trait = aspiring_alchemist
+							trait = novice_alchemist 
+						}	 
 						at_location = ROOT 
-						has_character_flag = elixer_of_life  
+						check_variable = {which = "elixer_counter" value = 1} 
 					}	
 				}
 			}
 		
 		effect = {	
 			character_event = { id = immortalspell.1 } 
-			character_event = { id = immortalspell.2 years = 50 } 
+			character_event = { id = immortalspell.2 years = 25 } 
 			FROM = { 					
 				random_realm_character = {
-					limit = { has_character_flag = elixer_of_life at_location = ROOT }
-					clr_character_flag = elixer_of_life
+					limit = { check_variable = {which = "elixer_counter" value = 1} at_location = ROOT }
+					change_variable = {which = "elixer_counter" value = -1}
 				}
 			}
 		}
