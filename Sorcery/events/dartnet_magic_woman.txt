@@ -7,13 +7,19 @@ picture = GFX_evt_recovery
 hide_window = yes
 
 trigger = {
-is_female = yes
-NOT = { has_character_flag = special_treasurer} 
-NOT = { has_character_flag = special_chancellor} 
-NOT = { has_character_flag = special_spiritual} 
-NOT = { has_character_flag = special_spymaster}
-NOT = { has_character_flag = special_marshal}
-OR = {trait = Sorcery trait = Mentalist trait = War_Mage trait = Herbalist trait = Alchemist}
+	is_female = yes
+	NOT = { has_character_flag = special_treasurer} 
+	NOT = { has_character_flag = special_chancellor} 
+	NOT = { has_character_flag = special_spiritual} 
+	NOT = { has_character_flag = special_spymaster}
+	NOT = { has_character_flag = special_marshal}
+	OR = {
+		trait = magister
+		trait = grand_sorcerer
+		trait = sorcerer
+		trait = sorcery_adept 
+		trait = sorcery_inniate
+	}
 }
 
 mean_time_to_happen = {

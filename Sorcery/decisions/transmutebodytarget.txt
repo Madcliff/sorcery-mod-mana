@@ -4,15 +4,26 @@ targetted_decisions = {
 		ai_target_filter   = all
 		filter = all
 		from_potential = {
-		wealth = 500
 			is_playable = yes
 			ai = no			
 			NOT = {	OR= { trait = incapable has_character_flag = sorcery}} 
 			OR = {
-				trait = master_alchemist
-				trait = alchemist
-				trait = aspiring_alchemist
-				trait = novice_alchemist 
+				and = {
+					trait = master_alchemist
+					wealth = 100
+				}
+				and = {
+					trait = alchemist
+					wealth = 300
+				}
+				and = {
+					trait = aspiring_alchemist
+					wealth = 400
+					}
+				and = {
+					trait = novice_alchemist 
+					wealth = 500
+				}
 			}
 		}
 		potential = {
@@ -25,10 +36,25 @@ targetted_decisions = {
 			ROOT = { at_location = FROM } 										
 		}
 		effect = {
-			save_event_target_as = transmutebodytarget			
+			save_event_target_as = transmutebody
 			FROM = {
-			character_event = {id = transmutebody.1 }	
-			}	
+				if = {
+					limit = { trait = novice_alchemist }
+				character_event = {id = transmutebody.1 }	
+				}
+				if = {
+					limit = { trait = aspiring_alchemist }
+				character_event = {id = transmutebody.2 }	
+				}
+				if = {
+					limit = { trait = alchemist }
+				character_event = {id = transmutebody.3 }	
+				}
+				if = {
+					limit = { trait = master_alchemist }
+				character_event = {id = transmutebody.4 }	
+				}				
+			}
 		}
 		revoke_allowed = {
 			always = no

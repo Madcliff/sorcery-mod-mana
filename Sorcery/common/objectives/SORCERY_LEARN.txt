@@ -92,20 +92,20 @@ obj_study_magic = {
 			give_nickname = nick_the_accursed
 		  }
 		  25 = {
-			give_nickname = nick_dragon
+			give_nickname = nick_the_dragon 
 		  }
 		}
 	set_special_character_title = HIGH_MAGISTER
 	}
 }
 
-obj_study_alchemist = {
+obj_study_alchemy = {
 	type = character
 	
 	allow = {
 		prisoner = no
 		is_adult = yes
-		NOT = {	trait = grand_sorcerer }
+		NOT = {	trait = master_alchemist }
 	}
 	chance = {
 		factor = 100
@@ -182,20 +182,7 @@ obj_study_alchemist = {
 	abort_effect = {
 	}
 	effect = {
-		random_list = {
-		  25 = {
-			give_nickname = nick_the_wise
-		  }
-		  25 = {
-			give_nickname = nick_the_black
-		  }
-		  25 = {
-			give_nickname = nick_the_accursed
-		  }
-		  25 = {
-			give_nickname = nick_dragon
-		  }
-		}
+	give_nickname = nick_the_alchemist
 	set_special_character_title = HIGH_MAGISTER
 	}
 }

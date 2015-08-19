@@ -1,4 +1,4 @@
-namespace = fizzle
+namespace = fizzile
 
 character_event = {
     id = fizzile.1

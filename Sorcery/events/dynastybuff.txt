@@ -32,7 +32,7 @@ character_event = {
 
 character_event = {
 	id = dynastybuff.2
-	desc = "How are you even seeing this? (high_valyrian.7)"
+	desc = dynastybuff.2_desc
 	
 	is_triggered_only = yes
 
@@ -223,25 +223,7 @@ character_event = {
 					}
 				}	
 			}
-			20 = {
-				add_trait = diligent
-				set_character_flag = potential_targ_lunatic
-				hidden_tooltip = {
-					any_dynasty_member = {
-						limit = {
-							ai = no
-							OR = {
-								any_child = { character = ROOT }
-								any_child = { any_child = { character = ROOT } }
-								any_child = { any_child = { any_child = { character = ROOT } } }
-							}
-						}
-						set_character_flag = diligent
-						character_event = { id = dynastybuff.5 }
-					}
-				}	
-			}
-			20 = {
+			30 = {
 				add_trait = quick
 				hidden_tooltip = {
 					any_dynasty_member = {
@@ -258,7 +240,7 @@ character_event = {
 					}
 				}	
 			}
-			10 = {
+			20 = {
 				hidden_tooltip = {
 					remove_trait = quick
 				}
@@ -323,12 +305,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "EVTOPTA999900074" 
-		if = {
-			limit = { has_character_flag = diligent }
-			tooltip = { FROM = { add_trait = diligent } }
-			clr_character_flag = diligent
-		}	
+		name = "EVTOPTA999900074" 	
 		if = {
 			limit = { has_character_flag = quick }
 			tooltip = { FROM = { add_trait = quick } }

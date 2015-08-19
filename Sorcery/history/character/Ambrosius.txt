@@ -1,7 +1,7 @@
-100450581 = {
+10450581 = {
 	name="Ambrosius"
 	# AKA: Olderic
-	dynasty=100450580
+	dynasty=10450580
 	martial=15
 	diplomacy=15
 	intrigue=15

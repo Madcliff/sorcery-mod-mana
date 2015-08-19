@@ -69,3 +69,220 @@ character_event = {
 			hidden_tooltip = { character_event = { id = cooldown.1 days = 60 } }				
 	}	
 }
+
+
+
+character_event = {
+	id = transmutebody.2 
+	desc = transmutebody.2_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes			
+	option = {
+			name = transmutebody.1a
+	
+		event_target:transmutebody = {	
+			random_list = {
+			25 = {	add_trait = weak	}			
+			25 = {	add_trait = strong}
+			25 = { 	death= { death_reason = death_sacrificed }}
+			25 = {	add_trait = infirm}
+			}
+		}
+		wealth = -400
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 45 } }				
+	}
+	option = {
+			name = transmutebody.1b
+	
+		event_target:transmutebody = {	
+			random_list = {
+			10 = {	add_trait = ugly }				 
+			25 = {	add_trait = fair }				
+			25 = { 	death= { death_reason = death_sacrificed }}
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -400
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 45 } }				
+	}
+	option = {
+			name = transmutebody.1c
+	
+		event_target:transmutebody = {	
+			random_list = {
+			20 = {	add_trait = quick	}			
+			20 = {	add_trait = genius}
+			20 = {	add_trait = slow	}			
+			20 = {	add_trait = imbecile}			
+			20 = { 	death= { death_reason = death_sacrificed }}
+			}
+		}
+		wealth = -400
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 45 } }				
+	}
+	option = {
+			name = transmutebody.1d
+	
+		event_target:transmutebody = {	
+			random_list = {
+			15 = {	add_trait = clubfooted }			
+			15 = {	add_trait = harelip }
+			15 = {	add_trait = hunchback }			
+			15 = {	add_trait = lisp }
+			15 = {	add_trait = stutter }			
+			15 = { 	add_trait = dwarf }
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -400
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 45 } }				
+	}	
+}
+
+
+character_event = {
+	id = transmutebody.3 
+	desc = transmutebody.3_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes			
+	option = {
+			name = transmutebody.1a
+	
+		event_target:transmutebody = {	
+			random_list = {
+			25 = {	add_trait = weak	}			
+			25 = {	add_trait = strong}
+			25 = { 	death= { death_reason = death_sacrificed }}
+			25 = {	add_trait = infirm}
+			}
+		}
+		wealth = -300
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
+	}
+	option = {
+			name = transmutebody.1b
+	
+		event_target:transmutebody = {	
+			random_list = {
+			10 = {	add_trait = ugly }				 
+			25 = {	add_trait = fair }				
+			25 = { 	death= { death_reason = death_sacrificed }}
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -300
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
+	}
+	option = {
+			name = transmutebody.1c
+	
+		event_target:transmutebody = {	
+			random_list = {
+			20 = {	add_trait = quick	}			
+			20 = {	add_trait = genius}
+			20 = {	add_trait = slow	}			
+			20 = {	add_trait = imbecile}			
+			20 = { 	death= { death_reason = death_sacrificed }}
+			}
+		}
+		wealth = -300
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
+	}
+	option = {
+			name = transmutebody.1d
+	
+		event_target:transmutebody = {	
+			random_list = {
+			15 = {	add_trait = clubfooted }			
+			15 = {	add_trait = harelip }
+			15 = {	add_trait = hunchback }			
+			15 = {	add_trait = lisp }
+			15 = {	add_trait = stutter }			
+			15 = { 	add_trait = dwarf }
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -300
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 30 } }				
+	}	
+}
+
+
+character_event = {
+	id = transmutebody.4 
+	desc = transmutebody.4_desc
+	picture = GFX_evt_mongols
+	is_triggered_only = yes			
+	option = {
+			name = transmutebody.1a
+	
+		event_target:transmutebody = {	
+			random_list = {
+			25 = {	add_trait = weak	}			
+			25 = {	add_trait = strong}
+			25 = { 	death= { death_reason = death_sacrificed }}
+			25 = {	add_trait = infirm}
+			}
+		}
+		wealth = -100
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }				
+	}
+	option = {
+			name = transmutebody.1b
+	
+		event_target:transmutebody = {	
+			random_list = {
+			10 = {	add_trait = ugly }				 
+			25 = {	add_trait = fair }				
+			25 = { 	death= { death_reason = death_sacrificed }}
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -100
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }				
+	}
+	option = {
+			name = transmutebody.1c
+	
+		event_target:transmutebody = {	
+			random_list = {
+			20 = {	add_trait = quick	}			
+			20 = {	add_trait = genius}
+			20 = {	add_trait = slow	}			
+			20 = {	add_trait = imbecile}			
+			20 = { 	death= { death_reason = death_sacrificed }}
+			}
+		}
+		wealth = -100
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }				
+	}
+	option = {
+			name = transmutebody.1d
+	
+		event_target:transmutebody = {	
+			random_list = {
+			15 = {	add_trait = clubfooted }			
+			15 = {	add_trait = harelip }
+			15 = {	add_trait = hunchback }			
+			15 = {	add_trait = lisp }
+			15 = {	add_trait = stutter }			
+			15 = { 	add_trait = dwarf }
+			10 = {	add_trait = infirm}
+			}
+		}
+		wealth = -100
+			set_character_flag = sorcery
+			hidden_tooltip = { character_event = { id = cooldown.1 days = 15 } }				
+	}	
+}

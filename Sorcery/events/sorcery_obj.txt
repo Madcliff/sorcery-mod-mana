@@ -10,12 +10,10 @@ character_event = {
 		prisoner = no
 		NOT = { trait = incapable }
 		NOT = { trait = magister }
-		OR = {
-			NOT = {trait = grand_sorcerer}
-			NOT = {trait = sorcerer}
-			NOT = {trait = sorcery_adept}		
-			NOT = {trait = sorcery_inniate}				
-			}
+		NOT = {trait = grand_sorcerer}
+		NOT = {trait = sorcerer}
+		NOT = {trait = sorcery_adept}		
+		NOT = {trait = sorcery_inniate}				
 	}
 mean_time_to_happen = {
 	years = 5
@@ -76,6 +74,7 @@ character_event = {
 		has_ambition = obj_study_magic 
 		prisoner = no
 		trait = sorcery_inniate
+		NOT = {trait = sorcery_adept}			
 		NOT = { trait = incapable }
 		NOT = { trait = magister }
 		check_variable = { which = "spellscast" value = 4 }				
@@ -139,6 +138,7 @@ character_event = {
 		has_ambition = obj_study_magic 
 		prisoner = no
 		trait = sorcery_adept
+		NOT = {trait = sorcerer}		
 		NOT = { trait = incapable }
 		NOT = { trait = magister }
 		check_variable = { which = "spellscast" value = 4 }
@@ -205,9 +205,258 @@ character_event = {
 		has_ambition = obj_study_magic 
 		prisoner = no
 		trait = sorcerer
+		NOT = {trait = grand_sorcerer}		
 		NOT = { trait = incapable }
 		NOT = { trait = magister }
 		check_variable = { which = "spellscast" value = 4 }
+
+	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = sorceryobj.4a
+		trigger = { not = {trait = grand_sorcerer}}
+				add_trait = grand_sorcerer	
+				set_variable = { which = "spellscast" value = 0 } 				
+		}
+}	
+
+
+character_event = {
+    id = sorceryobj.99
+    desc = sorceryobj.99_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion	
+    hide_window = no
+    
+   is_triggered_only = yes
+    
+		option = {
+		name = sorceryobj.99a
+			death = {
+				death_reason = death_accident
+			}
+		}
+}
+
+
+
+
+namespace = alchemobj
+character_event = {
+	id = alchemobj.1
+	desc = alchemobj.1_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_alchemy 
+		prisoner = no
+		NOT = { trait = incapable }
+		NOT = {trait = master_alchemist}
+		NOT = {trait = alchemist}
+		NOT = {trait = aspiring_alchemist}		
+		NOT = {trait = novice_alchemist}				
+	
+	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = alchemobj.1a
+		trigger = { not = {trait = novice_alchemist}}
+				add_trait = novice_alchemist				
+		}
+}
+
+	
+character_event = {
+	id = alchemobj.2
+	desc = alchemobj.2_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_alchemy
+		prisoner = no
+		trait = novice_alchemist
+		NOT = {trait = aspiring_alchemist}		
+		NOT = { trait = incapable }	
+	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = alchemobj.2a
+		trigger = { not = { trait = aspiring_alchemist}}
+			add_trait = aspiring_alchemist				
+		}
+}
+
+
+character_event = {
+	id = alchemobj.3
+	desc = alchemobj.3_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_alchemy 
+		prisoner = no
+		NOT = {trait = alchemist}		
+		trait = aspiring_alchemist
+		NOT = { trait = incapable }
+	}
+mean_time_to_happen = {
+	years = 5
+	modifier = {
+		factor = 2 # Decreases chances by half
+		NOT = { trait = genius }
+	}
+	modifier = {
+		factor = 0.5 # Increases chances by half
+		trait = diligent
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 334 }
+	}	
+		modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 802 }
+	}
+	modifier = {
+		factor = 0.1 # Increases chances by ten
+		location = { province = 496 }
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = mystic
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = faqih
+	}	
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = ambitious
+	}
+		modifier = {
+		factor = 0.5 # Increases chances by ten
+		trait = scholar
+	}	
+	
+}
+	option = {
+		name = alchemobj.3a
+		trigger = { not = {trait = alchemist}}
+				add_trait = alchemist				
+		}
+}	
+
+
+
+
+character_event = {
+	id = alchemobj.4
+	desc = alchemobj.4_desc
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+
+	trigger = {
+		has_ambition = obj_study_alchemy 
+		prisoner = no
+		NOT = {trait = master_alchemist}		
+		trait = alchemist
+		NOT = { trait = incapable }
 
 	}
 mean_time_to_happen = {
@@ -251,43 +500,8 @@ mean_time_to_happen = {
 	
 }
 	option = {
-		name = sorceryobj.4a
-		trigger = { not = {trait = grand_sorcerer}}
-				add_trait = grand_sorcerer	
-				set_variable = { which = "spellscast" value = 0 } 				
+		name = alchemobj.4a
+		trigger = { not = {trait = master_alchemist}}
+				add_trait = master_alchemist	
 		}
 }	
-
-character_event = {
-    id = sorceryobj.51
-    desc = sorceryobj.51_desc
-	picture = GFX_evt_comet
-	border = GFX_event_normal_frame_religion
-	
-    hide_window = no
-    
-   is_triggered_only = yes
-    
-		option = {
-		name = sorceryobj.51a
-		add_trait = Sorcery
-		}
-}
-
-
-character_event = {
-    id = sorceryobj.99
-    desc = sorceryobj.99_desc
-	picture = GFX_evt_comet
-	border = GFX_event_normal_frame_religion	
-    hide_window = no
-    
-   is_triggered_only = yes
-    
-		option = {
-		name = sorceryobj.99a
-			death = {
-				death_reason = death_accident
-			}
-		}
-}

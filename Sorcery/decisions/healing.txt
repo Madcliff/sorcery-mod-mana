@@ -75,8 +75,8 @@ targetted_decisions = {
 					limit = { trait = sorcery_inniate}
 					random_list = {
 						50 = {
-							character_event = { id = healspell.1  } 
-							} 
+							character_event = { id = healspell.1 } 
+						} 
 						50 = {
 							character_event = { id = fizzile.1 }
 						}

@@ -8,8 +8,10 @@ character_event = {
 	
 		
 	immediate = {
-		trigger = { check_variable = { which = "magic_power" value = "var1"   } } 
-		subtract_variable  = { which = "magic_power" which  = "var1" }
-	}	
+		if = {
+			limit = { check_variable = { which = "magic_power" value = "var1"   } } 
+			subtract_variable  = { which = "magic_power" which  = "var1" }
+		}
+	}
 }
 

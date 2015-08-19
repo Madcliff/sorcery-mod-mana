@@ -40,7 +40,26 @@ targetted_decisions = {
 				is_alive = yes  
 				}
 			
-			add_trait = Sorcery
+			if = {
+				limit = { trait = sorcery_inniate}
+				add_trait = sorcery_inniate
+			}
+			if = {
+				limit = { trait = sorcery_adept}
+				add_trait = sorcery_adept
+			}
+			if = {
+				limit = { trait = sorcerer}
+				add_trait = sorcerer
+			}
+			if = {
+				limit = { trait = grand_sorcerer}
+				add_trait = grand_sorcerer
+			}
+			if = {
+				limit = { trait = magister}
+				add_trait = magister
+			}			
 			set_reincarnation = FROM
 			dynasty = FROM
 			FROM = {

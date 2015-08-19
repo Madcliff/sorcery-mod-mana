@@ -206,3 +206,27 @@ character_event = {
 		set_variable = { which = "spell_powercastcount" value = 0 }	
     }
 }
+
+namespace = alchemyengine
+character_event = {
+    id = alchemyengine.1
+    hide_window = yes
+    
+    trigger = { 
+				or = {
+					trait = master_alchemist
+					trait = alchemist
+					trait = aspiring_alchemist 
+					trait = novice_alchemist
+				}
+				not = {
+					has_character_flag = alchemyengine
+				}
+			}
+	immediate = {
+		set_variable = {which = "elixer_counter" value = 0}
+		set_character_flag = alchemyengine
+	}
+
+}
+     

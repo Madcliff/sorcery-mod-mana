@@ -8,7 +8,6 @@ targetted_decisions = {
 		ai = no		
 			any_realm_character = { 
 				at_location = ROOT 
-				has_character_flag = elixer_of_life 
 				NOT = {	
 					trait = incapable 
 				}
@@ -17,7 +16,9 @@ targetted_decisions = {
 					trait = alchemist
 					trait = aspiring_alchemist
 					trait = novice_alchemist 
-			}
+			}				
+				check_variable = {which = "elixer_counter" value = 1}
+
 			}
 		}
 	
@@ -37,18 +38,18 @@ targetted_decisions = {
 							trait = novice_alchemist 
 						}	 
 						at_location = ROOT 
-						has_character_flag = elixer_of_life  
+						check_variable = {which = "elixer_counter" value = 1} 
 					}	
 				}
 			}
 		
 		effect = {	
 			character_event = { id = immortalspell.1 } 
-			character_event = { id = immortalspell.2 years = 50 } 
+			character_event = { id = immortalspell.2 years = 25 } 
 			FROM = { 					
 				random_realm_character = {
-					limit = { has_character_flag = elixer_of_life at_location = ROOT }
-					clr_character_flag = elixer_of_life
+					limit = { check_variable = {which = "elixer_counter" value = 1} at_location = ROOT }
+					change_variable = {which = "elixer_counter" value = -1}
 				}
 			}
 		}
